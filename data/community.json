@@ -628,5 +628,12 @@
     "curatedBy": "webkubor",
     "recommendedBy": null,
     "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "dyt-ashare-cli",
+    "addedAt": "2026-10-20T21:24:43+08:00",
+    "curatedBy": "renjiegod",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/pull/1"
   }
 ]
