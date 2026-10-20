@@ -15,6 +15,7 @@ export interface Entry {
   readonly docs: string;
   readonly icon: string;
   readonly locallyInstalled?: boolean;
+  readonly maintainerType: "vendor" | "community";
 }
 /** 指标只表示仓库关注度，无可比数据的条目为 null。 */
 export interface Metric {
@@ -40,7 +41,12 @@ export const usageSnapshot: {
 export function usage(item: Entry): Usage | null {
   return usageSnapshot.packages[item.id] ?? null;
 }
-const catalog: readonly Entry[] = rawCatalog;
+const catalog: readonly Entry[] = rawCatalog.map((item) => {
+  const maintainerType = item.maintainerType;
+  if (maintainerType !== "vendor" && maintainerType !== "community")
+    throw new Error(`Invalid maintainer type: ${item.id}`);
+  return { ...item, maintainerType };
+});
 const metrics: {
   readonly fetchedAt: string;
   readonly repositories: Readonly<Record<string, Metric | null>>;
@@ -55,13 +61,13 @@ export function queryEntries(
   category: string,
   vendor: string,
   sort: string,
-  localOnly = false,
+  maintainerType = "",
 ): Entry[] {
   const query = search.trim().toLocaleLowerCase();
   return catalog
     .filter(
       (item) =>
-        (!localOnly || item.locallyInstalled) &&
+        (!maintainerType || item.maintainerType === maintainerType) &&
         (!category || item.category === category) &&
         (!vendor || item.vendor === vendor) &&
         [
@@ -97,4 +103,8 @@ export function queryEntries(
       return right.stars - left.stars || a.name.localeCompare(b.name);
     });
 }
+export const maintainerLabels = {
+  vendor: "厂商官方",
+  community: "社区项目",
+} as const;
 export { catalog, categories, metrics };

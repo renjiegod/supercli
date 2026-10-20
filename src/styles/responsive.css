@@ -205,14 +205,3 @@
     scroll-behavior: auto !important;
   }
 }
-.local-filter {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 16px;
-}
-.local-filter input {
-  accent-color: var(--accent);
-}

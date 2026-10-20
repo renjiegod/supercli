@@ -9,3 +9,5 @@
 需要 Node 24+、pnpm 12。GitHub API 限流时通过环境变量传入 `GITHUB_TOKEN`，不要把它写入文件。可用 `node scripts/sync.mjs --gh --icons` 复用本机已登录 gh。
 
 只接纳可核验来源的 CLI，上游仓库不能重复；Stars 属于仓库，不声称代表 CLI 使用人数。首版不收重复镜像和未经证实的安装命令。
+
+项目来源须填写 `maintainerType`（vendor / community），附维护方依据；定义与核验入口见 [来源标记](docs/SOURCES.md)。这不是质量或可信度评级。

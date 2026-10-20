@@ -9,7 +9,8 @@
     "install": "npm install -g wrangler",
     "docs": "https://developers.cloudflare.com/workers/wrangler/",
     "icon": "cloudflare.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "tccli",
@@ -21,7 +22,8 @@
     "install": "pip install tccli",
     "docs": "https://github.com/TencentCloud/tencentcloud-cli",
     "icon": "tencentcloud.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "aliyun",
@@ -33,7 +35,8 @@
     "install": "brew install aliyun-cli",
     "docs": "https://github.com/aliyun/aliyun-cli",
     "icon": "aliyun.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "aws",
@@ -45,7 +48,8 @@
     "install": "brew install awscli",
     "docs": "https://aws.amazon.com/cli/",
     "icon": "aws.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "vendor"
   },
   {
     "id": "azure",
@@ -57,7 +61,8 @@
     "install": "brew install azure-cli",
     "docs": "https://learn.microsoft.com/cli/azure/",
     "icon": "azure.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "vendor"
   },
   {
     "id": "vercel",
@@ -69,7 +74,8 @@
     "install": "npm install -g vercel",
     "docs": "https://vercel.com/docs/cli",
     "icon": "vercel.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "vendor"
   },
   {
     "id": "supabase",
@@ -81,7 +87,8 @@
     "install": "brew install supabase/tap/supabase",
     "docs": "https://supabase.com/docs/guides/local-development/cli/getting-started",
     "icon": "supabase.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "firebase",
@@ -93,7 +100,8 @@
     "install": "npm install -g firebase-tools",
     "docs": "https://firebase.google.com/docs/cli",
     "icon": "firebase.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "vendor"
   },
   {
     "id": "codex",
@@ -105,7 +113,8 @@
     "install": "npm install -g @openai/codex",
     "docs": "https://github.com/openai/codex",
     "icon": "openai.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "claude",
@@ -117,7 +126,8 @@
     "install": "npm install -g @anthropic-ai/claude-code",
     "docs": "https://github.com/anthropics/claude-code",
     "icon": "anthropic.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "gemini",
@@ -129,7 +139,8 @@
     "install": "npm install -g @google/gemini-cli",
     "docs": "https://github.com/google-gemini/gemini-cli",
     "icon": "google.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "vendor"
   },
   {
     "id": "opencode",
@@ -141,7 +152,8 @@
     "install": "npm install -g opencode-ai",
     "docs": "https://opencode.ai/docs/",
     "icon": "opencode.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "aider",
@@ -153,7 +165,8 @@
     "install": "pip install aider-install && aider-install",
     "docs": "https://aider.chat/",
     "icon": "aider.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "community"
   },
   {
     "id": "gh",
@@ -165,7 +178,8 @@
     "install": "brew install gh",
     "docs": "https://cli.github.com/manual/",
     "icon": "github.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "lazygit",
@@ -177,7 +191,8 @@
     "install": "brew install lazygit",
     "docs": "https://github.com/jesseduffield/lazygit",
     "icon": "lazygit.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "community"
   },
   {
     "id": "docker",
@@ -189,7 +204,8 @@
     "install": "brew install docker",
     "docs": "https://docs.docker.com/reference/cli/docker/",
     "icon": "docker.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "helm",
@@ -201,7 +217,8 @@
     "install": "brew install helm",
     "docs": "https://helm.sh/docs/",
     "icon": "helm.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "community"
   },
   {
     "id": "rg",
@@ -213,7 +230,8 @@
     "install": "brew install ripgrep",
     "docs": "https://github.com/BurntSushi/ripgrep",
     "icon": "ripgrep.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "fzf",
@@ -225,7 +243,8 @@
     "install": "brew install fzf",
     "docs": "https://github.com/junegunn/fzf",
     "icon": "fzf.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "community"
   },
   {
     "id": "bat",
@@ -237,7 +256,8 @@
     "install": "brew install bat",
     "docs": "https://github.com/sharkdp/bat",
     "icon": "bat.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "community"
   },
   {
     "id": "fd",
@@ -249,7 +269,8 @@
     "install": "brew install fd",
     "docs": "https://github.com/sharkdp/fd",
     "icon": "bat.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "community"
   },
   {
     "id": "zoxide",
@@ -261,7 +282,8 @@
     "install": "brew install zoxide",
     "docs": "https://github.com/ajeetdsouza/zoxide",
     "icon": "zoxide.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "community"
   },
   {
     "id": "starship",
@@ -273,7 +295,8 @@
     "install": "brew install starship",
     "docs": "https://starship.rs/",
     "icon": "starship.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "jq",
@@ -285,7 +308,8 @@
     "install": "brew install jq",
     "docs": "https://jqlang.org/manual/",
     "icon": "jq.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "httpie",
@@ -297,7 +321,8 @@
     "install": "brew install httpie",
     "docs": "https://httpie.io/docs/cli",
     "icon": "httpie.png",
-    "locallyInstalled": false
+    "locallyInstalled": false,
+    "maintainerType": "vendor"
   },
   {
     "id": "rclone",
@@ -309,7 +334,8 @@
     "install": "brew install rclone",
     "docs": "https://rclone.org/docs/",
     "icon": "rclone.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "uv",
@@ -321,7 +347,8 @@
     "install": "brew install uv",
     "docs": "https://docs.astral.sh/uv/",
     "icon": "astral.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "pnpm",
@@ -333,7 +360,8 @@
     "install": "npm install -g pnpm",
     "docs": "https://pnpm.io/installation",
     "icon": "pnpm.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "cf",
@@ -345,7 +373,8 @@
     "install": "npm install -g cf",
     "docs": "https://developers.cloudflare.com/cf/",
     "icon": "cloudflare.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "cloudflared",
@@ -357,7 +386,8 @@
     "install": "brew install cloudflared",
     "docs": "https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/",
     "icon": "cloudflare.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "dsh",
@@ -369,7 +399,8 @@
     "install": "npm install -g @deepseek-ai/dsh",
     "docs": "https://github.com/deepseek-ai/deepseek-harness",
     "icon": "deepseek.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "grok",
@@ -381,7 +412,8 @@
     "install": "npm install -g @xai-official/grok",
     "docs": "https://docs.x.ai/build/cli/reference",
     "icon": "xai.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "mmx",
@@ -393,7 +425,8 @@
     "install": "npm install -g mmx-cli",
     "docs": "https://github.com/MiniMax-AI/cli",
     "icon": "minimax.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "hermes",
@@ -405,7 +438,8 @@
     "install": null,
     "docs": "https://github.com/NousResearch/hermes-agent",
     "icon": "hermes.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "lark",
@@ -417,7 +451,8 @@
     "install": "npm install -g @larksuite/cli",
     "docs": "https://github.com/larksuite/cli",
     "icon": "lark.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "museav",
@@ -429,7 +464,8 @@
     "install": "npm install -g museav-cli",
     "docs": "https://github.com/webkubor/museav-cli",
     "icon": "webkubor.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "kyvault",
@@ -441,7 +477,8 @@
     "install": null,
     "docs": "https://github.com/webkubor/kyvault",
     "icon": "webkubor.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "ego",
@@ -453,7 +490,8 @@
     "install": null,
     "docs": "https://github.com/webkubor/ego-lite",
     "icon": "webkubor.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "agent-reach",
@@ -465,7 +503,8 @@
     "install": null,
     "docs": "https://github.com/Panniantong/agent-reach",
     "icon": "agent-reach.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "path-guard",
@@ -477,7 +516,8 @@
     "install": null,
     "docs": "https://github.com/webkubor/path-guard",
     "icon": "webkubor.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "vlm",
@@ -489,7 +529,8 @@
     "install": null,
     "docs": "https://github.com/webkubor/mlx-vlm-kit",
     "icon": "webkubor.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "crawl4ai",
@@ -501,7 +542,8 @@
     "install": "pip install crawl4ai",
     "docs": "https://docs.crawl4ai.com/",
     "icon": "crawl4ai.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "playwright",
@@ -513,7 +555,8 @@
     "install": "npm install -D @playwright/test",
     "docs": "https://playwright.dev/",
     "icon": "microsoft.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "frida",
@@ -525,7 +568,8 @@
     "install": "pip install frida-tools",
     "docs": "https://frida.re/docs/home/",
     "icon": "frida.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "git-filter-repo",
@@ -537,7 +581,8 @@
     "install": "brew install git-filter-repo",
     "docs": "https://github.com/newren/git-filter-repo",
     "icon": "git-filter-repo.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "hf",
@@ -549,7 +594,8 @@
     "install": "pip install huggingface_hub",
     "docs": "https://huggingface.co/docs/huggingface_hub/guides/cli",
     "icon": "huggingface.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "octodns",
@@ -561,7 +607,8 @@
     "install": "pip install octodns",
     "docs": "https://github.com/octodns/octodns",
     "icon": "octodns.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "milvus",
@@ -573,7 +620,8 @@
     "install": "pip install milvus-lite",
     "docs": "https://github.com/milvus-io/milvus-lite",
     "icon": "milvus.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "mise",
@@ -585,7 +633,8 @@
     "install": "brew install mise",
     "docs": "https://mise.jdx.dev/",
     "icon": "mise.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "agy",
@@ -597,7 +646,8 @@
     "install": null,
     "docs": "https://antigravity.google/docs/cli/overview/",
     "icon": "google.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "mimo",
@@ -609,7 +659,8 @@
     "install": "npm install -g @mimo-ai/cli",
     "docs": "https://mimo.xiaomi.com/mimocode/start",
     "icon": "xiaomi.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "glab",
@@ -621,7 +672,8 @@
     "install": "brew install glab",
     "docs": "https://gitlab.com/gitlab-org/cli",
     "icon": "gitlab.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "apktool",
@@ -633,7 +685,8 @@
     "install": "brew install apktool",
     "docs": "https://github.com/iBotPeaches/Apktool",
     "icon": "apktool.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "binwalk",
@@ -645,7 +698,8 @@
     "install": "brew install binwalk",
     "docs": "https://github.com/ReFirmLabs/binwalk",
     "icon": "binwalk.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "cmake",
@@ -657,7 +711,8 @@
     "install": "brew install cmake",
     "docs": "https://github.com/Kitware/CMake",
     "icon": "cmake.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "cocoapods",
@@ -669,7 +724,8 @@
     "install": "brew install cocoapods",
     "docs": "https://github.com/CocoaPods/CocoaPods",
     "icon": "cocoapods.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "dnscontrol",
@@ -681,7 +737,8 @@
     "install": "brew install dnscontrol",
     "docs": "https://github.com/StackExchange/dnscontrol",
     "icon": "dnscontrol.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "ffmpeg",
@@ -693,7 +750,8 @@
     "install": "brew install ffmpeg",
     "docs": "https://github.com/FFmpeg/FFmpeg",
     "icon": "ffmpeg.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "ffuf",
@@ -705,7 +763,8 @@
     "install": "brew install ffuf",
     "docs": "https://github.com/ffuf/ffuf",
     "icon": "ffuf.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "git",
@@ -717,7 +776,8 @@
     "install": "brew install git",
     "docs": "https://github.com/git/git",
     "icon": "git.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "git-lfs",
@@ -729,7 +789,8 @@
     "install": "brew install git-lfs",
     "docs": "https://github.com/git-lfs/git-lfs",
     "icon": "git-lfs.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "go",
@@ -741,7 +802,8 @@
     "install": "brew install go",
     "docs": "https://github.com/golang/go",
     "icon": "go.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "hashcat",
@@ -753,7 +815,8 @@
     "install": "brew install hashcat",
     "docs": "https://github.com/hashcat/hashcat",
     "icon": "hashcat.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "jadx",
@@ -765,7 +828,8 @@
     "install": "brew install jadx",
     "docs": "https://github.com/skylot/jadx",
     "icon": "jadx.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "mas",
@@ -777,7 +841,8 @@
     "install": "brew install mas",
     "docs": "https://github.com/mas-cli/mas",
     "icon": "mas.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "nginx",
@@ -789,7 +854,8 @@
     "install": "brew install nginx",
     "docs": "https://github.com/nginx/nginx",
     "icon": "nginx.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "nmap",
@@ -801,7 +867,8 @@
     "install": "brew install nmap",
     "docs": "https://github.com/nmap/nmap",
     "icon": "nmap.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "nuclei",
@@ -813,7 +880,8 @@
     "install": "brew install nuclei",
     "docs": "https://github.com/projectdiscovery/nuclei",
     "icon": "nuclei.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "ollama",
@@ -825,7 +893,8 @@
     "install": "brew install ollama",
     "docs": "https://github.com/ollama/ollama",
     "icon": "ollama.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "pipx",
@@ -837,7 +906,8 @@
     "install": "brew install pipx",
     "docs": "https://github.com/pypa/pipx",
     "icon": "pipx.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "plantuml",
@@ -849,7 +919,8 @@
     "install": "brew install plantuml",
     "docs": "https://github.com/plantuml/plantuml",
     "icon": "plantuml.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "python",
@@ -861,7 +932,8 @@
     "install": "brew install python",
     "docs": "https://github.com/python/cpython",
     "icon": "python.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "radare2",
@@ -873,7 +945,8 @@
     "install": "brew install radare2",
     "docs": "https://github.com/radareorg/radare2",
     "icon": "radare2.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "railway",
@@ -885,7 +958,8 @@
     "install": "brew install railway",
     "docs": "https://github.com/railwayapp/cli",
     "icon": "railway.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "rust",
@@ -897,7 +971,8 @@
     "install": "brew install rust",
     "docs": "https://github.com/rust-lang/rust",
     "icon": "rust.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "sqlmap",
@@ -909,7 +984,8 @@
     "install": "brew install sqlmap",
     "docs": "https://github.com/sqlmapproject/sqlmap",
     "icon": "sqlmap.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "summarize",
@@ -921,7 +997,8 @@
     "install": "brew install summarize",
     "docs": "https://github.com/steipete/summarize",
     "icon": "summarize.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "terminal-notifier",
@@ -933,7 +1010,8 @@
     "install": "brew install terminal-notifier",
     "docs": "https://github.com/julienXX/terminal-notifier",
     "icon": "terminal-notifier.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "tmux",
@@ -945,7 +1023,8 @@
     "install": "brew install tmux",
     "docs": "https://github.com/tmux/tmux",
     "icon": "tmux.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "watchman",
@@ -957,7 +1036,8 @@
     "install": "brew install watchman",
     "docs": "https://github.com/facebook/watchman",
     "icon": "watchman.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "whisper",
@@ -969,7 +1049,8 @@
     "install": "brew install whisper-cpp",
     "docs": "https://github.com/ggml-org/whisper.cpp",
     "icon": "whisper.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "yara",
@@ -981,7 +1062,8 @@
     "install": "brew install yara",
     "docs": "https://github.com/VirusTotal/yara",
     "icon": "yara.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "vendor"
   },
   {
     "id": "rtk",
@@ -993,7 +1075,8 @@
     "install": "brew install rtk",
     "docs": "https://www.rtk-ai.app/",
     "icon": "rtk.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "psql",
@@ -1005,7 +1088,8 @@
     "install": "brew install libpq",
     "docs": "https://www.postgresql.org/docs/current/app-psql.html",
     "icon": "postgresql.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "java",
@@ -1017,7 +1101,8 @@
     "install": "brew install openjdk",
     "docs": "https://openjdk.org/",
     "icon": "openjdk.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "sox",
@@ -1029,7 +1114,8 @@
     "install": "brew install sox",
     "docs": "https://sox.sourceforge.net/",
     "icon": "sox.png",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "bash",
@@ -1041,7 +1127,8 @@
     "install": "brew install bash",
     "docs": "https://www.gnu.org/software/bash/",
     "icon": "gnu.svg",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "automake",
@@ -1053,7 +1140,8 @@
     "install": "brew install automake",
     "docs": "https://www.gnu.org/software/automake/",
     "icon": "gnu.svg",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "wget",
@@ -1065,7 +1153,8 @@
     "install": "brew install wget",
     "docs": "https://www.gnu.org/software/wget/",
     "icon": "gnu.svg",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   },
   {
     "id": "locateme",
@@ -1077,6 +1166,7 @@
     "install": "brew install locateme",
     "docs": "https://iharder.sourceforge.net/current/macosx/locateme/",
     "icon": "locateme.svg",
-    "locallyInstalled": true
+    "locallyInstalled": true,
+    "maintainerType": "community"
   }
 ]

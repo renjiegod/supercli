@@ -126,57 +126,75 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">找到你的下一件趁手工具</p>
-            <h2>CLI 排行榜<span class="count" id="result-count"></span></h2>
+            <h2>
+              CLI 排行榜<span
+                class="count"
+                id="result-count"
+                role="status"
+                aria-live="polite"
+              ></span>
+            </h2>
           </div>
           <p class="updated" id="updated"></p>
         </div>
-        <div class="controls">
-          <label class="search"
-            ><i data-lucide="search"></i
-            ><input
-              id="search"
-              type="search"
-              placeholder="搜索名称、厂商或用途…"
-              aria-label="搜索 CLI"
-            /><kbd>/</kbd></label
-          ><label class="select-label"
-            ><span class="sr-only">筛选厂商</span
-            ><select id="vendor">
-              <option value="">全部厂商</option>
-            </select></label
-          ><label class="select-label"
-            ><span class="sr-only">排序方式</span
-            ><select id="sort">
-              <option value="stars">GitHub Stars 最多</option>
-              <option value="updated">仓库最近更新</option>
-              <option value="downloads">npm 近30天下载最多</option>
-              <option value="name">名称 A–Z</option>
-            </select></label
-          >
+        <div class="filter-panel">
+          <div class="controls">
+            <label class="search"
+              ><i data-lucide="search"></i
+              ><input
+                id="search"
+                type="search"
+                placeholder="搜索名称、厂商或用途…"
+                aria-label="搜索 CLI"
+              /><kbd>/</kbd></label
+            >
+            <div class="select-label">
+              <span class="sr-only">筛选厂商</span
+              ><select id="vendor">
+                <option value="">全部厂商</option>
+              </select>
+            </div>
+            <div class="select-label">
+              <span class="sr-only">排序方式</span
+              ><select id="sort">
+                <option value="stars">Stars 最多</option>
+                <option value="updated">最近更新</option>
+                <option value="downloads">下载最多</option>
+                <option value="name">名称 A–Z</option>
+              </select>
+            </div>
+          </div>
+          <div
+            id="categories"
+            class="categories"
+            role="group"
+            aria-label="工具分类"
+          ></div>
+          <div class="filter-bottom">
+            <div class="source-switch" role="group" aria-label="项目来源">
+              <button data-source="" aria-pressed="true">全部来源</button>
+              <button data-source="vendor" aria-pressed="false">
+                厂商官方
+              </button>
+              <button data-source="community" aria-pressed="false">
+                社区项目
+              </button>
+            </div>
+            <button id="method-open" class="text-button">
+              数据与排行说明<i data-lucide="info"></i>
+            </button>
+          </div>
+          <div
+            id="active-filters"
+            class="active-filters"
+            aria-label="当前筛选条件"
+            hidden
+          ></div>
         </div>
-        <div
-          id="categories"
-          class="categories"
-          role="group"
-          aria-label="工具分类"
-        ></div>
-        <label class="local-filter"
-          ><input
-            id="local-only"
-            type="checkbox"
-          />仅看本机已装工具（建站时核验快照）</label
-        >
-        <div class="ranking-note">
-          <i data-lucide="info"></i
-          ><span id="ranking-summary"
-            >按所关联 GitHub 仓库的 Star
-            总数排序；非用户投票或下载量，多工具仓库共享仓库数据。</span
-          ><button id="method-open" class="text-button">排行说明</button>
+        <div class="results-bar">
+          <p id="ranking-summary"></p>
+          <span>下载量 ≠ 调用量</span>
         </div>
-        <p class="metric-note">
-          下载量为 npm 安装包近 30 天下载次数，不是 CLI
-          调用量；仓库更新来自作者或维护者的最近推送。无公开来源的指标不计为零。
-        </p>
         <div id="catalog" class="catalog"></div>
         <div class="empty" id="empty" hidden>
           <i data-lucide="search-x"></i>
@@ -262,6 +280,10 @@
       <p class="eyebrow">公开数据，明确口径</p>
       <h2 id="method-title">这份排行怎么算？</h2>
       <p>
+        “厂商官方”表示由产品或平台厂商直接维护；“社区项目”表示由独立作者、开源组织或社区维护，也包括项目自身的原版
+        CLI。两者只区分来源，不代表质量或可信度高低。
+      </p>
+      <p>
         默认按所关联 GitHub 仓库的累计 Stars 降序，同分按名称排列。Stars
         表示仓库关注度，不代表 CLI 用户数、下载量或质量评分。
       </p>
@@ -271,7 +293,7 @@
         GitHub pushed_at 为准。
       </p>
       <p>
-        收录本机实际使用的工具与社区投稿。没有可比 GitHub
+        收录厂商官方 CLI 与社区项目。没有可比 GitHub
         仓库的工具展示“未计分”，列在有数据条目后。PR
         由维护者本地核验、手动合并。
       </p>

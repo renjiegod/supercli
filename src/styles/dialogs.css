@@ -121,3 +121,44 @@ dialog h3 {
 .skip:focus {
   top: 16px;
 }
+
+/* 项目质检是详情里的辅助动作，与安装入口区分。 */
+.quality-panel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  margin: 20px 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.quality-panel > div {
+  min-width: 0;
+}
+.quality-panel h3 {
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+.quality-panel p {
+  font-size: 12px;
+  margin: 0;
+}
+.quality-panel span {
+  display: block;
+  font-size: 11px;
+  color: var(--faint);
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+}
+.quality-panel .button {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+@media (max-width: 640px) {
+  .quality-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+}

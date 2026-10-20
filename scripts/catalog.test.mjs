@@ -24,9 +24,25 @@ test("search supports case folding, command names and no matches", () => {
   assert.equal(queryEntries("  WRANGLER ", "", "", "stars")[0].id, "wrangler");
   assert.equal(queryEntries("nonexistent-cli-xyz", "", "", "stars").length, 0);
 });
-test("locally installed filter excludes unverified local presence", () => {
-  const result = queryEntries("", "", "", "stars", true);
-  assert(result.length > 0 && result.every((item) => item.locallyInstalled));
+test("source filters compose and partition catalog without implying quality", () => {
+  const official = queryEntries("", "", "", "stars", "vendor");
+  const community = queryEntries("", "", "", "stars", "community");
+  assert(official.length && community.length);
+  assert(official.every((item) => item.maintainerType === "vendor"));
+  assert(community.every((item) => item.maintainerType === "community"));
+  assert.equal(official.length + community.length, catalog.length);
+  assert.equal(
+    queryEntries("wrangler", "cloud", "Cloudflare", "stars", "vendor")[0].id,
+    "wrangler",
+  );
+  assert.equal(
+    queryEntries("wrangler", "", "", "stars", "community").length,
+    0,
+  );
+  assert.equal(
+    queryEntries("ripgrep", "", "", "stars", "community")[0].id,
+    "rg",
+  );
 });
 test("non-GitHub tools have no fabricated stars and remain discoverable", () => {
   const entry = queryEntries("MiMo Code", "", "", "stars")[0];

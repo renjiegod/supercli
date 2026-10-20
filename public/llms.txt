@@ -11,6 +11,6 @@
 - [Security policy](https://github.com/webkubor/supercli/blob/main/SECURITY.md): report vulnerabilities privately to the maintainer.
 
 ## Interpretation
-Stars describe the linked repository, including its other packages when it is a monorepo. They are not CLI downloads, active users or a quality score. Tools without comparable GitHub data remain unranked. The local-install filter is the maintainer's dated setup snapshot, not an inspection of the visitor's machine.
+Stars describe the linked repository, including its other packages when it is a monorepo. They are not CLI downloads, active users or a quality score. Tools without comparable GitHub data remain unranked. Source filters distinguish vendor-maintained CLIs from community projects; these labels are provenance, not quality ratings. No visitor machine inspection is performed.
 
 No MCP server, user voting system or automatic PR approval is provided. Official third-party names and trademarks belong to their owners.

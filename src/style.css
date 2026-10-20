@@ -9,3 +9,6 @@
 @import "./styles/motion.css";
 
 @import "./styles/tool-metrics.css";
+
+@import "./styles/filter-picker.css";
+@import "./styles/filters.css";

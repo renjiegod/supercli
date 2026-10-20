@@ -14,7 +14,8 @@
       "description",
       "install",
       "docs",
-      "icon"
+      "icon",
+      "maintainerType"
     ],
     "properties": {
       "id": {
@@ -73,6 +74,9 @@
       },
       "locallyInstalled": {
         "type": "boolean"
+      },
+      "maintainerType": {
+        "enum": ["vendor", "community"]
       }
     }
   }

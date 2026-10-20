@@ -37,6 +37,7 @@ const icons = {
 import {
   catalog,
   categories,
+  maintainerLabels,
   metrics,
   queryEntries,
   stats,
@@ -44,6 +45,7 @@ import {
   type Entry,
 } from "./catalog";
 import { escapeHtml as escape, detailMarkup } from "./html";
+import { setupFilterPicker } from "./filter-picker";
 import { cardMetrics } from "./tool-metrics";
 import "./style.css";
 import { setupDiscovery, setupDetailLinks } from "./discovery";
@@ -53,7 +55,7 @@ const vendor = document.querySelector<HTMLSelectElement>("#vendor")!;
 const sort = document.querySelector<HTMLSelectElement>("#sort")!;
 const detail = document.querySelector<HTMLDialogElement>("#detail")!;
 let category = "";
-let localOnly = false;
+let maintainerType = "";
 let toastTimer: ReturnType<typeof setTimeout>;
 const iconify = () => createIcons({ icons });
 const number = (n: number) =>
@@ -64,7 +66,7 @@ const number = (n: number) =>
 function card(item: Entry, index: number): string {
   const metric = stats(item);
   const destination = item.repo ? `https://github.com/${item.repo}` : item.docs;
-  return `<article class="card"><div class="card-top"><span class="rank">${((sort.value === "stars" || sort.value === "updated") && !metric) || (sort.value === "downloads" && !usage(item)) ? "—" : String(index + 1).padStart(2, "0")}</span><img class="vendor-icon" src="/icons/${escape(item.icon)}" alt="${escape(item.vendor)} 工具图标" width="40" height="40" loading="lazy"><span class="tag">${escape(categories[item.category as keyof typeof categories])}</span></div><button class="card-title" data-detail="${escape(item.id)}">${escape(item.name)}<i data-lucide="arrow-up-right"></i></button><p class="vendor-name">${escape(item.vendor)}</p><p class="description">${escape(item.description)}</p>${cardMetrics(item)}<div class="card-bottom"><a href="${escape(destination)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(item.name)} 的官方来源"><i data-lucide="star"></i>${metric ? number(metric.stars) : "未计分"}<span>${metric ? "Stars" : "官方文档"}</span></a><button class="copy" data-copy="${escape(item.id)}" aria-label="复制 ${escape(item.name)} 安装命令"><i data-lucide="copy"></i>${item.install ? "安装" : "详情"}</button></div></article>`;
+  return `<article class="card"><div class="card-top"><span class="rank">${((sort.value === "stars" || sort.value === "updated") && !metric) || (sort.value === "downloads" && !usage(item)) ? "—" : String(index + 1).padStart(2, "0")}</span><img class="vendor-icon" src="/icons/${escape(item.icon)}" alt="${escape(item.vendor)} 工具图标" width="40" height="40" loading="lazy"><span class="tag">${escape(categories[item.category as keyof typeof categories])}</span></div><button class="card-title" data-detail="${escape(item.id)}">${escape(item.name)}<i data-lucide="arrow-up-right"></i></button><p class="vendor-name">${escape(item.vendor)}<span class="source-badge" data-kind="${item.maintainerType}">${maintainerLabels[item.maintainerType]}</span></p><p class="description">${escape(item.description)}</p>${cardMetrics(item)}<div class="card-bottom"><a href="${escape(destination)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(item.name)} 的官方来源"><i data-lucide="star"></i>${metric ? number(metric.stars) : "未计分"}<span>${metric ? "Stars" : "官方文档"}</span></a><button class="copy" data-copy="${escape(item.id)}" aria-label="复制 ${escape(item.name)} 安装命令"><i data-lucide="copy"></i>${item.install ? "安装" : "详情"}</button></div></article>`;
 }
 function render(): void {
   const items = queryEntries(
@@ -72,17 +74,15 @@ function render(): void {
     category,
     vendor.value,
     sort.value,
-    localOnly,
+    maintainerType,
   );
   root.innerHTML = items.map(card).join("");
   document.querySelector("#result-count")!.textContent = `${items.length} 个`;
   const summaries: Record<string, string> = {
-    stars: "按所关联 GitHub 仓库的 Star 总数排序；多工具仓库共享仓库数据。",
-    downloads:
-      "按 npm 包近 30 天下载次数排序，不代表调用量或用户数；未接入数据的工具排在后面。",
-    updated:
-      "按作者或维护者最近一次仓库推送排序，不代表版本发布时间；未接入数据的工具排在后面。",
-    name: "按工具名称排序，序号不代表热度。",
+    stars: "按 GitHub Stars 排序 · 多工具仓库共享数据",
+    downloads: "按 npm 近 30 天下载量排序 · 未接入数据的工具在后",
+    updated: "按仓库最近推送排序 · 不代表版本发布时间",
+    name: "按名称 A–Z 排序 · 序号不代表热度",
   };
   document.querySelector("#ranking-summary")!.textContent =
     summaries[sort.value];
@@ -95,13 +95,22 @@ function render(): void {
         String(button.dataset.category === category),
       ),
     );
+  document
+    .querySelectorAll<HTMLButtonElement>("[data-source]")
+    .forEach((button) =>
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.source === maintainerType),
+      ),
+    );
+  renderActiveFilters();
   const params = new URLSearchParams();
   const tool = new URLSearchParams(location.search).get("tool");
   if (tool) params.set("tool", tool);
   if (search.value) params.set("q", search.value);
   if (category) params.set("category", category);
   if (vendor.value) params.set("vendor", vendor.value);
-  if (localOnly) params.set("local", "1");
+  if (maintainerType) params.set("source", maintainerType);
   if (sort.value !== "stars") params.set("sort", sort.value);
   history.replaceState(
     null,
@@ -109,6 +118,35 @@ function render(): void {
     `${location.pathname}${params.size ? `?${params}` : ""}${location.hash}`,
   );
   iconify();
+}
+function renderActiveFilters(): void {
+  const filters = [
+    ["search", search.value && `搜索：${search.value}`],
+    ["category", categories[category as keyof typeof categories]],
+    ["vendor", vendor.value],
+    [
+      "source",
+      maintainerLabels[maintainerType as keyof typeof maintainerLabels],
+    ],
+  ].filter(([, value]) => value);
+  const host = document.querySelector<HTMLElement>("#active-filters")!;
+  host.hidden = !filters.length;
+  host.innerHTML =
+    filters
+      .map(
+        ([key, value]) =>
+          `<button class="filter-chip" data-clear="${key}" aria-label="移除${escape(String(value))}">${escape(String(value))}<i data-lucide="x"></i></button>`,
+      )
+      .join("") +
+    '<button class="clear-all" data-clear="all">清除全部</button>';
+}
+function clearFilter(key: string): void {
+  if (key === "search" || key === "all") search.value = "";
+  if (key === "category" || key === "all") category = "";
+  if (key === "vendor" || key === "all") vendor.value = "";
+  if (key === "source" || key === "all") maintainerType = "";
+  vendor.dispatchEvent(new Event("change"));
+  search.focus();
 }
 function notify(message: string): void {
   const toast = document.querySelector<HTMLElement>("#toast")!;
@@ -168,8 +206,9 @@ function initFilters(): void {
   const params = new URLSearchParams(location.search);
   search.value = params.get("q") ?? "";
   category = params.get("category") ?? "";
-  localOnly = params.get("local") === "1";
-  document.querySelector<HTMLInputElement>("#local-only")!.checked = localOnly;
+  maintainerType = ["vendor", "community"].includes(params.get("source") ?? "")
+    ? params.get("source")!
+    : "";
   if (!Object.hasOwn(categories, category)) category = "";
   vendor.value = params.get("vendor") ?? "";
   if (!vendor.value) vendor.value = "";
@@ -180,16 +219,17 @@ function initFilters(): void {
     : "stars";
 }
 function setupEvents(): void {
-  document.querySelector("#local-only")!.addEventListener("change", (event) => {
-    localOnly = (event.target as HTMLInputElement).checked;
-    render();
-  });
   [search, vendor, sort].forEach((element) =>
     element.addEventListener(element === search ? "input" : "change", render),
   );
   document.addEventListener("click", (event) => {
     const target = (event.target as HTMLElement).closest<HTMLElement>("button");
     if (!target) return;
+    if (target.dataset.clear) clearFilter(target.dataset.clear);
+    if (target.dataset.source !== undefined) {
+      maintainerType = target.dataset.source;
+      render();
+    }
     if (target.dataset.category !== undefined) {
       category = target.dataset.category;
       render();
@@ -211,13 +251,7 @@ function setupEvents(): void {
       document.querySelector<HTMLDialogElement>("#method")!.showModal(),
     );
   document.querySelector("#reset")!.addEventListener("click", () => {
-    search.value = "";
-    vendor.value = "";
-    category = "";
-    localOnly = false;
-    document.querySelector<HTMLInputElement>("#local-only")!.checked = false;
-    render();
-    search.focus();
+    clearFilter("all");
   });
   document.addEventListener("keydown", (event) => {
     if (
@@ -234,6 +268,8 @@ function setupEvents(): void {
 }
 initFilters();
 setupEvents();
+setupFilterPicker(vendor, true);
+setupFilterPicker(sort, false);
 render();
 
 setupDiscovery(showDetail, copyCommand);
