@@ -41,3 +41,25 @@
 本轮未增加账号、投票、自动审核、自动合并与定时任务；未虚构列表加载态。弹窗使用原生即时退出，没有为了退场动画延迟焦点回归。组合字标使用系统 sans 字体回退；图形本身为完整矢量。
 
 线上 Scorecard 与部署验收在发布后补记，分别报告仓库与网页分数，不混算。
+
+## 发布与线上回读
+
+- 代码：c083d5f，annotated tag v0.2.0；GitHub release 附静态站点 ZIP。
+- Cloudflare Pages 部署：https://e1bfbc70.supercli.pages.dev；正式域名 https://supercli.site/。
+- 正式首页四阶视口复验：无溢出，1/2/3/4 列，标题宽度均 ≥80px；90 条目录与新版首屏正常。
+- 正式品牌页四阶视口复验：无溢出，品牌蓝 computedStyle 为 rgb(0,47,167)。GitHub CLI 详情真实点击打开、Escape 关闭，品牌页演示可操作。
+- 未知路径仍为 HTTP 404；已加载图片中没有损坏图片。
+- Cloudflare 注入的第三方 insights beacon 被现有 `script-src self` 阻止；产品自有模块与 CSS 正常加载，无产品 JS 异常。未为非核心统计放宽 CSP。
+- 本地 5179 主检出已更新到发布代码；5180 设计 worktree 预览在交付后停止。
+
+## 用户自建 Scorecard
+
+使用 `/Users/webkubor/dev/agent-infra/scorecard/bin/scorecard.mjs` 的 `--fresh` 复测正式域名。网页分数 **7.2/10**，原始 Markdown 见 scorecard-page.md；沿用引擎原始结果，不进行二次折算。引擎 Markdown 的“/9”为其原有呈现问题，JSON score 为 0–10 分。
+
+仓库 fresh 复测先连接失败，重试后 90 秒超时，**本轮没有新的仓库分数**。不把上一版结果冒充本轮结果。
+
+网页剩余项包括 apple-touch-icon、favicon.ico、JSON-LD 与新鲜度响应头。引擎认为 sitemap 两条 URL 过少，但本站真实入口就是首页与品牌页，不为分数生成虚假页面；已有可正常加载的 SVG favicon，“标签页空白”不符合浏览器实况。WebMCP 不是本静态目录的功能范围。
+
+## 流程记录
+
+`cs land --no-cleanup` 完成主干合入。合入时自动飞书通知返回 Bot Not Enabled，已记入 cs retro；发布、站点与 GitHub release 不受影响。
