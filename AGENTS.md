@@ -23,7 +23,7 @@
 
 PR 由维护者本地核验、人工批准、手动合并。不要添加自动审核、自动批准、自动合并或定时任务。
 
-只发布已审查 main。工作流仅允许人工触发，具体运行与验收要求见 `docs/REVIEW.md`、`docs/DEPLOYMENT.md`。完成发布后必须验证真实页面和关键交互。
+只发布已审查 main。main 合并后自动构建、部署并验证线上版本；保留人工触发入口，具体运行与验收要求见 `docs/REVIEW.md`、`docs/DEPLOYMENT.md`。完成发布后必须验证真实页面和关键交互。
 
 <!-- agent-eyes:begin -->
 ## 运行时视野（vite-plugin-agent-eyes 自动维护，勿手改此块）

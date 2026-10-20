@@ -6,7 +6,7 @@
 - DNS：根域名 CNAME 指向 supercli.pages.dev，开启代理；Pages 已绑定 supercli.site。
 - 创建时间：2026-10-20；NS 传播与 TLS 激活需要按实况回读，配置完成不等于全球缓存已刷新。
 
-## 本地预览和人工发布
+## 本地预览和应急人工发布
 
 ```sh
 pnpm install --frozen-lockfile
@@ -17,7 +17,11 @@ CLOUDFLARE_ACCOUNT_ID=916ebb1b9f240bf4c8826021dd161692 pnpm exec wrangler pages 
 
 Wrangler 使用本机 owner OAuth，不在仓库落密钥。Pages 的 wrangler.toml 不能包含 account_id，应通过环境变量指定。
 
-GitHub Actions 仅保留 workflow_dispatch 手动入口，需要单独配置 Pages 专用 Token 才能使用；首期未向 GitHub 存储主账户 Token。不运行定时任务、自动 PR 审核或自动合并。
+GitHub Actions 在 main 更新后自动运行：安装锁定依赖 → 类型、数据与测试检查 → 构建 → Cloudflare Pages 部署 → 验证线上 deployment.json 的提交 SHA。PR 不触发部署，审核与合并仍由维护者完成。保留 workflow_dispatch 手动重跑入口。
+
+生产任务串行执行；部署前确认当前提交仍是最新 main，过时任务跳过，避免回退线上版本。构建或测试失败时不会部署。production 环境仅允许受保护分支，不再另加发布审批。
+
+CI 仅使用独立 Pages 部署 Token，通过 GitHub Actions Secret 注入部署步骤，密钥真源保存在 kyvault；不把账号主 Token 或 Wrangler OAuth 交给 CI。
 
 ## 分支审核
 
