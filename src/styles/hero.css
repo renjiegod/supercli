@@ -1,0 +1,131 @@
+.hero {
+  padding-block: 72px 64px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 88px;
+}
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+h1 {
+  font-size: clamp(40px, 4.9vw, 64px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2.5px;
+}
+h1 span {
+  color: var(--accent);
+}
+.intro {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+.explore {
+  margin-top: 28px;
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  font-weight: 600;
+}
+.explore:hover {
+  color: var(--accent);
+}
+.terminal {
+  background: var(--terminal);
+  color: var(--terminal-text);
+  border-radius: var(--radius-lg);
+  transform: rotate(-2deg);
+  overflow: hidden;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.terminal-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--terminal-line);
+}
+.terminal-title > span {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: var(--terminal-muted);
+}
+.terminal-title p {
+  font-size: 11px;
+  color: var(--terminal-muted);
+  text-align: right;
+  flex: 1;
+}
+.terminal-body {
+  padding: 24px 26px;
+  line-height: 1.9;
+  font-size: 13px;
+}
+.terminal-body b {
+  color: var(--success);
+  margin-right: 10px;
+}
+.dim {
+  color: var(--terminal-muted);
+}
+.terminal-success {
+  color: var(--success);
+}
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: var(--terminal-text);
+  vertical-align: middle;
+}
+.terminal-footer {
+  border-top: 1px solid var(--terminal-line);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  color: var(--terminal-muted);
+}
+.overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+  border-block: 1px solid var(--line);
+  padding: 24px 0;
+  align-items: center;
+  gap: 24px;
+}
+.overview > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.overview strong {
+  font-size: 30px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -1px;
+}
+.overview span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.overview svg {
+  width: 26px;
+  height: 26px;
+  color: var(--accent);
+}
+.overview > p {
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+}

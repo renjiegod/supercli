@@ -1,0 +1,26 @@
+name: 推荐或修正 CLI
+description: 提交工具建议，供维护者人工核验。
+title: "[CLI] "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: CLI 名称
+    validations:
+      required: true
+  - type: input
+    id: official
+    attributes:
+      label: 官方仓库或官方文档
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 用途、安装方式和使用经验
+    validations:
+      required: true
+  - type: input
+    id: icon
+    attributes:
+      label: 官方图标来源

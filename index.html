@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="发现值得装进终端的 CLI。按真实 GitHub Stars 排名，涵盖云平台、AI、开发工具与终端效率，通过 Pull Request 共同维护。"
+    />
+    <meta name="theme-color" content="#002fa7" />
+    <meta property="og:title" content="SuperCLI — 好工具，从命令行开始" />
+    <meta
+      property="og:description"
+      content="开源 CLI 发现与排行榜。社区提交，公开维护。"
+    />
+    <meta property="og:image" content="https://supercli.site/social-card.svg" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="canonical" href="https://supercli.site/" />
+    <title>SuperCLI — 发现值得装进终端的工具</title>
+  </head>
+  <body>
+    <a class="skip" href="#directory">跳到 CLI 目录</a>
+    <header class="header wrap">
+      <a class="brand" href="/" aria-label="SuperCLI 首页"
+        ><img src="/favicon.svg" alt="" width="34" height="34" />SuperCLI<span
+          class="beta"
+          >社区</span
+        ></a
+      >
+      <nav aria-label="主导航">
+        <a href="#directory">探索 CLI</a><a href="#contribute">如何贡献</a
+        ><a
+          href="https://github.com/webkubor/supercli"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i data-lucide="git-fork"></i><span>GitHub</span></a
+        >
+      </nav>
+      <a
+        class="button primary submit-link"
+        href="https://github.com/webkubor/supercli/edit/main/data/catalog.json"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><i data-lucide="plus"></i>提交 CLI</a
+      >
+    </header>
+    <main class="wrap">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">由社区维护的 CLI 目录</p>
+          <h1>好工具，<br />从<span>命令行</span>开始。</h1>
+          <p class="intro">
+            少一点重复操作，多一点心流。<br />发现下一个值得装进终端的工具。
+          </p>
+          <a class="explore" href="#directory"
+            >探索全部工具 <i data-lucide="arrow-down-right"></i
+          ></a>
+        </div>
+        <div class="terminal" aria-label="SuperCLI 使用示意">
+          <div class="terminal-title">
+            <span></span><span></span><span></span>
+            <p>your next favorite tool</p>
+          </div>
+          <div class="terminal-body">
+            <p class="dim"># 让日常工作，快一点</p>
+            <p><b>❯</b> gh pr list</p>
+            <p class="dim">#21 Add your favorite CLI</p>
+            <p class="dim">#20 Built by the community</p>
+            <br />
+            <p><b>❯</b> wrangler deploy</p>
+            <p class="terminal-success">Ready for the world.</p>
+            <br />
+            <p><b>❯</b> <span class="cursor"></span></p>
+          </div>
+          <div class="terminal-footer">
+            <i data-lucide="git-pull-request"></i>发现 · 使用 · 分享
+          </div>
+        </div>
+      </section>
+      <section class="overview" aria-label="目录概况">
+        <div><strong id="total">—</strong><span>精选 CLI</span></div>
+        <div><strong id="category-total">07</strong><span>工具分类</span></div>
+        <div>
+          <i data-lucide="git-pull-request"></i><span>通过 PR 共同维护</span>
+        </div>
+        <p>每个好用的命令，<br />都值得被更多人发现。</p>
+      </section>
+      <section id="directory" class="directory">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">找到你的下一件趁手工具</p>
+            <h2>CLI 排行榜<span class="count" id="result-count"></span></h2>
+          </div>
+          <p class="updated" id="updated"></p>
+        </div>
+        <div class="controls">
+          <label class="search"
+            ><i data-lucide="search"></i
+            ><input
+              id="search"
+              type="search"
+              placeholder="搜索名称、厂商或用途…"
+              aria-label="搜索 CLI"
+            /><kbd>/</kbd></label
+          ><label class="select-label"
+            ><span class="sr-only">筛选厂商</span
+            ><select id="vendor">
+              <option value="">全部厂商</option>
+            </select></label
+          ><label class="select-label"
+            ><span class="sr-only">排序方式</span
+            ><select id="sort">
+              <option value="stars">GitHub Stars 最多</option>
+              <option value="updated">仓库最近更新</option>
+              <option value="name">名称 A–Z</option>
+            </select></label
+          >
+        </div>
+        <div
+          id="categories"
+          class="categories"
+          role="group"
+          aria-label="工具分类"
+        ></div>
+        <label class="local-filter"
+          ><input
+            id="local-only"
+            type="checkbox"
+          />仅看本机已装工具（建站时核验快照）</label
+        >
+        <div class="ranking-note">
+          <i data-lucide="info"></i
+          ><span
+            >按所关联 GitHub 仓库的 Star
+            总数排序；非用户投票或下载量，多工具仓库共享仓库数据。</span
+          ><button id="method-open" class="text-button">排行说明</button>
+        </div>
+        <div id="catalog" class="catalog"></div>
+        <div class="empty" id="empty" hidden>
+          <i data-lucide="search-x"></i>
+          <h3>还没找到匹配的工具</h3>
+          <p>换个关键词，或把你喜欢的 CLI 提交进来。</p>
+          <button id="reset" class="button">清除筛选</button>
+        </div>
+      </section>
+      <section id="contribute" class="contribute">
+        <div class="contribute-heading">
+          <span class="contribute-symbol"
+            ><i data-lucide="git-pull-request"></i
+          ></span>
+          <h2>这个目录，<br />有你的一份。</h2>
+          <p>知道一个好用的 CLI？<br />让更多人少走一段弯路。</p>
+          <a
+            class="button primary"
+            href="https://github.com/webkubor/supercli/edit/main/data/catalog.json"
+            target="_blank"
+            rel="noopener noreferrer"
+            >提交一个 CLI<i data-lucide="arrow-up-right"></i
+          ></a>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>补充工具信息</h3>
+              <p>在公开清单里添加名称、官方仓库、用途、安装方式和图标来源。</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>发起 Pull Request</h3>
+              <p>
+                维护者在本地核对来源、安装说明、图标和页面预览，给出审核意见。
+              </p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>人工审核，手动合并</h3>
+              <p>审核通过后手动合并，在本地更新数据与预览，确认后再发布。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <footer class="wrap footer">
+      <a class="brand" href="/"
+        >SuperCLI<span class="footer-note">给终端多一点可能。</span></a
+      >
+      <p>独立社区目录 · 商标与图标归各权利人所有</p>
+      <a
+        href="https://github.com/webkubor/supercli/blob/main/CONTRIBUTING.md"
+        target="_blank"
+        rel="noopener noreferrer"
+        >贡献指南<i data-lucide="arrow-up-right"></i
+      ></a>
+    </footer>
+    <dialog id="detail" aria-labelledby="detail-title">
+      <button class="close" aria-label="关闭详情">
+        <i data-lucide="x"></i>
+      </button>
+      <div id="detail-content"></div>
+    </dialog>
+    <dialog id="method" aria-labelledby="method-title">
+      <button class="close" aria-label="关闭排行说明">
+        <i data-lucide="x"></i>
+      </button>
+      <p class="eyebrow">公开数据，明确口径</p>
+      <h2 id="method-title">这份排行怎么算？</h2>
+      <p>
+        默认按所关联 GitHub 仓库的累计 Stars 降序，同分按名称排列。Stars
+        表示仓库关注度，不代表 CLI 用户数、下载量或质量评分。
+      </p>
+      <p>
+        Wrangler（workers-sdk）、Vercel
+        等项目的数据覆盖整个仓库。界面提供快照时间，仓库归档状态会在详情里标注。仓库最近更新以
+        GitHub pushed_at 为准。
+      </p>
+      <p>
+        收录本机实际使用的工具与社区投稿。没有可比 GitHub
+        仓库的工具展示“未计分”，列在有数据条目后。PR
+        由维护者本地核验、手动合并。
+      </p>
+      <a
+        class="button"
+        href="https://github.com/webkubor/supercli/blob/main/docs/RESEARCH.md"
+        target="_blank"
+        rel="noopener noreferrer"
+        >查看参考项目与数据说明<i data-lucide="arrow-up-right"></i
+      ></a>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

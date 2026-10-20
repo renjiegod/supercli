@@ -1,0 +1,94 @@
+.contribute {
+  margin-block: 72px 64px;
+  padding: 40px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+.contribute-symbol {
+  display: inline-flex;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.contribute-symbol svg {
+  width: 22px;
+  height: 22px;
+}
+.contribute h2 {
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: -1px;
+}
+.contribute-heading > p {
+  margin-block: 16px 22px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-self: center;
+  display: grid;
+  gap: 28px;
+}
+.steps li {
+  display: flex;
+  gap: 20px;
+}
+.steps li > span {
+  font-size: 13px;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  padding-top: 3px;
+}
+.steps h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.steps p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+.footer {
+  padding-block: 24px 36px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footer .brand {
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+.footer-note {
+  font-size: 11px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 8px;
+}
+.footer > p,
+.footer > a:last-child {
+  font-size: 10px;
+  color: var(--muted);
+}
+.footer > a:last-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer svg {
+  width: 12px;
+  height: 12px;
+}

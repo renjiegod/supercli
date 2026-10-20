@@ -1,0 +1,4 @@
+name = "supercli"
+account_id = "916ebb1b9f240bf4c8826021dd161692"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-20"
