@@ -8,7 +8,7 @@
   "repository": "https://github.com/webkubor/supercli",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "check": "tsc --noEmit && node scripts/validate.mjs && tsx --test scripts/catalog.test.mjs",
+    "check": "tsc --noEmit && node scripts/validate.mjs && tsx --test scripts/*.test.mjs",
     "build": "pnpm check && vite build",
     "sync": "node scripts/sync.mjs",
     "preview": "vite preview --host 127.0.0.1"

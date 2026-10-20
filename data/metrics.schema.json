@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["fetchedAt", "source", "repositories"],
+  "properties": {
+    "fetchedAt": {
+      "type": "string",
+      "format": "timestamp"
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repositories": {
+      "type": "object",
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "null"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "repo",
+              "stars",
+              "forks",
+              "pushedAt",
+              "archived",
+              "language",
+              "license"
+            ],
+            "properties": {
+              "stars": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "forks": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "pushedAt": {
+                "type": "string",
+                "format": "timestamp"
+              },
+              "archived": {
+                "type": "boolean"
+              },
+              "language": {
+                "type": ["string", "null"],
+                "pattern": "^[^<>]*$"
+              },
+              "license": {
+                "type": ["string", "null"],
+                "pattern": "^[^<>]*$"
+              },
+              "repo": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+$"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

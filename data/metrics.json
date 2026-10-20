@@ -3,6 +3,7 @@
   "source": "GitHub REST API /repos/{owner}/{repo}",
   "repositories": {
     "wrangler": {
+      "repo": "cloudflare/workers-sdk",
       "stars": 4636,
       "forks": 1604,
       "pushedAt": "2026-10-20T09:19:39Z",
@@ -11,6 +12,7 @@
       "license": "Apache-2.0"
     },
     "tccli": {
+      "repo": "TencentCloud/tencentcloud-cli",
       "stars": 136,
       "forks": 33,
       "pushedAt": "2026-10-19T18:42:08Z",
@@ -19,6 +21,7 @@
       "license": "Apache-2.0"
     },
     "aliyun": {
+      "repo": "aliyun/aliyun-cli",
       "stars": 1119,
       "forks": 236,
       "pushedAt": "2026-10-20T02:20:18Z",
@@ -27,6 +30,7 @@
       "license": "Apache-2.0"
     },
     "aws": {
+      "repo": "aws/aws-cli",
       "stars": 17314,
       "forks": 4733,
       "pushedAt": "2026-10-20T06:23:18Z",
@@ -35,6 +39,7 @@
       "license": "NOASSERTION"
     },
     "azure": {
+      "repo": "Azure/azure-cli",
       "stars": 4651,
       "forks": 3515,
       "pushedAt": "2026-10-20T07:47:28Z",
@@ -43,6 +48,7 @@
       "license": "MIT"
     },
     "vercel": {
+      "repo": "vercel/vercel",
       "stars": 16414,
       "forks": 3862,
       "pushedAt": "2026-10-20T08:25:07Z",
@@ -51,6 +57,7 @@
       "license": "Apache-2.0"
     },
     "supabase": {
+      "repo": "supabase/cli",
       "stars": 2439,
       "forks": 536,
       "pushedAt": "2026-10-20T09:09:09Z",
@@ -59,6 +66,7 @@
       "license": null
     },
     "firebase": {
+      "repo": "firebase/firebase-tools",
       "stars": 4476,
       "forks": 1269,
       "pushedAt": "2026-10-20T02:31:38Z",
@@ -67,6 +75,7 @@
       "license": "MIT"
     },
     "codex": {
+      "repo": "openai/codex",
       "stars": 130031,
       "forks": 20487,
       "pushedAt": "2026-10-20T09:53:51Z",
@@ -75,6 +84,7 @@
       "license": "Apache-2.0"
     },
     "claude": {
+      "repo": "anthropics/claude-code",
       "stars": 152861,
       "forks": 27155,
       "pushedAt": "2026-10-19T23:06:46Z",
@@ -83,6 +93,7 @@
       "license": null
     },
     "gemini": {
+      "repo": "google-gemini/gemini-cli",
       "stars": 107463,
       "forks": 14746,
       "pushedAt": "2026-10-20T01:33:51Z",
@@ -91,6 +102,7 @@
       "license": "Apache-2.0"
     },
     "opencode": {
+      "repo": "anomalyco/opencode",
       "stars": 218292,
       "forks": 29155,
       "pushedAt": "2026-10-20T10:02:09Z",
@@ -99,6 +111,7 @@
       "license": "MIT"
     },
     "aider": {
+      "repo": "Aider-AI/aider",
       "stars": 49653,
       "forks": 5087,
       "pushedAt": "2026-05-22T14:02:20Z",
@@ -107,6 +120,7 @@
       "license": "Apache-2.0"
     },
     "gh": {
+      "repo": "cli/cli",
       "stars": 46702,
       "forks": 9194,
       "pushedAt": "2026-10-19T18:28:39Z",
@@ -115,6 +129,7 @@
       "license": "MIT"
     },
     "lazygit": {
+      "repo": "jesseduffield/lazygit",
       "stars": 83312,
       "forks": 3108,
       "pushedAt": "2026-10-17T11:06:26Z",
@@ -123,6 +138,7 @@
       "license": "MIT"
     },
     "docker": {
+      "repo": "docker/cli",
       "stars": 6094,
       "forks": 2221,
       "pushedAt": "2026-10-19T15:06:27Z",
@@ -131,6 +147,7 @@
       "license": "Apache-2.0"
     },
     "helm": {
+      "repo": "helm/helm",
       "stars": 30348,
       "forks": 7855,
       "pushedAt": "2026-10-19T21:39:46Z",
@@ -139,6 +156,7 @@
       "license": "Apache-2.0"
     },
     "rg": {
+      "repo": "BurntSushi/ripgrep",
       "stars": 69266,
       "forks": 5837,
       "pushedAt": "2026-08-04T13:59:44Z",
@@ -147,6 +165,7 @@
       "license": "Unlicense"
     },
     "fzf": {
+      "repo": "junegunn/fzf",
       "stars": 83687,
       "forks": 5773,
       "pushedAt": "2026-10-17T02:11:02Z",
@@ -155,6 +174,7 @@
       "license": "MIT"
     },
     "bat": {
+      "repo": "sharkdp/bat",
       "stars": 60854,
       "forks": 4827,
       "pushedAt": "2026-10-17T11:57:57Z",
@@ -163,6 +183,7 @@
       "license": "Apache-2.0"
     },
     "fd": {
+      "repo": "sharkdp/fd",
       "stars": 44803,
       "forks": 1175,
       "pushedAt": "2026-10-20T07:45:47Z",
@@ -171,6 +192,7 @@
       "license": "Apache-2.0"
     },
     "zoxide": {
+      "repo": "ajeetdsouza/zoxide",
       "stars": 40209,
       "forks": 933,
       "pushedAt": "2026-10-18T00:08:44Z",
@@ -179,6 +201,7 @@
       "license": "MIT"
     },
     "starship": {
+      "repo": "starship/starship",
       "stars": 60353,
       "forks": 2725,
       "pushedAt": "2026-10-20T06:29:56Z",
@@ -187,6 +210,7 @@
       "license": "ISC"
     },
     "jq": {
+      "repo": "jqlang/jq",
       "stars": 35870,
       "forks": 4927,
       "pushedAt": "2026-10-16T12:50:47Z",
@@ -195,6 +219,7 @@
       "license": "NOASSERTION"
     },
     "httpie": {
+      "repo": "httpie/cli",
       "stars": 38659,
       "forks": 4024,
       "pushedAt": "2024-12-17T17:30:35Z",
@@ -203,6 +228,7 @@
       "license": "BSD-3-Clause"
     },
     "rclone": {
+      "repo": "rclone/rclone",
       "stars": 60429,
       "forks": 5551,
       "pushedAt": "2026-10-20T09:49:46Z",
@@ -211,6 +237,7 @@
       "license": "MIT"
     },
     "uv": {
+      "repo": "astral-sh/uv",
       "stars": 90921,
       "forks": 3676,
       "pushedAt": "2026-10-20T08:16:46Z",
@@ -219,6 +246,7 @@
       "license": "Apache-2.0"
     },
     "pnpm": {
+      "repo": "pnpm/pnpm",
       "stars": 36860,
       "forks": 1950,
       "pushedAt": "2026-10-20T09:56:46Z",
@@ -227,6 +255,7 @@
       "license": "MIT"
     },
     "cf": {
+      "repo": "cloudflare/cf",
       "stars": 909,
       "forks": 52,
       "pushedAt": "2026-10-20T09:50:24Z",
@@ -235,6 +264,7 @@
       "license": "Apache-2.0"
     },
     "cloudflared": {
+      "repo": "cloudflare/cloudflared",
       "stars": 16190,
       "forks": 1488,
       "pushedAt": "2026-10-20T09:10:56Z",
@@ -243,6 +273,7 @@
       "license": "Apache-2.0"
     },
     "dsh": {
+      "repo": "deepseek-ai/deepseek-harness",
       "stars": 255102,
       "forks": 30826,
       "pushedAt": "2026-10-17T08:16:09Z",
@@ -251,6 +282,7 @@
       "license": "MIT"
     },
     "grok": {
+      "repo": "xai-org/grok-build",
       "stars": 27464,
       "forks": 5192,
       "pushedAt": "2026-09-29T16:57:13Z",
@@ -259,6 +291,7 @@
       "license": "Apache-2.0"
     },
     "mmx": {
+      "repo": "MiniMax-AI/cli",
       "stars": 2198,
       "forks": 195,
       "pushedAt": "2026-10-19T10:26:46Z",
@@ -267,6 +300,7 @@
       "license": null
     },
     "hermes": {
+      "repo": "NousResearch/hermes-agent",
       "stars": 255399,
       "forks": 55628,
       "pushedAt": "2026-10-20T09:56:05Z",
@@ -275,6 +309,7 @@
       "license": "MIT"
     },
     "lark": {
+      "repo": "larksuite/cli",
       "stars": 17756,
       "forks": 1400,
       "pushedAt": "2026-10-19T14:11:11Z",
@@ -283,6 +318,7 @@
       "license": "MIT"
     },
     "museav": {
+      "repo": "webkubor/museav-cli",
       "stars": 33,
       "forks": 7,
       "pushedAt": "2026-10-20T07:51:53Z",
@@ -291,6 +327,7 @@
       "license": "MIT"
     },
     "kyvault": {
+      "repo": "webkubor/kyvault",
       "stars": 55,
       "forks": 11,
       "pushedAt": "2026-10-19T13:19:41Z",
@@ -299,6 +336,7 @@
       "license": "MIT"
     },
     "ego": {
+      "repo": "webkubor/ego-lite",
       "stars": 0,
       "forks": 0,
       "pushedAt": "2026-10-15T07:51:16Z",
@@ -307,6 +345,7 @@
       "license": "MIT"
     },
     "agent-reach": {
+      "repo": "Panniantong/agent-reach",
       "stars": 100008,
       "forks": 8838,
       "pushedAt": "2026-10-20T09:11:41Z",
@@ -315,6 +354,7 @@
       "license": "MIT"
     },
     "path-guard": {
+      "repo": "webkubor/path-guard",
       "stars": 18,
       "forks": 4,
       "pushedAt": "2026-09-29T06:37:16Z",
@@ -323,6 +363,7 @@
       "license": "MIT"
     },
     "vlm": {
+      "repo": "webkubor/mlx-vlm-kit",
       "stars": 16,
       "forks": 4,
       "pushedAt": "2026-10-13T14:10:47Z",
@@ -331,6 +372,7 @@
       "license": "MIT"
     },
     "crawl4ai": {
+      "repo": "unclecode/crawl4ai",
       "stars": 85897,
       "forks": 8937,
       "pushedAt": "2026-10-20T02:43:56Z",
@@ -339,6 +381,7 @@
       "license": "Apache-2.0"
     },
     "playwright": {
+      "repo": "microsoft/playwright",
       "stars": 98134,
       "forks": 6659,
       "pushedAt": "2026-10-20T02:59:45Z",
@@ -347,6 +390,7 @@
       "license": "Apache-2.0"
     },
     "frida": {
+      "repo": "frida/frida",
       "stars": 22387,
       "forks": 2265,
       "pushedAt": "2026-10-20T07:48:57Z",
@@ -355,6 +399,7 @@
       "license": "NOASSERTION"
     },
     "git-filter-repo": {
+      "repo": "newren/git-filter-repo",
       "stars": 13417,
       "forks": 1017,
       "pushedAt": "2026-07-09T22:09:49Z",
@@ -363,6 +408,7 @@
       "license": "NOASSERTION"
     },
     "hf": {
+      "repo": "huggingface/huggingface_hub",
       "stars": 3991,
       "forks": 1287,
       "pushedAt": "2026-10-20T09:48:05Z",
@@ -371,6 +417,7 @@
       "license": "Apache-2.0"
     },
     "octodns": {
+      "repo": "octodns/octodns",
       "stars": 3774,
       "forks": 449,
       "pushedAt": "2026-10-19T20:10:06Z",
@@ -379,6 +426,7 @@
       "license": "MIT"
     },
     "milvus": {
+      "repo": "milvus-io/milvus-lite",
       "stars": 465,
       "forks": 76,
       "pushedAt": "2026-10-16T07:07:14Z",
@@ -387,6 +435,7 @@
       "license": "Apache-2.0"
     },
     "mise": {
+      "repo": "jdx/mise",
       "stars": 35195,
       "forks": 1489,
       "pushedAt": "2026-10-20T09:59:26Z",
@@ -398,6 +447,7 @@
     "mimo": null,
     "glab": null,
     "apktool": {
+      "repo": "iBotPeaches/Apktool",
       "stars": 26265,
       "forks": 4080,
       "pushedAt": "2026-10-17T10:46:18Z",
@@ -406,6 +456,7 @@
       "license": "Apache-2.0"
     },
     "binwalk": {
+      "repo": "ReFirmLabs/binwalk",
       "stars": 14518,
       "forks": 1855,
       "pushedAt": "2026-08-11T15:27:34Z",
@@ -414,6 +465,7 @@
       "license": "MIT"
     },
     "cmake": {
+      "repo": "Kitware/CMake",
       "stars": 8131,
       "forks": 2710,
       "pushedAt": "2026-10-20T04:13:03Z",
@@ -422,6 +474,7 @@
       "license": "BSD-3-Clause"
     },
     "cocoapods": {
+      "repo": "CocoaPods/CocoaPods",
       "stars": 14833,
       "forks": 2681,
       "pushedAt": "2026-07-06T21:36:05Z",
@@ -430,6 +483,7 @@
       "license": "NOASSERTION"
     },
     "dnscontrol": {
+      "repo": "StackExchange/dnscontrol",
       "stars": 3977,
       "forks": 549,
       "pushedAt": "2026-10-18T20:22:59Z",
@@ -438,6 +492,7 @@
       "license": "MIT"
     },
     "ffmpeg": {
+      "repo": "FFmpeg/FFmpeg",
       "stars": 65455,
       "forks": 14391,
       "pushedAt": "2026-10-20T09:31:42Z",
@@ -446,6 +501,7 @@
       "license": "NOASSERTION"
     },
     "ffuf": {
+      "repo": "ffuf/ffuf",
       "stars": 16911,
       "forks": 1623,
       "pushedAt": "2026-09-26T08:58:08Z",
@@ -454,6 +510,7 @@
       "license": "MIT"
     },
     "git": {
+      "repo": "git/git",
       "stars": 63906,
       "forks": 28585,
       "pushedAt": "2026-10-20T04:31:16Z",
@@ -462,6 +519,7 @@
       "license": "NOASSERTION"
     },
     "git-lfs": {
+      "repo": "git-lfs/git-lfs",
       "stars": 14557,
       "forks": 2268,
       "pushedAt": "2026-10-01T04:52:14Z",
@@ -470,6 +528,7 @@
       "license": "NOASSERTION"
     },
     "go": {
+      "repo": "golang/go",
       "stars": 139409,
       "forks": 22736,
       "pushedAt": "2026-10-20T02:41:08Z",
@@ -478,6 +537,7 @@
       "license": "BSD-3-Clause"
     },
     "hashcat": {
+      "repo": "hashcat/hashcat",
       "stars": 27031,
       "forks": 3582,
       "pushedAt": "2026-10-20T05:42:41Z",
@@ -486,6 +546,7 @@
       "license": null
     },
     "jadx": {
+      "repo": "skylot/jadx",
       "stars": 51124,
       "forks": 5835,
       "pushedAt": "2026-10-14T22:10:04Z",
@@ -494,6 +555,7 @@
       "license": "Apache-2.0"
     },
     "mas": {
+      "repo": "mas-cli/mas",
       "stars": 12401,
       "forks": 301,
       "pushedAt": "2026-10-19T12:45:33Z",
@@ -502,6 +564,7 @@
       "license": "MIT"
     },
     "nginx": {
+      "repo": "nginx/nginx",
       "stars": 31926,
       "forks": 8330,
       "pushedAt": "2026-10-19T18:24:18Z",
@@ -510,6 +573,7 @@
       "license": "BSD-2-Clause"
     },
     "nmap": {
+      "repo": "nmap/nmap",
       "stars": 13831,
       "forks": 2937,
       "pushedAt": "2026-10-19T20:00:05Z",
@@ -518,6 +582,7 @@
       "license": "NOASSERTION"
     },
     "nuclei": {
+      "repo": "projectdiscovery/nuclei",
       "stars": 32160,
       "forks": 3975,
       "pushedAt": "2026-10-20T05:49:11Z",
@@ -526,6 +591,7 @@
       "license": "MIT"
     },
     "ollama": {
+      "repo": "ollama/ollama",
       "stars": 183937,
       "forks": 18431,
       "pushedAt": "2026-10-20T01:51:51Z",
@@ -534,6 +600,7 @@
       "license": "MIT"
     },
     "pipx": {
+      "repo": "pypa/pipx",
       "stars": 12977,
       "forks": 728,
       "pushedAt": "2026-10-19T19:26:08Z",
@@ -542,6 +609,7 @@
       "license": "MIT"
     },
     "plantuml": {
+      "repo": "plantuml/plantuml",
       "stars": 13375,
       "forks": 1239,
       "pushedAt": "2026-10-19T22:38:14Z",
@@ -550,6 +618,7 @@
       "license": "LGPL-3.0"
     },
     "python": {
+      "repo": "python/cpython",
       "stars": 77770,
       "forks": 38768,
       "pushedAt": "2026-10-20T09:39:30Z",
@@ -558,6 +627,7 @@
       "license": "NOASSERTION"
     },
     "radare2": {
+      "repo": "radareorg/radare2",
       "stars": 25105,
       "forks": 3370,
       "pushedAt": "2026-10-20T09:51:42Z",
@@ -566,6 +636,7 @@
       "license": "NOASSERTION"
     },
     "railway": {
+      "repo": "railwayapp/cli",
       "stars": 622,
       "forks": 206,
       "pushedAt": "2026-10-19T22:25:00Z",
@@ -574,6 +645,7 @@
       "license": "MIT"
     },
     "rust": {
+      "repo": "rust-lang/rust",
       "stars": 120625,
       "forks": 19115,
       "pushedAt": "2026-10-20T09:46:02Z",
@@ -582,6 +654,7 @@
       "license": "Apache-2.0"
     },
     "sqlmap": {
+      "repo": "sqlmapproject/sqlmap",
       "stars": 38746,
       "forks": 6413,
       "pushedAt": "2026-10-20T08:07:38Z",
@@ -590,6 +663,7 @@
       "license": "NOASSERTION"
     },
     "summarize": {
+      "repo": "steipete/summarize",
       "stars": 6726,
       "forks": 455,
       "pushedAt": "2026-10-19T21:52:29Z",
@@ -598,6 +672,7 @@
       "license": "MIT"
     },
     "terminal-notifier": {
+      "repo": "julienXX/terminal-notifier",
       "stars": 7361,
       "forks": 360,
       "pushedAt": "2026-08-30T13:06:54Z",
@@ -606,6 +681,7 @@
       "license": "NOASSERTION"
     },
     "tmux": {
+      "repo": "tmux/tmux",
       "stars": 49938,
       "forks": 2973,
       "pushedAt": "2026-10-20T09:21:51Z",
@@ -614,6 +690,7 @@
       "license": "ISC"
     },
     "watchman": {
+      "repo": "facebook/watchman",
       "stars": 13743,
       "forks": 1071,
       "pushedAt": "2026-10-20T05:22:30Z",
@@ -622,6 +699,7 @@
       "license": "MIT"
     },
     "whisper": {
+      "repo": "ggml-org/whisper.cpp",
       "stars": 54500,
       "forks": 6271,
       "pushedAt": "2026-10-19T14:14:00Z",
@@ -630,6 +708,7 @@
       "license": "MIT"
     },
     "yara": {
+      "repo": "VirusTotal/yara",
       "stars": 9960,
       "forks": 1587,
       "pushedAt": "2026-10-15T13:43:02Z",
@@ -638,6 +717,7 @@
       "license": "BSD-3-Clause"
     },
     "rtk": {
+      "repo": "rtk-ai/rtk",
       "stars": 84024,
       "forks": 5337,
       "pushedAt": "2026-10-20T00:07:16Z",
@@ -646,6 +726,7 @@
       "license": "Apache-2.0"
     },
     "psql": {
+      "repo": "postgres/postgres",
       "stars": 22477,
       "forks": 5983,
       "pushedAt": "2026-10-20T06:08:02Z",
@@ -654,6 +735,7 @@
       "license": "NOASSERTION"
     },
     "java": {
+      "repo": "openjdk/jdk",
       "stars": 23448,
       "forks": 6507,
       "pushedAt": "2026-10-20T09:51:08Z",
@@ -662,6 +744,7 @@
       "license": "GPL-2.0"
     },
     "sox": {
+      "repo": "chirlu/sox",
       "stars": 968,
       "forks": 128,
       "pushedAt": "2023-11-24T21:01:06Z",

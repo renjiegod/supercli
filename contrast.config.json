@@ -1,0 +1,109 @@
+{
+  "files": [
+    "src/styles/base.css"
+  ],
+  "pairs": [
+    {
+      "fg": "ink",
+      "bg": "bg",
+      "min": 4.5,
+      "label": "正文 / bg"
+    },
+    {
+      "fg": "ink",
+      "bg": "surface",
+      "min": 4.5,
+      "label": "正文 / surface"
+    },
+    {
+      "fg": "ink",
+      "bg": "surface-hover",
+      "min": 4.5,
+      "label": "正文 / surface-hover"
+    },
+    {
+      "fg": "muted",
+      "bg": "bg",
+      "min": 4.5,
+      "label": "次要文字 / bg"
+    },
+    {
+      "fg": "muted",
+      "bg": "surface",
+      "min": 4.5,
+      "label": "次要文字 / surface"
+    },
+    {
+      "fg": "muted",
+      "bg": "surface-hover",
+      "min": 4.5,
+      "label": "次要文字 / surface-hover"
+    },
+    {
+      "fg": "faint",
+      "bg": "bg",
+      "min": 4.5,
+      "label": "弱文字 / bg"
+    },
+    {
+      "fg": "faint",
+      "bg": "surface",
+      "min": 4.5,
+      "label": "弱文字 / surface"
+    },
+    {
+      "fg": "faint",
+      "bg": "surface-hover",
+      "min": 4.5,
+      "label": "弱文字 / surface-hover"
+    },
+    {
+      "fg": "on-accent",
+      "bg": "accent",
+      "min": 4.5,
+      "label": "主按钮 / accent"
+    },
+    {
+      "fg": "on-accent",
+      "bg": "accent-hover",
+      "min": 4.5,
+      "label": "主按钮 / accent-hover"
+    },
+    {
+      "fg": "terminal-text",
+      "bg": "terminal",
+      "min": 4.5,
+      "label": "终端正文"
+    },
+    {
+      "fg": "terminal-muted",
+      "bg": "terminal",
+      "min": 4.5,
+      "label": "终端次要文字"
+    },
+    {
+      "fg": "success",
+      "bg": "terminal",
+      "min": 4.5,
+      "label": "终端成功状态"
+    },
+    {
+      "fg": "accent",
+      "bg": "bg",
+      "min": 4.5,
+      "label": "链接 / bg"
+    },
+    {
+      "fg": "accent",
+      "bg": "surface",
+      "min": 4.5,
+      "label": "链接 / surface"
+    },
+    {
+      "fg": "accent",
+      "bg": "surface-hover",
+      "min": 4.5,
+      "label": "链接 / surface-hover"
+    }
+  ]
+}

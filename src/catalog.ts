@@ -17,6 +17,7 @@ export interface Entry {
 }
 /** 指标只表示仓库关注度，无可比数据的条目为 null。 */
 export interface Metric {
+  readonly repo: string;
   readonly stars: number;
   readonly forks: number;
   readonly pushedAt: string;

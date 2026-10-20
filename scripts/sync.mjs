@@ -1,9 +1,30 @@
 /** 手动拉取 GitHub 官方指标；网络失败有界重试，完整成功后原子写入快照。 */
-import { readFile, writeFile, rename, access } from "node:fs/promises";
+import { readFile, writeFile, rename, access, lstat } from "node:fs/promises";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import { validateCatalog, validateMetrics } from "./validation.mjs";
 const execute = promisify(execFile);
 const catalog = JSON.parse(await readFile("data/catalog.json", "utf8"));
+validateCatalog(catalog);
+/** 任何联网前拒绝图标父目录及目标符号链接，避免校验后越界写盘。 */
+async function validateIconPaths() {
+  for (const path of [
+    "public",
+    "public/icons",
+    ...catalog.map((item) => `public/icons/${item.icon}`),
+  ]) {
+    try {
+      const info = await lstat(path);
+      if (info.isSymbolicLink())
+        throw new Error(`图标路径禁止符号链接: ${path}`);
+      if ((path === "public" || path === "public/icons") && !info.isDirectory())
+        throw new Error(`图标父路径不是目录: ${path}`);
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+  }
+}
+if (process.argv.includes("--icons")) await validateIconPaths();
 const headers = {
   Accept: "application/vnd.github+json",
   "User-Agent": "SuperCLI-directory",
@@ -50,7 +71,9 @@ async function syncIcon(item, repo) {
     `Icon ${item.icon}`,
   );
   if (!response.ok) throw new Error(`Icon ${item.icon}: ${response.status}`);
-  await writeFile(path, Buffer.from(await response.arrayBuffer()));
+  await writeFile(path, Buffer.from(await response.arrayBuffer()), {
+    flag: "wx",
+  });
 }
 async function syncItem(item) {
   if (!item.repo) return [item.id, null];
@@ -60,6 +83,7 @@ async function syncItem(item) {
   return [
     item.id,
     {
+      repo: item.repo,
       stars: repo.stargazers_count,
       forks: repo.forks_count,
       pushedAt: repo.pushed_at,
@@ -79,6 +103,7 @@ const snapshot = {
   source: "GitHub REST API /repos/{owner}/{repo}",
   repositories: Object.fromEntries(rows),
 };
+validateMetrics(snapshot, catalog);
 await writeFile(
   "data/metrics.json.tmp",
   JSON.stringify(snapshot, null, 2) + "\n",

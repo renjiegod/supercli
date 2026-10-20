@@ -34,6 +34,7 @@ import {
   stats,
   type Entry,
 } from "./catalog";
+import { escapeHtml as escape, detailMarkup } from "./html";
 import "./style.css";
 const root = document.querySelector<HTMLElement>("#catalog")!;
 const search = document.querySelector<HTMLInputElement>("#search")!;
@@ -49,18 +50,10 @@ const number = (n: number) =>
     notation: "compact",
     maximumFractionDigits: 1,
   }).format(n);
-const escape = (value: string) =>
-  value.replace(
-    /[&<>"']/g,
-    (char) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
-        char
-      ]!,
-  );
 function card(item: Entry, index: number): string {
   const metric = stats(item);
   const destination = item.repo ? `https://github.com/${item.repo}` : item.docs;
-  return `<article class="card"><div class="card-top"><span class="rank">${sort.value === "stars" && !metric ? "—" : String(index + 1).padStart(2, "0")}</span><img class="vendor-icon" src="/icons/${item.icon}" alt="${escape(item.vendor)} 工具图标" width="40" height="40" loading="lazy"><span class="tag">${categories[item.category as keyof typeof categories]}</span></div><button class="card-title" data-detail="${item.id}">${escape(item.name)}<i data-lucide="arrow-up-right"></i></button><p class="vendor-name">${escape(item.vendor)}</p><p class="description">${escape(item.description)}</p><div class="card-bottom"><a href="${destination}" target="_blank" rel="noopener noreferrer" aria-label="${escape(item.name)} 的官方来源"><i data-lucide="star"></i>${metric ? number(metric.stars) : "未计分"}<span>${metric ? "Stars" : "官方文档"}</span></a><button class="copy" data-copy="${item.id}" aria-label="复制 ${escape(item.name)} 安装命令"><i data-lucide="copy"></i>${item.install ? "安装" : "详情"}</button></div></article>`;
+  return `<article class="card"><div class="card-top"><span class="rank">${sort.value === "stars" && !metric ? "—" : String(index + 1).padStart(2, "0")}</span><img class="vendor-icon" src="/icons/${escape(item.icon)}" alt="${escape(item.vendor)} 工具图标" width="40" height="40" loading="lazy"><span class="tag">${escape(categories[item.category as keyof typeof categories])}</span></div><button class="card-title" data-detail="${escape(item.id)}">${escape(item.name)}<i data-lucide="arrow-up-right"></i></button><p class="vendor-name">${escape(item.vendor)}</p><p class="description">${escape(item.description)}</p><div class="card-bottom"><a href="${escape(destination)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(item.name)} 的官方来源"><i data-lucide="star"></i>${metric ? number(metric.stars) : "未计分"}<span>${metric ? "Stars" : "官方文档"}</span></a><button class="copy" data-copy="${escape(item.id)}" aria-label="复制 ${escape(item.name)} 安装命令"><i data-lucide="copy"></i>${item.install ? "安装" : "详情"}</button></div></article>`;
 }
 function render(): void {
   const items = queryEntries(
@@ -116,8 +109,10 @@ async function copyCommand(item: Entry): Promise<void> {
 }
 function showDetail(item: Entry): void {
   const data = stats(item);
-  document.querySelector("#detail-content")!.innerHTML =
-    `<img class="detail-icon" src="/icons/${item.icon}" alt="${escape(item.vendor)} 工具图标"><p class="eyebrow">${escape(item.vendor)} / ${categories[item.category as keyof typeof categories]}</p><h2 id="detail-title">${escape(item.name)}</h2><p>${escape(item.description)}</p><div class="detail-stats"><span>${data ? number(data.stars) + " Stars" : "未计分"}</span><span>${data?.language ?? "无可比 GitHub 指标"}</span><span>${data ? (data.archived ? "仓库已归档" : "仓库未归档") : "官方来源收录"}</span></div><h3>安装命令</h3><p class="install-note">复制后请先阅读官方文档，按你的系统与运行环境安装。</p><div class="install"><code>${escape(item.install ?? "请按官方文档安装；本站不提供未经核实的命令。")}</code>${item.install ? `<button class="button" data-copy="${item.id}">复制</button>` : ""}</div><div class="detail-links"><a class="button primary" href="${item.docs}" target="_blank" rel="noopener noreferrer">官方文档<i data-lucide="arrow-up-right"></i></a>${item.repo ? `<a class="button" href="https://github.com/${item.repo}" target="_blank" rel="noopener noreferrer">源码仓库</a>` : ""}</div><p class="detail-meta">仓库最近推送：${data ? new Date(data.pushedAt).toLocaleDateString("zh-CN") : "不适用"} · 许可证：${data?.license ?? "见官方文档"}<br>图标来源：官方组织、维护者或标注出处的品牌资产，详见仓库 docs/ICONS.md。</p><a class="feedback" href="https://github.com/webkubor/supercli/issues/new?title=${encodeURIComponent(`修正 ${item.name} 信息`)}" target="_blank" rel="noopener noreferrer">信息有误？提交修正</a>`;
+  document.querySelector("#detail-content")!.innerHTML = detailMarkup(
+    item,
+    data,
+  );
   if (!detail.open) detail.showModal();
   iconify();
 }
@@ -141,7 +136,7 @@ function initFilters(): void {
   ]
     .map(
       ([id, label]) =>
-        `<button data-category="${id}" aria-pressed="${id === ""}">${label}<span>${catalog.filter((item) => !id || item.category === id).length}</span></button>`,
+        `<button data-category="${escape(id)}" aria-pressed="${id === ""}">${escape(label)}<span>${catalog.filter((item) => !id || item.category === id).length}</span></button>`,
     )
     .join("");
   const params = new URLSearchParams(location.search);
@@ -149,7 +144,7 @@ function initFilters(): void {
   category = params.get("category") ?? "";
   localOnly = params.get("local") === "1";
   document.querySelector<HTMLInputElement>("#local-only")!.checked = localOnly;
-  if (!(category in categories)) category = "";
+  if (!Object.hasOwn(categories, category)) category = "";
   vendor.value = params.get("vendor") ?? "";
   if (!vendor.value) vendor.value = "";
   sort.value = ["stars", "updated", "name"].includes(params.get("sort") ?? "")
