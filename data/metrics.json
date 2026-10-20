@@ -1,12 +1,12 @@
 {
-  "fetchedAt": "2026-10-20T10:02:55.097Z",
+  "fetchedAt": "2026-10-20T12:20:27.009Z",
   "source": "GitHub REST API /repos/{owner}/{repo}",
   "repositories": {
     "wrangler": {
       "repo": "cloudflare/workers-sdk",
       "stars": 4636,
       "forks": 1604,
-      "pushedAt": "2026-10-20T09:19:39Z",
+      "pushedAt": "2026-10-20T12:14:15Z",
       "archived": false,
       "language": "TypeScript",
       "license": "Apache-2.0"
@@ -15,16 +15,16 @@
       "repo": "TencentCloud/tencentcloud-cli",
       "stars": 136,
       "forks": 33,
-      "pushedAt": "2026-10-19T18:42:08Z",
+      "pushedAt": "2026-10-20T11:21:52Z",
       "archived": false,
       "language": "Python",
       "license": "Apache-2.0"
     },
     "aliyun": {
       "repo": "aliyun/aliyun-cli",
-      "stars": 1119,
+      "stars": 1118,
       "forks": 236,
-      "pushedAt": "2026-10-20T02:20:18Z",
+      "pushedAt": "2026-10-20T12:11:31Z",
       "archived": false,
       "language": "Go",
       "license": "Apache-2.0"
@@ -49,7 +49,7 @@
     },
     "vercel": {
       "repo": "vercel/vercel",
-      "stars": 16414,
+      "stars": 16415,
       "forks": 3862,
       "pushedAt": "2026-10-20T08:25:07Z",
       "archived": false,
@@ -60,7 +60,7 @@
       "repo": "supabase/cli",
       "stars": 2439,
       "forks": 536,
-      "pushedAt": "2026-10-20T09:09:09Z",
+      "pushedAt": "2026-10-20T11:46:19Z",
       "archived": false,
       "language": "TypeScript",
       "license": null
@@ -76,17 +76,17 @@
     },
     "codex": {
       "repo": "openai/codex",
-      "stars": 130031,
-      "forks": 20487,
-      "pushedAt": "2026-10-20T09:53:51Z",
+      "stars": 130313,
+      "forks": 20531,
+      "pushedAt": "2026-10-20T11:56:35Z",
       "archived": false,
       "language": "Rust",
       "license": "Apache-2.0"
     },
     "claude": {
       "repo": "anthropics/claude-code",
-      "stars": 152861,
-      "forks": 27155,
+      "stars": 152877,
+      "forks": 27179,
       "pushedAt": "2026-10-19T23:06:46Z",
       "archived": false,
       "language": "TypeScript",
@@ -94,8 +94,8 @@
     },
     "gemini": {
       "repo": "google-gemini/gemini-cli",
-      "stars": 107463,
-      "forks": 14746,
+      "stars": 107462,
+      "forks": 14745,
       "pushedAt": "2026-10-20T01:33:51Z",
       "archived": false,
       "language": "TypeScript",
@@ -103,16 +103,16 @@
     },
     "opencode": {
       "repo": "anomalyco/opencode",
-      "stars": 218292,
-      "forks": 29155,
-      "pushedAt": "2026-10-20T10:02:09Z",
+      "stars": 218392,
+      "forks": 29165,
+      "pushedAt": "2026-10-20T12:18:10Z",
       "archived": false,
       "language": "TypeScript",
       "license": "MIT"
     },
     "aider": {
       "repo": "Aider-AI/aider",
-      "stars": 49653,
+      "stars": 49659,
       "forks": 5087,
       "pushedAt": "2026-05-22T14:02:20Z",
       "archived": false,
@@ -121,7 +121,7 @@
     },
     "gh": {
       "repo": "cli/cli",
-      "stars": 46702,
+      "stars": 46701,
       "forks": 9194,
       "pushedAt": "2026-10-19T18:28:39Z",
       "archived": false,
@@ -130,8 +130,8 @@
     },
     "lazygit": {
       "repo": "jesseduffield/lazygit",
-      "stars": 83312,
-      "forks": 3108,
+      "stars": 83313,
+      "forks": 3109,
       "pushedAt": "2026-10-17T11:06:26Z",
       "archived": false,
       "language": "Go",
@@ -141,24 +141,24 @@
       "repo": "docker/cli",
       "stars": 6094,
       "forks": 2221,
-      "pushedAt": "2026-10-19T15:06:27Z",
+      "pushedAt": "2026-10-20T11:24:07Z",
       "archived": false,
       "language": "Go",
       "license": "Apache-2.0"
     },
     "helm": {
       "repo": "helm/helm",
-      "stars": 30348,
+      "stars": 30349,
       "forks": 7855,
-      "pushedAt": "2026-10-19T21:39:46Z",
+      "pushedAt": "2026-10-20T10:38:37Z",
       "archived": false,
       "language": "Go",
       "license": "Apache-2.0"
     },
     "rg": {
       "repo": "BurntSushi/ripgrep",
-      "stars": 69266,
-      "forks": 5837,
+      "stars": 69268,
+      "forks": 5853,
       "pushedAt": "2026-08-04T13:59:44Z",
       "archived": false,
       "language": "Rust",
@@ -166,8 +166,8 @@
     },
     "fzf": {
       "repo": "junegunn/fzf",
-      "stars": 83687,
-      "forks": 5773,
+      "stars": 83688,
+      "forks": 5788,
       "pushedAt": "2026-10-17T02:11:02Z",
       "archived": false,
       "language": "Go",
@@ -175,8 +175,8 @@
     },
     "bat": {
       "repo": "sharkdp/bat",
-      "stars": 60854,
-      "forks": 4827,
+      "stars": 60857,
+      "forks": 4850,
       "pushedAt": "2026-10-17T11:57:57Z",
       "archived": false,
       "language": "Rust",
@@ -184,7 +184,7 @@
     },
     "fd": {
       "repo": "sharkdp/fd",
-      "stars": 44803,
+      "stars": 44806,
       "forks": 1175,
       "pushedAt": "2026-10-20T07:45:47Z",
       "archived": false,
@@ -193,7 +193,7 @@
     },
     "zoxide": {
       "repo": "ajeetdsouza/zoxide",
-      "stars": 40209,
+      "stars": 40210,
       "forks": 933,
       "pushedAt": "2026-10-18T00:08:44Z",
       "archived": false,
@@ -202,7 +202,7 @@
     },
     "starship": {
       "repo": "starship/starship",
-      "stars": 60353,
+      "stars": 60357,
       "forks": 2725,
       "pushedAt": "2026-10-20T06:29:56Z",
       "archived": false,
@@ -211,8 +211,8 @@
     },
     "jq": {
       "repo": "jqlang/jq",
-      "stars": 35870,
-      "forks": 4927,
+      "stars": 35871,
+      "forks": 4947,
       "pushedAt": "2026-10-16T12:50:47Z",
       "archived": false,
       "language": "C",
@@ -221,7 +221,7 @@
     "httpie": {
       "repo": "httpie/cli",
       "stars": 38659,
-      "forks": 4024,
+      "forks": 4026,
       "pushedAt": "2024-12-17T17:30:35Z",
       "archived": false,
       "language": "Python",
@@ -229,43 +229,43 @@
     },
     "rclone": {
       "repo": "rclone/rclone",
-      "stars": 60429,
-      "forks": 5551,
-      "pushedAt": "2026-10-20T09:49:46Z",
+      "stars": 60435,
+      "forks": 5553,
+      "pushedAt": "2026-10-20T10:17:18Z",
       "archived": false,
       "language": "Go",
       "license": "MIT"
     },
     "uv": {
       "repo": "astral-sh/uv",
-      "stars": 90921,
-      "forks": 3676,
-      "pushedAt": "2026-10-20T08:16:46Z",
+      "stars": 90930,
+      "forks": 3675,
+      "pushedAt": "2026-10-20T11:46:03Z",
       "archived": false,
       "language": "Rust",
       "license": "Apache-2.0"
     },
     "pnpm": {
       "repo": "pnpm/pnpm",
-      "stars": 36860,
+      "stars": 36862,
       "forks": 1950,
-      "pushedAt": "2026-10-20T09:56:46Z",
+      "pushedAt": "2026-10-20T12:03:14Z",
       "archived": false,
       "language": "Rust",
       "license": "MIT"
     },
     "cf": {
       "repo": "cloudflare/cf",
-      "stars": 909,
+      "stars": 911,
       "forks": 52,
-      "pushedAt": "2026-10-20T09:50:24Z",
+      "pushedAt": "2026-10-20T11:35:05Z",
       "archived": false,
       "language": "TypeScript",
       "license": "Apache-2.0"
     },
     "cloudflared": {
       "repo": "cloudflare/cloudflared",
-      "stars": 16190,
+      "stars": 16192,
       "forks": 1488,
       "pushedAt": "2026-10-20T09:10:56Z",
       "archived": false,
@@ -274,8 +274,8 @@
     },
     "dsh": {
       "repo": "deepseek-ai/deepseek-harness",
-      "stars": 255102,
-      "forks": 30826,
+      "stars": 255319,
+      "forks": 30910,
       "pushedAt": "2026-10-17T08:16:09Z",
       "archived": false,
       "language": "TypeScript",
@@ -283,7 +283,7 @@
     },
     "grok": {
       "repo": "xai-org/grok-build",
-      "stars": 27464,
+      "stars": 27465,
       "forks": 5192,
       "pushedAt": "2026-09-29T16:57:13Z",
       "archived": false,
@@ -301,18 +301,18 @@
     },
     "hermes": {
       "repo": "NousResearch/hermes-agent",
-      "stars": 255399,
-      "forks": 55628,
-      "pushedAt": "2026-10-20T09:56:05Z",
+      "stars": 255434,
+      "forks": 55639,
+      "pushedAt": "2026-10-20T12:17:58Z",
       "archived": false,
       "language": "Python",
       "license": "MIT"
     },
     "lark": {
       "repo": "larksuite/cli",
-      "stars": 17756,
-      "forks": 1400,
-      "pushedAt": "2026-10-19T14:11:11Z",
+      "stars": 17757,
+      "forks": 1401,
+      "pushedAt": "2026-10-20T11:25:27Z",
       "archived": false,
       "language": "Go",
       "license": "MIT"
@@ -346,9 +346,9 @@
     },
     "agent-reach": {
       "repo": "Panniantong/agent-reach",
-      "stars": 100008,
-      "forks": 8838,
-      "pushedAt": "2026-10-20T09:11:41Z",
+      "stars": 100075,
+      "forks": 8850,
+      "pushedAt": "2026-10-20T11:24:28Z",
       "archived": false,
       "language": "Python",
       "license": "MIT"
@@ -373,16 +373,16 @@
     },
     "crawl4ai": {
       "repo": "unclecode/crawl4ai",
-      "stars": 85897,
+      "stars": 85901,
       "forks": 8937,
-      "pushedAt": "2026-10-20T02:43:56Z",
+      "pushedAt": "2026-10-20T10:39:22Z",
       "archived": false,
       "language": "Python",
       "license": "Apache-2.0"
     },
     "playwright": {
       "repo": "microsoft/playwright",
-      "stars": 98134,
+      "stars": 98140,
       "forks": 6659,
       "pushedAt": "2026-10-20T02:59:45Z",
       "archived": false,
@@ -391,9 +391,9 @@
     },
     "frida": {
       "repo": "frida/frida",
-      "stars": 22387,
+      "stars": 22389,
       "forks": 2265,
-      "pushedAt": "2026-10-20T07:48:57Z",
+      "pushedAt": "2026-10-20T11:59:26Z",
       "archived": false,
       "language": "Meson",
       "license": "NOASSERTION"
@@ -429,16 +429,16 @@
       "repo": "milvus-io/milvus-lite",
       "stars": 465,
       "forks": 76,
-      "pushedAt": "2026-10-16T07:07:14Z",
+      "pushedAt": "2026-10-20T11:20:38Z",
       "archived": false,
       "language": "Python",
       "license": "Apache-2.0"
     },
     "mise": {
       "repo": "jdx/mise",
-      "stars": 35195,
+      "stars": 35197,
       "forks": 1489,
-      "pushedAt": "2026-10-20T09:59:26Z",
+      "pushedAt": "2026-10-20T11:56:20Z",
       "archived": false,
       "language": "Rust",
       "license": "MIT"
@@ -448,8 +448,8 @@
     "glab": null,
     "apktool": {
       "repo": "iBotPeaches/Apktool",
-      "stars": 26265,
-      "forks": 4080,
+      "stars": 26273,
+      "forks": 4081,
       "pushedAt": "2026-10-17T10:46:18Z",
       "archived": false,
       "language": "Java",
@@ -457,7 +457,7 @@
     },
     "binwalk": {
       "repo": "ReFirmLabs/binwalk",
-      "stars": 14518,
+      "stars": 14519,
       "forks": 1855,
       "pushedAt": "2026-08-11T15:27:34Z",
       "archived": false,
@@ -467,7 +467,7 @@
     "cmake": {
       "repo": "Kitware/CMake",
       "stars": 8131,
-      "forks": 2710,
+      "forks": 2712,
       "pushedAt": "2026-10-20T04:13:03Z",
       "archived": false,
       "language": "C",
@@ -493,9 +493,9 @@
     },
     "ffmpeg": {
       "repo": "FFmpeg/FFmpeg",
-      "stars": 65455,
-      "forks": 14391,
-      "pushedAt": "2026-10-20T09:31:42Z",
+      "stars": 65461,
+      "forks": 14393,
+      "pushedAt": "2026-10-20T11:44:17Z",
       "archived": false,
       "language": "C",
       "license": "NOASSERTION"
@@ -511,8 +511,8 @@
     },
     "git": {
       "repo": "git/git",
-      "stars": 63906,
-      "forks": 28585,
+      "stars": 63907,
+      "forks": 28584,
       "pushedAt": "2026-10-20T04:31:16Z",
       "archived": false,
       "language": "C",
@@ -529,8 +529,8 @@
     },
     "go": {
       "repo": "golang/go",
-      "stars": 139409,
-      "forks": 22736,
+      "stars": 139415,
+      "forks": 22754,
       "pushedAt": "2026-10-20T02:41:08Z",
       "archived": false,
       "language": "Go",
@@ -538,8 +538,8 @@
     },
     "hashcat": {
       "repo": "hashcat/hashcat",
-      "stars": 27031,
-      "forks": 3582,
+      "stars": 27032,
+      "forks": 3581,
       "pushedAt": "2026-10-20T05:42:41Z",
       "archived": false,
       "language": "C",
@@ -547,8 +547,8 @@
     },
     "jadx": {
       "repo": "skylot/jadx",
-      "stars": 51124,
-      "forks": 5835,
+      "stars": 51130,
+      "forks": 5836,
       "pushedAt": "2026-10-14T22:10:04Z",
       "archived": false,
       "language": "Java",
@@ -565,16 +565,16 @@
     },
     "nginx": {
       "repo": "nginx/nginx",
-      "stars": 31926,
-      "forks": 8330,
-      "pushedAt": "2026-10-19T18:24:18Z",
+      "stars": 31924,
+      "forks": 8331,
+      "pushedAt": "2026-10-20T10:52:03Z",
       "archived": false,
       "language": "C",
       "license": "BSD-2-Clause"
     },
     "nmap": {
       "repo": "nmap/nmap",
-      "stars": 13831,
+      "stars": 13832,
       "forks": 2937,
       "pushedAt": "2026-10-19T20:00:05Z",
       "archived": false,
@@ -583,7 +583,7 @@
     },
     "nuclei": {
       "repo": "projectdiscovery/nuclei",
-      "stars": 32160,
+      "stars": 32166,
       "forks": 3975,
       "pushedAt": "2026-10-20T05:49:11Z",
       "archived": false,
@@ -592,8 +592,8 @@
     },
     "ollama": {
       "repo": "ollama/ollama",
-      "stars": 183937,
-      "forks": 18431,
+      "stars": 184234,
+      "forks": 18456,
       "pushedAt": "2026-10-20T01:51:51Z",
       "archived": false,
       "language": "Go",
@@ -619,18 +619,18 @@
     },
     "python": {
       "repo": "python/cpython",
-      "stars": 77770,
-      "forks": 38768,
-      "pushedAt": "2026-10-20T09:39:30Z",
+      "stars": 77777,
+      "forks": 38776,
+      "pushedAt": "2026-10-20T12:07:28Z",
       "archived": false,
       "language": "Python",
       "license": "NOASSERTION"
     },
     "radare2": {
       "repo": "radareorg/radare2",
-      "stars": 25105,
-      "forks": 3370,
-      "pushedAt": "2026-10-20T09:51:42Z",
+      "stars": 25106,
+      "forks": 3369,
+      "pushedAt": "2026-10-20T11:23:19Z",
       "archived": false,
       "language": "C",
       "license": "NOASSERTION"
@@ -646,9 +646,9 @@
     },
     "rust": {
       "repo": "rust-lang/rust",
-      "stars": 120625,
-      "forks": 19115,
-      "pushedAt": "2026-10-20T09:46:02Z",
+      "stars": 120637,
+      "forks": 19129,
+      "pushedAt": "2026-10-20T12:10:48Z",
       "archived": false,
       "language": "Rust",
       "license": "Apache-2.0"
@@ -664,7 +664,7 @@
     },
     "summarize": {
       "repo": "steipete/summarize",
-      "stars": 6726,
+      "stars": 6727,
       "forks": 455,
       "pushedAt": "2026-10-19T21:52:29Z",
       "archived": false,
@@ -682,9 +682,9 @@
     },
     "tmux": {
       "repo": "tmux/tmux",
-      "stars": 49938,
+      "stars": 49941,
       "forks": 2973,
-      "pushedAt": "2026-10-20T09:21:51Z",
+      "pushedAt": "2026-10-20T12:08:12Z",
       "archived": false,
       "language": "C",
       "license": "ISC"
@@ -700,8 +700,8 @@
     },
     "whisper": {
       "repo": "ggml-org/whisper.cpp",
-      "stars": 54500,
-      "forks": 6271,
+      "stars": 54506,
+      "forks": 6272,
       "pushedAt": "2026-10-19T14:14:00Z",
       "archived": false,
       "language": "C++",
@@ -718,8 +718,8 @@
     },
     "rtk": {
       "repo": "rtk-ai/rtk",
-      "stars": 84024,
-      "forks": 5337,
+      "stars": 84043,
+      "forks": 5338,
       "pushedAt": "2026-10-20T00:07:16Z",
       "archived": false,
       "language": "Rust",
@@ -727,8 +727,8 @@
     },
     "psql": {
       "repo": "postgres/postgres",
-      "stars": 22477,
-      "forks": 5983,
+      "stars": 22478,
+      "forks": 5984,
       "pushedAt": "2026-10-20T06:08:02Z",
       "archived": false,
       "language": "C",
@@ -737,8 +737,8 @@
     "java": {
       "repo": "openjdk/jdk",
       "stars": 23448,
-      "forks": 6507,
-      "pushedAt": "2026-10-20T09:51:08Z",
+      "forks": 6508,
+      "pushedAt": "2026-10-20T12:14:43Z",
       "archived": false,
       "language": "Java",
       "license": "GPL-2.0"

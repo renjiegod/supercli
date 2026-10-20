@@ -24,8 +24,13 @@
     <a class="skip" href="#directory">跳到 CLI 目录</a>
     <header class="header wrap">
       <a class="brand" href="/" aria-label="SuperCLI 首页"
-        ><img src="/favicon.svg" alt="" width="34" height="34" />SuperCLI</a
-      >
+        ><img
+          class="brand-lockup"
+          src="/brand/supercli-wordmark.svg"
+          alt="SuperCLI"
+          width="210"
+          height="45"
+      /></a>
       <nav aria-label="主导航">
         <a href="#directory">探索 CLI</a><a href="#contribute">如何贡献</a
         ><a
@@ -144,6 +149,7 @@
             ><select id="sort">
               <option value="stars">GitHub Stars 最多</option>
               <option value="updated">仓库最近更新</option>
+              <option value="downloads">npm 近30天下载最多</option>
               <option value="name">名称 A–Z</option>
             </select></label
           >
@@ -162,11 +168,15 @@
         >
         <div class="ranking-note">
           <i data-lucide="info"></i
-          ><span
+          ><span id="ranking-summary"
             >按所关联 GitHub 仓库的 Star
             总数排序；非用户投票或下载量，多工具仓库共享仓库数据。</span
           ><button id="method-open" class="text-button">排行说明</button>
         </div>
+        <p class="metric-note">
+          下载量为 npm 安装包近 30 天下载次数，不是 CLI
+          调用量；仓库更新来自作者或维护者的最近推送。无公开来源的指标不计为零。
+        </p>
         <div id="catalog" class="catalog"></div>
         <div class="empty" id="empty" hidden>
           <i data-lucide="search-x"></i>
@@ -219,7 +229,13 @@
     </main>
     <footer class="wrap footer">
       <a class="brand" href="/"
-        >SuperCLI<span class="footer-note">给终端多一点可能。</span></a
+        ><img
+          class="brand-lockup"
+          src="/brand/supercli-wordmark.svg"
+          alt="SuperCLI"
+          width="180"
+          height="38"
+        /><span class="footer-note">给终端多一点可能。</span></a
       >
       <p>独立社区目录 · 商标与图标归各权利人所有</p>
       <a href="/brand.html">品牌与设计</a>
@@ -258,6 +274,16 @@
         收录本机实际使用的工具与社区投稿。没有可比 GitHub
         仓库的工具展示“未计分”，列在有数据条目后。PR
         由维护者本地核验、手动合并。
+      </p>
+      <p>
+        下载量来自 npm 官方下载 API 的最近 30 个可用日，包含重复下载、CI
+        与依赖安装，不等于用户数或 CLI 执行次数。仅覆盖目录安装命令对应的 npm
+        包，未接入的工具不会按零处理；下载排序只比较有数据条目。
+      </p>
+      <p>
+        仓库更新时间是 GitHub
+        pushed_at，表示作者或维护者最近向仓库推送的时间，不等于最新版本发布时间；monorepo
+        可能包含其他工具的改动。真实调用量目前没有统一公开数据源。
       </p>
       <a
         class="button"

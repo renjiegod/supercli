@@ -40,9 +40,11 @@ import {
   metrics,
   queryEntries,
   stats,
+  usage,
   type Entry,
 } from "./catalog";
 import { escapeHtml as escape, detailMarkup } from "./html";
+import { cardMetrics } from "./tool-metrics";
 import "./style.css";
 import { setupDiscovery, setupDetailLinks } from "./discovery";
 const root = document.querySelector<HTMLElement>("#catalog")!;
@@ -62,7 +64,7 @@ const number = (n: number) =>
 function card(item: Entry, index: number): string {
   const metric = stats(item);
   const destination = item.repo ? `https://github.com/${item.repo}` : item.docs;
-  return `<article class="card"><div class="card-top"><span class="rank">${sort.value === "stars" && !metric ? "—" : String(index + 1).padStart(2, "0")}</span><img class="vendor-icon" src="/icons/${escape(item.icon)}" alt="${escape(item.vendor)} 工具图标" width="40" height="40" loading="lazy"><span class="tag">${escape(categories[item.category as keyof typeof categories])}</span></div><button class="card-title" data-detail="${escape(item.id)}">${escape(item.name)}<i data-lucide="arrow-up-right"></i></button><p class="vendor-name">${escape(item.vendor)}</p><p class="description">${escape(item.description)}</p><div class="card-bottom"><a href="${escape(destination)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(item.name)} 的官方来源"><i data-lucide="star"></i>${metric ? number(metric.stars) : "未计分"}<span>${metric ? "Stars" : "官方文档"}</span></a><button class="copy" data-copy="${escape(item.id)}" aria-label="复制 ${escape(item.name)} 安装命令"><i data-lucide="copy"></i>${item.install ? "安装" : "详情"}</button></div></article>`;
+  return `<article class="card"><div class="card-top"><span class="rank">${((sort.value === "stars" || sort.value === "updated") && !metric) || (sort.value === "downloads" && !usage(item)) ? "—" : String(index + 1).padStart(2, "0")}</span><img class="vendor-icon" src="/icons/${escape(item.icon)}" alt="${escape(item.vendor)} 工具图标" width="40" height="40" loading="lazy"><span class="tag">${escape(categories[item.category as keyof typeof categories])}</span></div><button class="card-title" data-detail="${escape(item.id)}">${escape(item.name)}<i data-lucide="arrow-up-right"></i></button><p class="vendor-name">${escape(item.vendor)}</p><p class="description">${escape(item.description)}</p>${cardMetrics(item)}<div class="card-bottom"><a href="${escape(destination)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(item.name)} 的官方来源"><i data-lucide="star"></i>${metric ? number(metric.stars) : "未计分"}<span>${metric ? "Stars" : "官方文档"}</span></a><button class="copy" data-copy="${escape(item.id)}" aria-label="复制 ${escape(item.name)} 安装命令"><i data-lucide="copy"></i>${item.install ? "安装" : "详情"}</button></div></article>`;
 }
 function render(): void {
   const items = queryEntries(
@@ -74,6 +76,16 @@ function render(): void {
   );
   root.innerHTML = items.map(card).join("");
   document.querySelector("#result-count")!.textContent = `${items.length} 个`;
+  const summaries: Record<string, string> = {
+    stars: "按所关联 GitHub 仓库的 Star 总数排序；多工具仓库共享仓库数据。",
+    downloads:
+      "按 npm 包近 30 天下载次数排序，不代表调用量或用户数；未接入数据的工具排在后面。",
+    updated:
+      "按作者或维护者最近一次仓库推送排序，不代表版本发布时间；未接入数据的工具排在后面。",
+    name: "按工具名称排序，序号不代表热度。",
+  };
+  document.querySelector("#ranking-summary")!.textContent =
+    summaries[sort.value];
   document.querySelector<HTMLElement>("#empty")!.hidden = items.length > 0;
   document
     .querySelectorAll<HTMLButtonElement>("[data-category]")
@@ -161,7 +173,9 @@ function initFilters(): void {
   if (!Object.hasOwn(categories, category)) category = "";
   vendor.value = params.get("vendor") ?? "";
   if (!vendor.value) vendor.value = "";
-  sort.value = ["stars", "updated", "name"].includes(params.get("sort") ?? "")
+  sort.value = ["stars", "updated", "downloads", "name"].includes(
+    params.get("sort") ?? "",
+  )
     ? params.get("sort")!
     : "stars";
 }

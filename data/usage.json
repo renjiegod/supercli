@@ -1,0 +1,192 @@
+{
+  "fetchedAt": "2026-10-20T12:20:40.623Z",
+  "source": "npm downloads API",
+  "packages": {
+    "wrangler": {
+      "package": "wrangler",
+      "repo": "cloudflare/workers-sdk",
+      "downloads": 106478817,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "tccli": null,
+    "aliyun": null,
+    "aws": null,
+    "azure": null,
+    "vercel": {
+      "package": "vercel",
+      "repo": "vercel/vercel",
+      "downloads": 18613530,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "supabase": null,
+    "firebase": {
+      "package": "firebase-tools",
+      "repo": "firebase/firebase-tools",
+      "downloads": 13473266,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "codex": {
+      "package": "@openai/codex",
+      "repo": "openai/codex",
+      "downloads": 91545359,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "claude": {
+      "package": "@anthropic-ai/claude-code",
+      "repo": "anthropics/claude-code",
+      "downloads": 49122517,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "gemini": {
+      "package": "@google/gemini-cli",
+      "repo": "google-gemini/gemini-cli",
+      "downloads": 1602990,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "opencode": {
+      "package": "opencode-ai",
+      "repo": "anomalyco/opencode",
+      "downloads": 11639646,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "aider": null,
+    "gh": null,
+    "lazygit": null,
+    "docker": null,
+    "helm": null,
+    "rg": null,
+    "fzf": null,
+    "bat": null,
+    "fd": null,
+    "zoxide": null,
+    "starship": null,
+    "jq": null,
+    "httpie": null,
+    "rclone": null,
+    "uv": null,
+    "pnpm": {
+      "package": "pnpm",
+      "repo": "pnpm/pnpm",
+      "downloads": 849798668,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "cf": {
+      "package": "cf",
+      "repo": "cloudflare/cf",
+      "downloads": 708519,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "cloudflared": null,
+    "dsh": {
+      "package": "@deepseek-ai/dsh",
+      "repo": "deepseek-ai/deepseek-harness",
+      "downloads": 1729399,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "grok": {
+      "package": "@xai-official/grok",
+      "repo": "xai-org/grok-build",
+      "downloads": 269930,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "mmx": {
+      "package": "mmx-cli",
+      "repo": "MiniMax-AI/cli",
+      "downloads": 16273,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "hermes": null,
+    "lark": {
+      "package": "@larksuite/cli",
+      "repo": "larksuite/cli",
+      "downloads": 463583,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "museav": {
+      "package": "museav-cli",
+      "repo": "webkubor/museav-cli",
+      "downloads": 1313,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "kyvault": null,
+    "ego": null,
+    "agent-reach": null,
+    "path-guard": null,
+    "vlm": null,
+    "crawl4ai": null,
+    "playwright": {
+      "package": "@playwright/test",
+      "repo": "microsoft/playwright",
+      "downloads": 293935238,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "frida": null,
+    "git-filter-repo": null,
+    "hf": null,
+    "octodns": null,
+    "milvus": null,
+    "mise": null,
+    "agy": null,
+    "mimo": {
+      "package": "@mimo-ai/cli",
+      "repo": null,
+      "downloads": 13121,
+      "start": "2026-09-19",
+      "end": "2026-10-18"
+    },
+    "glab": null,
+    "apktool": null,
+    "binwalk": null,
+    "cmake": null,
+    "cocoapods": null,
+    "dnscontrol": null,
+    "ffmpeg": null,
+    "ffuf": null,
+    "git": null,
+    "git-lfs": null,
+    "go": null,
+    "hashcat": null,
+    "jadx": null,
+    "mas": null,
+    "nginx": null,
+    "nmap": null,
+    "nuclei": null,
+    "ollama": null,
+    "pipx": null,
+    "plantuml": null,
+    "python": null,
+    "radare2": null,
+    "railway": null,
+    "rust": null,
+    "sqlmap": null,
+    "summarize": null,
+    "terminal-notifier": null,
+    "tmux": null,
+    "watchman": null,
+    "whisper": null,
+    "yara": null,
+    "rtk": null,
+    "psql": null,
+    "java": null,
+    "sox": null,
+    "bash": null,
+    "automake": null,
+    "wget": null,
+    "locateme": null
+  }
+}

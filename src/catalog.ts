@@ -1,5 +1,6 @@
 /** CLI 目录查询；路由：/；来源：人工收录清单与本地刷新快照。 */
 import rawCatalog from "../data/catalog.json";
+import rawUsage from "../data/usage.json";
 import rawMetrics from "../data/metrics.json";
 import categories from "../data/categories.json";
 /** 公开目录条目；非 GitHub CLI 使用官方文档，不虚构仓库。 */
@@ -24,6 +25,20 @@ export interface Metric {
   readonly archived: boolean;
   readonly language: string | null;
   readonly license: string | null;
+}
+export interface Usage {
+  readonly package: string;
+  readonly repo: string | null;
+  readonly downloads: number;
+  readonly start: string;
+  readonly end: string;
+}
+export const usageSnapshot: {
+  readonly fetchedAt: string;
+  readonly packages: Readonly<Record<string, Usage | null>>;
+} = rawUsage;
+export function usage(item: Entry): Usage | null {
+  return usageSnapshot.packages[item.id] ?? null;
 }
 const catalog: readonly Entry[] = rawCatalog;
 const metrics: {
@@ -63,6 +78,13 @@ export function queryEntries(
     )
     .toSorted((a, b) => {
       if (sort === "name") return a.name.localeCompare(b.name);
+      if (sort === "downloads") {
+        const left = usage(a);
+        const right = usage(b);
+        return left && right
+          ? right.downloads - left.downloads || a.name.localeCompare(b.name)
+          : Number(!!right) - Number(!!left) || a.name.localeCompare(b.name);
+      }
       const left = stats(a);
       const right = stats(b);
       if (!left || !right)

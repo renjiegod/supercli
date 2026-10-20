@@ -1,6 +1,6 @@
 {
   "name": "supercli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "type": "module",
   "description": "Open-source CLI discovery and rankings, maintained through pull requests.",
@@ -13,7 +13,8 @@
     "sync": "node scripts/sync.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "tsx --test scripts/*.test.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sync:usage": "node scripts/sync-usage.mjs"
   },
   "engines": {
     "node": ">=24"

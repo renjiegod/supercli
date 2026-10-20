@@ -1,0 +1,71 @@
+/* 品牌资产直接应用，指标在列表中即可比较。 */
+.brand .brand-lockup {
+  width: 210px;
+  height: auto;
+}
+.footer .brand-lockup {
+  width: 180px;
+}
+.tool-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--line);
+}
+.tool-metrics > div {
+  min-width: 0;
+}
+.tool-metrics dt {
+  font-size: 11px;
+  color: var(--muted);
+}
+.tool-metrics dd {
+  margin: 4px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.tool-metrics dd a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.tool-metrics dd a:hover {
+  color: var(--accent);
+}
+.tool-metrics dd a span {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.tool-metrics .metric-missing {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--faint);
+}
+.metric-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin: -10px 0 22px;
+  line-height: 1.8;
+}
+.usage-explanation {
+  margin-block: 14px 24px;
+  font-size: 12px;
+}
+.usage-explanation a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  .brand .brand-lockup {
+    width: 164px;
+    height: auto;
+  }
+  .footer .brand-lockup {
+    width: 164px;
+  }
+}
