@@ -1,4 +1,9 @@
 :root {
+  --slow: 360ms;
+  --brand-tint: #edf1fb;
+  --shadow: 0 16px 48px rgb(25 25 29 / 0.06);
+  --backdrop: rgb(15 20 35 / 0.5);
+
   --bg: #fff;
   --surface: #f7f7f8;
   --surface-hover: #ededf0;
@@ -115,16 +120,6 @@ img {
   align-items: center;
   gap: 10px;
   white-space: nowrap;
-}
-.beta {
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  padding: 1px 6px;
-  border-radius: 4px;
-  align-self: center;
 }
 .header nav {
   display: flex;

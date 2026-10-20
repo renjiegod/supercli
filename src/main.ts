@@ -12,6 +12,10 @@ import {
   Star,
   X,
   SearchX,
+  Cloud,
+  Sparkles,
+  Terminal,
+  Link,
 } from "lucide";
 const icons = {
   GitFork,
@@ -25,6 +29,10 @@ const icons = {
   Star,
   X,
   SearchX,
+  Cloud,
+  Sparkles,
+  Terminal,
+  Link,
 };
 import {
   catalog,
@@ -36,6 +44,7 @@ import {
 } from "./catalog";
 import { escapeHtml as escape, detailMarkup } from "./html";
 import "./style.css";
+import { setupDiscovery, setupDetailLinks } from "./discovery";
 const root = document.querySelector<HTMLElement>("#catalog")!;
 const search = document.querySelector<HTMLInputElement>("#search")!;
 const vendor = document.querySelector<HTMLSelectElement>("#vendor")!;
@@ -75,6 +84,8 @@ function render(): void {
       ),
     );
   const params = new URLSearchParams();
+  const tool = new URLSearchParams(location.search).get("tool");
+  if (tool) params.set("tool", tool);
   if (search.value) params.set("q", search.value);
   if (category) params.set("category", category);
   if (vendor.value) params.set("vendor", vendor.value);
@@ -113,6 +124,9 @@ function showDetail(item: Entry): void {
     item,
     data,
   );
+  const url = new URL(location.href);
+  url.searchParams.set("tool", item.id);
+  history.replaceState(null, "", url);
   if (!detail.open) detail.showModal();
   iconify();
 }
@@ -165,6 +179,10 @@ function setupEvents(): void {
     if (target.dataset.category !== undefined) {
       category = target.dataset.category;
       render();
+      if (target.classList.contains("use-case"))
+        document
+          .querySelector("#directory")!
+          .scrollIntoView({ block: "start" });
     }
     const item = catalog.find(
       (entry) => entry.id === (target.dataset.detail ?? target.dataset.copy),
@@ -203,3 +221,7 @@ function setupEvents(): void {
 initFilters();
 setupEvents();
 render();
+
+setupDiscovery(showDetail, copyCommand);
+setupDetailLinks(showDetail, notify);
+iconify();

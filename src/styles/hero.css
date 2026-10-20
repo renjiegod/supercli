@@ -37,65 +37,6 @@ h1 span {
 .explore:hover {
   color: var(--accent);
 }
-.terminal {
-  background: var(--terminal);
-  color: var(--terminal-text);
-  border-radius: var(--radius-lg);
-  transform: rotate(-2deg);
-  overflow: hidden;
-  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-}
-.terminal-title {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 16px 18px;
-  border-bottom: 1px solid var(--terminal-line);
-}
-.terminal-title > span {
-  width: 8px;
-  height: 8px;
-  border-radius: 100%;
-  background: var(--terminal-muted);
-}
-.terminal-title p {
-  font-size: 11px;
-  color: var(--terminal-muted);
-  text-align: right;
-  flex: 1;
-}
-.terminal-body {
-  padding: 24px 26px;
-  line-height: 1.9;
-  font-size: 13px;
-}
-.terminal-body b {
-  color: var(--success);
-  margin-right: 10px;
-}
-.dim {
-  color: var(--terminal-muted);
-}
-.terminal-success {
-  color: var(--success);
-}
-.cursor {
-  display: inline-block;
-  width: 8px;
-  height: 15px;
-  background: var(--terminal-text);
-  vertical-align: middle;
-}
-.terminal-footer {
-  border-top: 1px solid var(--terminal-line);
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 11px;
-  color: var(--terminal-muted);
-}
 .overview {
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr 1.5fr;

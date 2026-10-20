@@ -1,0 +1,51 @@
+@media (max-width: 1000px) {
+  .page-map {
+    grid-template-columns: 1fr 1fr;
+  }
+  .page-map a:nth-child(3) {
+    border-left: 0;
+  }
+  .page-map a:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+  .motion-demo {
+    gap: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .brand-intro {
+    padding-block: 40px;
+  }
+  .spec-section {
+    padding-block: 32px;
+  }
+  .identity-grid,
+  .type-spec,
+  .component-grid,
+  .motion-demo,
+  .page-map {
+    grid-template-columns: 1fr;
+  }
+  .logo-board {
+    min-height: 280px;
+  }
+  .token-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .swatch {
+    padding: 16px;
+  }
+  .page-map a + a {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .spec-footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-tile:active {
+    transform: none;
+  }
+}

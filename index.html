@@ -24,10 +24,7 @@
     <a class="skip" href="#directory">跳到 CLI 目录</a>
     <header class="header wrap">
       <a class="brand" href="/" aria-label="SuperCLI 首页"
-        ><img src="/favicon.svg" alt="" width="34" height="34" />SuperCLI<span
-          class="beta"
-          >社区</span
-        ></a
+        ><img src="/favicon.svg" alt="" width="34" height="34" />SuperCLI</a
       >
       <nav aria-label="主导航">
         <a href="#directory">探索 CLI</a><a href="#contribute">如何贡献</a
@@ -49,34 +46,44 @@
     <main class="wrap">
       <section class="hero">
         <div>
-          <p class="eyebrow">由社区维护的 CLI 目录</p>
-          <h1>好工具，<br />从<span>命令行</span>开始。</h1>
+          <p class="eyebrow">发现工具 · 少走弯路</p>
+          <h1>下一条命令，<br />更多<span>可能。</span></h1>
           <p class="intro">
-            少一点重复操作，多一点心流。<br />发现下一个值得装进终端的工具。
+            从云端部署到本地开发，把重复的事交给工具。<br />找到适合你的
+            CLI，复制命令，开始使用。
           </p>
           <a class="explore" href="#directory"
             >探索全部工具 <i data-lucide="arrow-down-right"></i
           ></a>
         </div>
-        <div class="terminal" aria-label="SuperCLI 使用示意">
-          <div class="terminal-title">
-            <span></span><span></span><span></span>
-            <p>your next favorite tool</p>
+        <div class="tool-stage" aria-label="从真实目录选择工具">
+          <div class="stage-heading">
+            <img
+              src="/brand/supercli-symbol-mono.svg"
+              alt=""
+              width="28"
+              height="28"
+            /><span>从一个好工具开始</span>
           </div>
-          <div class="terminal-body">
-            <p class="dim"># 让日常工作，快一点</p>
-            <p><b>❯</b> gh pr list</p>
-            <p class="dim">#21 Add your favorite CLI</p>
-            <p class="dim">#20 Built by the community</p>
-            <br />
-            <p><b>❯</b> wrangler deploy</p>
-            <p class="terminal-success">Ready for the world.</p>
-            <br />
-            <p><b>❯</b> <span class="cursor"></span></p>
+          <div class="stage-tools" id="stage-tools"></div>
+          <div class="stage-command">
+            <span>Wrangler 安装命令</span><code id="stage-command"></code
+            ><button
+              id="stage-copy"
+              class="copy"
+              aria-label="复制展示工具的安装命令"
+            >
+              <i data-lucide="copy"></i>复制
+            </button>
           </div>
-          <div class="terminal-footer">
-            <i data-lucide="git-pull-request"></i>发现 · 使用 · 分享
-          </div>
+          <p class="stage-caption">Stars 为关联仓库快照 · 点击工具查看详情</p>
+          <img
+            class="stage-watermark"
+            src="/brand/supercli-symbol-mono.svg"
+            alt=""
+            width="160"
+            height="160"
+          />
         </div>
       </section>
       <section class="overview" aria-label="目录概况">
@@ -86,6 +93,29 @@
           <i data-lucide="git-pull-request"></i><span>通过 PR 共同维护</span>
         </div>
         <p>每个好用的命令，<br />都值得被更多人发现。</p>
+      </section>
+      <section class="use-cases" aria-labelledby="use-case-title">
+        <div>
+          <p class="eyebrow">按用途发现</p>
+          <h2 id="use-case-title">今天，想完成什么？</h2>
+        </div>
+        <div class="use-case-grid">
+          <button data-category="cloud" class="use-case">
+            <i data-lucide="cloud"></i><strong>把项目部署到云端</strong
+            ><span>Cloudflare · 腾讯云 · 阿里云</span
+            ><i data-lucide="arrow-up-right"></i>
+          </button>
+          <button data-category="ai" class="use-case">
+            <i data-lucide="sparkles"></i><strong>让 AI 加入工作流</strong
+            ><span>编码助手与 Agent 工具</span
+            ><i data-lucide="arrow-up-right"></i>
+          </button>
+          <button data-category="terminal" class="use-case">
+            <i data-lucide="terminal"></i><strong>让终端更顺手</strong
+            ><span>搜索、导航与日常效率</span
+            ><i data-lucide="arrow-up-right"></i>
+          </button>
+        </div>
       </section>
       <section id="directory" class="directory">
         <div class="section-heading">
@@ -192,6 +222,7 @@
         >SuperCLI<span class="footer-note">给终端多一点可能。</span></a
       >
       <p>独立社区目录 · 商标与图标归各权利人所有</p>
+      <a href="/brand.html">品牌与设计</a>
       <a
         href="https://github.com/webkubor/supercli/blob/main/CONTRIBUTING.md"
         target="_blank"
@@ -204,6 +235,9 @@
         <i data-lucide="x"></i>
       </button>
       <div id="detail-content"></div>
+      <button class="button detail-share" id="detail-share">
+        <i data-lucide="link"></i>复制详情链接
+      </button>
     </dialog>
     <dialog id="method" aria-labelledby="method-title">
       <button class="close" aria-label="关闭排行说明">

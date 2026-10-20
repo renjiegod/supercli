@@ -33,7 +33,7 @@ Cloudflare Pages 项目名 `supercli`。如需使用手动 Actions 发布，在 
 
 Stars 代表仓库关注度，monorepo 指标覆盖整个仓库，不代表 CLI 使用量。商标与图标归各权利人。本站为独立社区。
 
-[产品](PRODUCT.md) · [设计](DESIGN.md) · [交互](EXPERIENCE.md) · [图标来源](docs/ICONS.md) · [变更记录](CHANGELOG.md)
+[品牌与设计规范](https://supercli.site/brand.html) · [产品](PRODUCT.md) · [设计](DESIGN.md) · [交互](EXPERIENCE.md) · [图标来源](docs/ICONS.md) · [变更记录](CHANGELOG.md)
 
 [PR 人工审核机制](docs/REVIEW.md)：本地核验、人工审核、手动合并，首期不运行自动化审核。
 

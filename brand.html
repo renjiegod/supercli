@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="SuperCLI 的品牌资产、页面体系、组件状态与动效规范。"
+    />
+    <meta name="theme-color" content="#002fa7" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="canonical" href="https://supercli.site/brand.html" />
+    <title>品牌与设计 — SuperCLI</title>
+  </head>
+  <body>
+    <a class="skip" href="#brand-main">跳到设计规范</a>
+    <header class="header wrap">
+      <a class="brand" href="/"
+        ><img src="/favicon.svg" alt="" width="34" height="34" />SuperCLI</a
+      >
+      <nav aria-label="主导航">
+        <a href="/#directory">返回目录</a
+        ><a
+          href="https://github.com/webkubor/supercli"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
+      </nav>
+    </header>
+    <main id="brand-main" class="wrap brand-page">
+      <section class="brand-intro">
+        <p class="eyebrow">SuperCLI 品牌与设计规范 · v1</p>
+        <h1>一个标记。<br />一套<span>共同语言。</span></h1>
+        <p class="intro">
+          从第一次发现，到复制下一条命令。<br />统一的视觉、清晰的路径、有分寸的动效。
+        </p>
+        <nav class="spec-nav" aria-label="设计规范目录">
+          <a href="#identity">品牌</a><a href="#pages">页面体系</a
+          ><a href="#components">组件状态</a><a href="#motion">动效</a>
+        </nav>
+      </section>
+      <section id="identity" class="spec-section">
+        <div class="spec-heading">
+          <p class="eyebrow">品牌识别</p>
+          <h2>S，是 Super，也是下一条命令。</h2>
+          <p>
+            用一条折返的几何带组成
+            S，保留命令行的斜切节奏；右下角的短横是输入光标。独立使用也能识别，不依赖终端窗口的外框。
+          </p>
+        </div>
+        <div class="identity-grid">
+          <div class="logo-board logo-board-blue">
+            <img
+              src="/brand/supercli-symbol.svg"
+              alt="SuperCLI 蓝底白色 S 标记"
+              width="152"
+              height="152"
+            /><strong>SuperCLI</strong><span>主标记 · Klein Blue</span>
+          </div>
+          <div class="logo-board">
+            <img
+              src="/brand/supercli-symbol-mono.svg"
+              alt="SuperCLI 单色 S 标记"
+              width="112"
+              height="112"
+            />
+            <div class="logo-sizes">
+              <img
+                src="/favicon.svg"
+                alt="16 像素图标"
+                width="16"
+                height="16"
+              /><img
+                src="/favicon.svg"
+                alt="24 像素图标"
+                width="24"
+                height="24"
+              /><img
+                src="/favicon.svg"
+                alt="32 像素图标"
+                width="32"
+                height="32"
+              />
+            </div>
+            <span>单色版本与小尺寸应用</span>
+          </div>
+        </div>
+        <div class="asset-actions">
+          <a class="button primary" href="/brand/supercli-symbol.svg" download
+            >下载主标记 SVG</a
+          ><a class="button" href="/brand/supercli-symbol-mono.svg" download
+            >下载单色 SVG</a
+          ><a class="button" href="/brand/supercli-wordmark.svg" download
+            >下载组合标志 SVG</a
+          >
+        </div>
+        <p class="spec-note">
+          图形最小 16 px；四周留白至少为图形宽度的
+          ¼。不拉伸、不旋转、不添加阴影。厂商图标使用各自原始品牌资产。
+        </p>
+        <div class="token-grid">
+          <div class="swatch swatch-blue">
+            <strong>品牌蓝</strong><span>#002FA7</span>
+          </div>
+          <div class="swatch swatch-ink">
+            <strong>正文</strong><span>#19191D</span>
+          </div>
+          <div class="swatch swatch-surface">
+            <strong>次级表面</strong><span>#F7F7F8</span>
+          </div>
+          <div class="swatch swatch-white">
+            <strong>页面</strong><span>#FFFFFF</span>
+          </div>
+        </div>
+        <div class="type-spec">
+          <div>
+            <span>标题 / Helvetica Neue · 系统中文</span>
+            <p class="type-display">下一条命令，更多可能。</p>
+          </div>
+          <div>
+            <span>正文 / 同一字体家族</span>
+            <p>
+              工具名称优先，说明其次。数字使用等宽数字；命令使用系统等宽字体。字号层级与色彩共同传达主次。
+            </p>
+            <code>npm install -g wrangler</code>
+          </div>
+        </div>
+      </section>
+      <section id="pages" class="spec-section">
+        <div class="spec-heading">
+          <p class="eyebrow">信息架构与页面流程</p>
+          <h2>发现 → 比较 → 使用 → 贡献</h2>
+          <p>
+            所有工具进入同一目录。分类与厂商用于检索，不设置“官方 /
+            社区”两套入口。
+          </p>
+        </div>
+        <div class="page-map">
+          <a href="/"
+            ><span>首页</span><strong>先找到方向</strong>
+            <p>品牌主张、真实工具示例、用途入口。</p>
+            <small>开始探索 →</small></a
+          ><a href="/?category=cloud#directory"
+            ><span>分类与排行</span><strong>缩小选择范围</strong>
+            <p>关键词、厂商、用途组合筛选，明确排序与快照。</p>
+            <small>查看云平台 →</small></a
+          ><a href="/?tool=wrangler"
+            ><span>工具详情</span><strong>决定如何开始</strong>
+            <p>用途、安装、来源、许可证与可分享的直达链接。</p>
+            <small>查看 Wrangler →</small></a
+          ><a href="/#contribute"
+            ><span>贡献流程</span><strong>把经验留给别人</strong>
+            <p>补充资料 → 发起 PR → 本地核验 → 人工合并。</p>
+            <small>查看贡献方式 →</small></a
+          >
+        </div>
+        <p class="spec-note">
+          以上是当前可运行的页面与视图。首页、目录和贡献区在同一页；详情通过 URL
+          参数直达，品牌规范独立成页。
+        </p>
+      </section>
+      <section id="components" class="spec-section">
+        <div class="spec-heading">
+          <p class="eyebrow">组件与状态</p>
+          <h2>每一步，都有明确回应。</h2>
+          <p>
+            按钮、搜索、空结果、弹窗与反馈共享令牌。这里的演示与目录使用同一份样式。
+          </p>
+        </div>
+        <div class="component-grid">
+          <div class="spec-panel">
+            <h3>主操作与次操作</h3>
+            <div class="asset-actions">
+              <button class="button primary" id="demo-toast">
+                体验复制反馈</button
+              ><a class="button" href="/#directory">探索目录</a
+              ><button class="button" disabled>暂不可用</button>
+            </div>
+            <p>
+              悬停提示意图，焦点保持可见，按下给予轻微反馈。禁用状态不接受点击。
+            </p>
+          </div>
+          <div class="spec-panel">
+            <h3>搜索与空结果</h3>
+            <label class="search"
+              ><i data-lucide="search"></i
+              ><input
+                id="demo-search"
+                placeholder="试着输入一个关键词"
+                aria-label="体验搜索状态"
+            /></label>
+            <p id="demo-result" role="status">
+              在目录中，筛选结果会同步到网址，方便分享。
+            </p>
+            <a href="/?q=supercli-no-result#directory">查看真实空结果状态 →</a>
+          </div>
+          <div class="spec-panel">
+            <h3>详情与来源</h3>
+            <p>
+              原生模态管理焦点，Escape
+              关闭，关闭后回到触发按钮。来源与安装提示始终可读。
+            </p>
+            <a class="button" href="/?tool=wrangler">打开真实详情</a>
+          </div>
+          <div class="spec-panel">
+            <h3>加载与失败</h3>
+            <p>
+              目录随页面静态加载，不使用模拟加载动画。没有 GitHub
+              指标时展示“未计分”；复制失败时保留可手动复制的命令。
+            </p>
+            <a href="/?q=tencent#directory">查看工具信息 →</a>
+          </div>
+        </div>
+      </section>
+      <section id="motion" class="spec-section">
+        <div class="spec-heading">
+          <p class="eyebrow">动效规则</p>
+          <h2>让变化被看见，让操作不停顿。</h2>
+          <p>
+            只为进入、聚焦、确认服务。没有自动轮播、打字循环或跟随鼠标的装饰。
+          </p>
+        </div>
+        <div class="motion-demo">
+          <button class="motion-tile" id="motion-replay">
+            <img src="/favicon.svg" alt="" width="64" height="64" /><span
+              >点击重播进场</span
+            >
+          </button>
+          <div>
+            <h3>快起，慢停。</h3>
+            <p>
+              150 ms：按钮反馈<br />240 ms：卡片与详情进入<br />360
+              ms：首页首屏进入
+            </p>
+            <code>cubic-bezier(0.16, 1, 0.3, 1)</code>
+            <p class="spec-note">
+              位移仅使用 transform 与
+              opacity。开启系统“减弱动态效果”后，位移与进场动画停止；所有操作依旧可用。
+            </p>
+          </div>
+        </div>
+      </section>
+      <footer class="spec-footer">
+        <a href="/">返回 SuperCLI →</a
+        ><span>设计规范与产品共用代码，随版本维护。</span>
+      </footer>
+    </main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/brand.ts"></script>
+  </body>
+</html>

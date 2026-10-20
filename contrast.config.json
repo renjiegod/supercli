@@ -1,7 +1,5 @@
 {
-  "files": [
-    "src/styles/base.css"
-  ],
+  "files": ["src/styles/base.css"],
   "pairs": [
     {
       "fg": "ink",
@@ -104,6 +102,30 @@
       "bg": "surface-hover",
       "min": 4.5,
       "label": "链接 / surface-hover"
+    },
+    {
+      "fg": "ink",
+      "bg": "brand-tint",
+      "min": 4.5,
+      "label": "ink / 用途入口悬停"
+    },
+    {
+      "fg": "muted",
+      "bg": "brand-tint",
+      "min": 4.5,
+      "label": "muted / 用途入口悬停"
+    },
+    {
+      "fg": "accent",
+      "bg": "brand-tint",
+      "min": 4.5,
+      "label": "accent / 用途入口悬停"
+    },
+    {
+      "fg": "terminal-text",
+      "bg": "terminal-line",
+      "min": 4.5,
+      "label": "安装复制按钮"
     }
   ]
 }

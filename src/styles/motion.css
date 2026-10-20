@@ -1,0 +1,49 @@
+/* 动效契约：仅 transform / opacity，系统减弱动效优先。 */
+.hero > div:first-child {
+  animation: arrive var(--slow) var(--ease) both;
+}
+.tool-stage {
+  animation: arrive var(--slow) var(--ease) both;
+}
+dialog[open] {
+  animation: panel-in var(--medium) var(--ease) both;
+}
+dialog::backdrop {
+  background: var(--backdrop);
+}
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero > div,
+  .tool-stage,
+  dialog[open] {
+    animation: none;
+  }
+  .card:hover,
+  .card:active,
+  .card:focus-within,
+  .stage-tool:hover,
+  .stage-tool:focus-visible,
+  .stage-tool:active,
+  .use-case:active {
+    transform: none;
+  }
+}
