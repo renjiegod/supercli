@@ -1,0 +1,632 @@
+[
+  {
+    "id": "wrangler",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "tccli",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "aliyun",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "aws",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "azure",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "vercel",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "supabase",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "firebase",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "codex",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "claude",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "gemini",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "opencode",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "aider",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "gh",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "lazygit",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "docker",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "helm",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "rg",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "fzf",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "bat",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "fd",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "zoxide",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "starship",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "jq",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "httpie",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "rclone",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "uv",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "pnpm",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "cf",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "cloudflared",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "dsh",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "grok",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "mmx",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "hermes",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "lark",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "museav",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "kyvault",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "ego",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "agent-reach",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "path-guard",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "vlm",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "crawl4ai",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "playwright",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "frida",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "git-filter-repo",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "hf",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "octodns",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "milvus",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "mise",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "agy",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "mimo",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "glab",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "apktool",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "binwalk",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "cmake",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "cocoapods",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "dnscontrol",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "ffmpeg",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "ffuf",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "git",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "git-lfs",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "go",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "hashcat",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "jadx",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "mas",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "nginx",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "nmap",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "nuclei",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "ollama",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "pipx",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "plantuml",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "python",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "radare2",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "railway",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "rust",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "sqlmap",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "summarize",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "terminal-notifier",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "tmux",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "watchman",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "whisper",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "yara",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "rtk",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "psql",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "java",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "sox",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "bash",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "automake",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "wget",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  },
+  {
+    "id": "locateme",
+    "addedAt": "2026-10-20T18:04:16+08:00",
+    "curatedBy": "webkubor",
+    "recommendedBy": null,
+    "evidence": "https://github.com/webkubor/supercli/commit/3c4e05a9b27baf899eff3ceb49efe58487cdcc38"
+  }
+]

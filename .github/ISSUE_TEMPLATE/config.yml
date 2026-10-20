@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 熟悉 Git？通过 PR 投稿
+    url: https://github.com/webkubor/supercli/blob/main/CONTRIBUTING.md
+    about: 按贡献指南修改目录并提交 PR，由维护者人工审核。

@@ -27,3 +27,7 @@ Fork 后编辑 data/catalog.json；写清官方文档、用途、安装方式与
 ## 数据更新
 
 维护者在本地运行 `pnpm sync`，检查快照差异再提交。GitHub / GitLab 以外的 CLI 无可比 Star 数据，展示“未计分”，排在有指标条目后；绝不填 0 冒充已查询结果。
+
+## 社区投稿收尾
+
+按 [社区维护流程](COMMUNITY.md) 核对 `data/community.json` 收录时间、出处及推荐者的署名选择。信息修改不刷新旧收录时间；已合并但未上线不得提前标“已收录”。Issue 表单先由 GitHub 登录，不接本站 OAuth。

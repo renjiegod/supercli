@@ -45,6 +45,7 @@ import {
   type Entry,
 } from "./catalog";
 import { escapeHtml as escape, detailMarkup } from "./html";
+import { setupCommunity } from "./community";
 import { setupFilterPicker } from "./filter-picker";
 import { cardMetrics } from "./tool-metrics";
 import "./style.css";
@@ -273,5 +274,6 @@ setupFilterPicker(sort, false);
 render();
 
 setupDiscovery(showDetail, copyCommand);
+setupCommunity();
 setupDetailLinks(showDetail, notify);
 iconify();

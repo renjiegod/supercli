@@ -1,26 +1,45 @@
-name: 推荐或修正 CLI
-description: 提交工具建议，供维护者人工核验。
-title: "[CLI] "
+name: 推荐一个 CLI
+description: 不用改代码，告诉我们工具是什么、为什么值得用。
+title: "[推荐 CLI] "
+labels: ["待核验"]
 body:
+  - type: markdown
+    attributes:
+      value: "谢谢推荐！维护者会核对来源并回复。收录后会在工具详情署名并链接本 Issue。提交需要 GitHub 账号；请勿填写 Token 或个人配置。"
   - type: input
     id: name
     attributes:
-      label: CLI 名称
+      label: 工具名称
+      placeholder: 例如：Wrangler
     validations:
       required: true
   - type: input
-    id: official
+    id: source
     attributes:
-      label: 官方仓库或官方文档
+      label: 工具链接
+      description: 官网、原作者仓库或官方文档，提供一个即可。
     validations:
       required: true
   - type: textarea
     id: purpose
     attributes:
-      label: 用途、安装方式和使用经验
+      label: 它能做什么？
+      description: 用一两句话介绍适用场景。
     validations:
       required: true
-  - type: input
-    id: icon
+  - type: textarea
+    id: reason
     attributes:
-      label: 官方图标来源
+      label: 为什么推荐？
+      description: 解决过什么问题，或相比其他工具有什么不同？没用过也可以如实说明。
+    validations:
+      required: true
+  - type: dropdown
+    id: credit
+    attributes:
+      label: 收录后的署名
+      options:
+        - 可以展示我的 GitHub 用户名并链接主页
+        - 请仅链接本 Issue，不在网站单独署名
+    validations:
+      required: true

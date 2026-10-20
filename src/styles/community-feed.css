@@ -1,0 +1,142 @@
+/* 最近收录与贡献署名：沿用目录网格，公开历史事实，不造社区活跃度。 */
+.recent-section,
+.credits-section {
+  padding-top: 56px;
+}
+.recent-section h2,
+.credits-section h2 {
+  font-size: 24px;
+}
+.recent-tools {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.recent-tool {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 20px;
+  text-align: left;
+  background: var(--bg);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.recent-tool:hover {
+  background: var(--surface);
+}
+.recent-tool img {
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.recent-tool > span {
+  flex: 1;
+  min-width: 0;
+}
+.recent-tool strong {
+  display: block;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.recent-tool small {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.recent-tool svg {
+  width: 14px;
+  color: var(--faint);
+}
+.community-caption {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.contribute-heading .submission-note {
+  font-size: 11px;
+  margin: 10px 0 14px;
+}
+.pr-route {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 12px;
+  min-height: 44px;
+}
+.credits-section {
+  padding: 0 0 56px;
+}
+.credit-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.credit-group {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.credit-group h3 {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.credit-group ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.credit-group li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  font-size: 13px;
+}
+.credit-group p,
+.credit-group li span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.credit-group a {
+  color: var(--accent);
+}
+.attribution {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-size: 11px;
+  color: var(--muted);
+  margin: 12px 0;
+}
+.attribution a {
+  color: var(--accent);
+}
+@media (max-width: 1000px) {
+  .recent-tools {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .recent-section {
+    padding-top: 36px;
+  }
+  .recent-tools,
+  .credit-columns {
+    grid-template-columns: 1fr;
+  }
+  .recent-tool {
+    padding: 16px;
+    min-height: 80px;
+  }
+  .recent-section .section-heading > a,
+  .credits-section .section-heading > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0;
+  }
+}

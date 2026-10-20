@@ -32,7 +32,8 @@
           height="45"
       /></a>
       <nav aria-label="主导航">
-        <a href="#directory">探索 CLI</a><a href="#contribute">如何贡献</a
+        <a href="#directory">探索 CLI</a><a href="#recent">最近收录</a
+        ><a href="#contribute">如何贡献</a
         ><a
           href="https://github.com/webkubor/supercli"
           target="_blank"
@@ -42,10 +43,10 @@
       </nav>
       <a
         class="button primary submit-link"
-        href="https://github.com/webkubor/supercli/edit/main/data/catalog.json"
+        href="https://github.com/webkubor/supercli/issues/new?template=cli.yml"
         target="_blank"
         rel="noopener noreferrer"
-        ><i data-lucide="plus"></i>提交 CLI</a
+        ><i data-lucide="plus"></i>推荐 CLI</a
       >
     </header>
     <main class="wrap">
@@ -121,6 +122,25 @@
             ><i data-lucide="arrow-up-right"></i>
           </button>
         </div>
+      </section>
+      <section
+        id="recent"
+        class="recent-section"
+        aria-labelledby="recent-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">让好工具被更多人发现</p>
+            <h2 id="recent-title">最近收录</h2>
+          </div>
+          <a class="text-button" href="#contribute"
+            >推荐你用过的工具<i data-lucide="arrow-up-right"></i
+          ></a>
+        </div>
+        <div id="recent-tools" class="recent-tools"></div>
+        <p class="community-caption">
+          按本站收录时间展示，和工具的版本发布时间不同。首批目录由维护者整理。
+        </p>
       </section>
       <section id="directory" class="directory">
         <div class="section-heading">
@@ -212,37 +232,76 @@
           <p>知道一个好用的 CLI？<br />让更多人少走一段弯路。</p>
           <a
             class="button primary"
-            href="https://github.com/webkubor/supercli/edit/main/data/catalog.json"
+            href="https://github.com/webkubor/supercli/issues/new?template=cli.yml"
             target="_blank"
             rel="noopener noreferrer"
-            >提交一个 CLI<i data-lucide="arrow-up-right"></i
+            >填写推荐表单<i data-lucide="arrow-up-right"></i
           ></a>
         </div>
         <ol class="steps">
           <li>
             <span>01</span>
             <div>
-              <h3>补充工具信息</h3>
-              <p>在公开清单里添加名称、官方仓库、用途、安装方式和图标来源。</p>
+              <h3>告诉我们，为什么值得用</h3>
+              <p>
+                填写名称、工具链接、用途和推荐理由。安装方式、图标与分类可由维护者补齐。
+              </p>
             </div>
           </li>
           <li>
             <span>02</span>
             <div>
-              <h3>发起 Pull Request</h3>
+              <h3>公开核验，跟进进度</h3>
               <p>
-                维护者在本地核对来源、安装说明、图标和页面预览，给出审核意见。
+                提交后进入“待核验”；需要更多信息时标为“需补充信息”。在原 Issue
+                或 PR 跟进审核。
               </p>
             </div>
           </li>
           <li>
             <span>03</span>
             <div>
-              <h3>人工审核，手动合并</h3>
-              <p>审核通过后手动合并，在本地更新数据与预览，确认后再发布。</p>
+              <h3>收录上线，留下你的贡献</h3>
+              <p>
+                维护者审核、合并并发布后标为“已收录”。经你同意，工具详情会展示推荐者并链接投稿记录。
+              </p>
             </div>
           </li>
         </ol>
+      </section>
+      <section class="credits-section" aria-labelledby="credits-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">每一份贡献，都有出处</p>
+            <h2 id="credits-title">一起维护这个目录</h2>
+          </div>
+          <a
+            class="text-button"
+            href="https://github.com/webkubor/supercli/issues?q=is%3Aissue+label%3A%E5%BE%85%E6%A0%B8%E9%AA%8C"
+            target="_blank"
+            rel="noopener noreferrer"
+            >查看待核验投稿<i data-lucide="arrow-up-right"></i
+          ></a>
+        </div>
+        <div class="credit-columns">
+          <div class="credit-group">
+            <h3>社区推荐者</h3>
+            <ul id="recommender-credits"></ul>
+            <p id="community-empty">
+              还没有已署名的社区推荐。<a
+                href="https://github.com/webkubor/supercli/issues/new?template=cli.yml"
+                target="_blank"
+                rel="noopener noreferrer"
+                >来推荐第一个工具</a
+              >。
+            </p>
+          </div>
+          <div class="credit-group">
+            <h3>收录维护者</h3>
+            <ul id="maintainer-credits"></ul>
+            <p>依据收录记录统计，维护和推荐分别署名。</p>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="wrap footer">
