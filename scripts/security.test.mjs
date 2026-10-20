@@ -114,11 +114,25 @@ async function fixture(run) {
   await mkdir(join(cwd, "public/icons"), { recursive: true });
   const sentinel = join(root, "network-called");
   const mock = join(root, "network.mjs");
+  const iconWrites = join(root, "icon-writes");
   await writeFile(
     mock,
-    `import { writeFileSync } from "node:fs";
+    `import { appendFileSync } from "node:fs";
+    import fs from "node:fs/promises";
+    import { syncBuiltinESMExports } from "node:module";
+    const writeFile = fs.writeFile;
+    fs.writeFile = async (path, ...args) => {
+      if (String(path).startsWith("public/icons/"))
+        appendFileSync(${JSON.stringify(iconWrites)}, String(path) + "\\n");
+      return writeFile(path, ...args);
+    };
+    syncBuiltinESMExports();
     globalThis.fetch = async (url) => {
-      writeFileSync(${JSON.stringify(sentinel)}, "called");
+      appendFileSync(${JSON.stringify(sentinel)}, String(url) + "\\n");
+      if (String(url).startsWith("https://example.com/avatar")) {
+        await new Promise((resolve) => setTimeout(resolve, 25));
+        return new Response("shared icon");
+      }
       return new Response(JSON.stringify({ stargazers_count: 1, forks_count: 0,
         pushed_at: "2026-10-20T00:00:00Z", archived: false, language: "Go",
         license: { spdx_id: "MIT" }, owner: { avatar_url: "https://example.com/avatar?x=1" } }));
@@ -145,7 +159,7 @@ async function fixture(run) {
     );
   };
   try {
-    await run({ root, cwd, sentinel, sync });
+    await run({ root, cwd, sentinel, iconWrites, sync });
   } finally {
     await rm(root, { recursive: true, force: true });
   }
@@ -197,5 +211,38 @@ test("sync accepts valid catalog without old metrics and produces validated snap
     validateMetrics(snapshot, [entry]);
     assert.equal(snapshot.repositories[entry.id].repo, entry.repo);
     await access(join(cwd, `public/icons/${entry.icon}`));
+  });
+});
+
+test("sync shares one icon download and exclusive write across different repositories", async () => {
+  await fixture(async ({ cwd, sentinel, iconWrites, sync }) => {
+    const rows = [
+      entry,
+      { ...entry, id: "shared-icon-peer", repo: "other/project" },
+    ];
+    const result = await sync(rows);
+    assert.equal(result.status, 0, result.stderr);
+    const snapshot = JSON.parse(
+      await readFile(join(cwd, "data/metrics.json"), "utf8"),
+    );
+    validateMetrics(snapshot, rows);
+    const requests = (await readFile(sentinel, "utf8")).trim().split("\n");
+    assert.equal(
+      requests.filter((url) => url.startsWith("https://api.github.com/repos/"))
+        .length,
+      2,
+    );
+    assert.equal(
+      requests.filter((url) => url.startsWith("https://example.com/avatar"))
+        .length,
+      1,
+    );
+    assert.deepEqual((await readFile(iconWrites, "utf8")).trim().split("\n"), [
+      `public/icons/${entry.icon}`,
+    ]);
+    assert.equal(
+      await readFile(join(cwd, `public/icons/${entry.icon}`), "utf8"),
+      "shared icon",
+    );
   });
 });

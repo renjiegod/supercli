@@ -1,0 +1,1 @@
+Follow the repository AGENTS.md. The catalog and schemas are the data source of truth. Preserve HTML escaping, repository-bound metrics and safe icon writes. Run pnpm build. Keep contributions under local human review and manual merge; do not add automatic PR review, approval or merge.

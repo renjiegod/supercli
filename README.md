@@ -5,16 +5,20 @@
 
 [English](README.en.md) · [网站](https://supercli.site) · [贡献指南](CONTRIBUTING.md) · [参考项目](docs/RESEARCH.md)
 
-| 需求 | SuperCLI |
-| --- | --- |
-| 找云厂商、AI 与终端工具 | 用途分类 + 搜索 + 厂商筛选 |
-| 知道排名依据 | GitHub 仓库 Stars + 明确快照时间 |
-| 收藏自己的常用工具 | 分享带筛选条件的 URL |
-| 贡献工具 | GitHub PR，本地人工核验后手动合并 |
+| 需求                    | SuperCLI                          |
+| ----------------------- | --------------------------------- |
+| 找云厂商、AI 与终端工具 | 用途分类 + 搜索 + 厂商筛选        |
+| 知道排名依据            | GitHub 仓库 Stars + 明确快照时间  |
+| 收藏自己的常用工具      | 分享带筛选条件的 URL              |
+| 贡献工具                | GitHub PR，本地人工核验后手动合并 |
 
 首批收录 90 个工具，包含 Cloudflare Wrangler、腾讯云 CLI、阿里云 CLI。使用官方项目组织或维护者头像，提供官方文档和安装命令。
 
+## 快速开始 / Quick start
+
 ```sh
+git clone git@github.com:webkubor/supercli.git
+cd supercli
 pnpm install --frozen-lockfile
 pnpm dev
 ```
@@ -32,3 +36,9 @@ Stars 代表仓库关注度，monorepo 指标覆盖整个仓库，不代表 CLI 
 [产品](PRODUCT.md) · [设计](DESIGN.md) · [交互](EXPERIENCE.md) · [图标来源](docs/ICONS.md) · [变更记录](CHANGELOG.md)
 
 [PR 人工审核机制](docs/REVIEW.md)：本地核验、人工审核、手动合并，首期不运行自动化审核。
+
+## 配置与故障排查
+
+[配置参考](docs/CONFIGURATION.md) · [FAQ](docs/FAQ.md) · [安全政策](SECURITY.md) · [AI 协作规范](AGENTS.md)
+
+项目手动检查使用 `pnpm test`、`pnpm typecheck`、`pnpm build`。GitHub 的 Manual project checks 只在维护者手动触发时执行基础校验，不审核或批准 PR。

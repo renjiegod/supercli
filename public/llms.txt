@@ -1,0 +1,16 @@
+# SuperCLI
+
+> A community CLI directory with search, purpose and vendor filters, official tool links, installation commands and transparent GitHub repository star rankings.
+
+## Website
+- [Explore CLI tools](https://supercli.site/): directory, filters and ranking methodology.
+- [Catalog data](https://github.com/webkubor/supercli/blob/main/data/catalog.json): canonical list of tools and official sources.
+- [Metrics snapshot](https://github.com/webkubor/supercli/blob/main/data/metrics.json): snapshot timestamp and repository-bound GitHub statistics.
+- [Contribution guide](https://github.com/webkubor/supercli/blob/main/CONTRIBUTING.md): submit a pull request for local human review.
+- [Icon sources](https://github.com/webkubor/supercli/blob/main/docs/ICONS.md): vendor and maintainer asset provenance.
+- [Security policy](https://github.com/webkubor/supercli/blob/main/SECURITY.md): report vulnerabilities privately to the maintainer.
+
+## Interpretation
+Stars describe the linked repository, including its other packages when it is a monorepo. They are not CLI downloads, active users or a quality score. Tools without comparable GitHub data remain unranked. The local-install filter is the maintainer's dated setup snapshot, not an inspection of the visitor's machine.
+
+No MCP server, user voting system or automatic PR approval is provided. Official third-party names and trademarks belong to their owners.

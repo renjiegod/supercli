@@ -54,9 +54,15 @@ async function withRetry(action, label) {
     }
   }
 }
-async function syncIcon(item, repo) {
+const iconDownloads = new Map();
+function syncIcon(item, repo) {
   if (!process.argv.includes("--icons")) return;
   const path = `public/icons/${item.icon}`;
+  if (!iconDownloads.has(path))
+    iconDownloads.set(path, downloadIcon(path, item, repo));
+  return iconDownloads.get(path);
+}
+async function downloadIcon(path, item, repo) {
   try {
     await access(path);
     return;

@@ -1,0 +1,18 @@
+# SuperCLI repository
+
+> Community-maintained CLI discovery and GitHub repository rankings. Static Vite + TypeScript site. Contributions are reviewed locally and merged manually.
+
+- Website: https://supercli.site/
+- Repository: https://github.com/webkubor/supercli
+- Agent instructions: ./AGENTS.md
+- Quick start and local commands: ./README.md
+- Contribution and review: ./CONTRIBUTING.md and ./docs/REVIEW.md
+- Canonical catalog: ./data/catalog.json
+- Repository-bound metrics: ./data/metrics.json
+- Input contracts: ./data/catalog.schema.json and ./data/metrics.schema.json
+- Shared validation: ./scripts/validation.mjs
+- Brand asset provenance: ./docs/ICONS.md
+- Security reporting: ./SECURITY.md
+- Deployment: ./docs/DEPLOYMENT.md
+
+Use pnpm build for local verification. Do not infer CLI user counts from repository stars. Do not commit credentials or enable automatic PR approval/merge.

@@ -1,6 +1,6 @@
 {
   "name": "supercli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "Open-source CLI discovery and rankings, maintained through pull requests.",
@@ -8,10 +8,12 @@
   "repository": "https://github.com/webkubor/supercli",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "check": "tsc --noEmit && node scripts/validate.mjs && tsx --test scripts/*.test.mjs",
+    "check": "pnpm typecheck && node scripts/validate.mjs && pnpm test",
     "build": "pnpm check && vite build",
     "sync": "node scripts/sync.mjs",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "tsx --test scripts/*.test.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "engines": {
     "node": ">=24"

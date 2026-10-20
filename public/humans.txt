@@ -1,0 +1,6 @@
+SuperCLI
+Maintainer: webkubor
+Repository: https://github.com/webkubor/supercli
+Stack: TypeScript, Vite, Cloudflare Pages
+Contributions: human-reviewed pull requests
+Third-party names and icons belong to their respective owners.
