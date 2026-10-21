@@ -31,6 +31,21 @@
 
 回读入口：[Search Console 站点地图](https://search.google.com/search-console/sitemaps?resource_id=sc-domain%3Asupercli.site)。后续内容更新由构建自动刷新同一站点地图地址，无需因每次新增工具而重复添加资源。
 
+## 首轮网址检查与索引基线
+
+2026-10-21（Asia/Taipei），通过 GSC 网址检查和“测试实际网址”抽查：
+
+| 页面 | Google 索引报告 | 实际网址测试 | 收录推进方式 |
+| --- | --- | --- | --- |
+| `https://supercli.site/` | 已发现，尚未编入索引 | 可编入索引 | 索引请求已被接受，进入优先抓取队列 |
+| `https://supercli.site/en/` | 已发现，尚未编入索引 | 可编入索引 | 索引请求已被接受，进入优先抓取队列 |
+| `https://supercli.site/tools/wrangler/` | 已发现，尚未编入索引 | 可编入索引 | 通过已成功读取的站点地图发现 |
+| `https://supercli.site/en/tools/wrangler/` | 已发现，尚未编入索引 | 可编入索引 | 通过已成功读取的站点地图发现 |
+
+四页线上均返回 200，没有 `noindex` 或 `X-Robots-Tag` 限制；canonical 指向各自页面，hreflang 正确互指中英文版本。Google 检查工具智能手机版实际测试均显示允许抓取、网页抓取成功、允许编入索引，识别到的用户声明 canonical 与被检页面一致。
+
+这些结果说明抽查页可以被 Google 抓取和编入索引，不表示已经收录。Google 最终选择的 canonical 要等索引后才能确认。检查时索引报告尚无历史抓取时间，四个样本都来自已提交站点地图；全站索引数量、曝光和点击报告仍在处理，不能记作 0，也不能将四个样本外推为全站已完成索引检查。首页请求已成功提交，不重复提交同一网址。
+
 Google 的 AI Overviews / AI Mode 沿用 SEO 基础要求，不要求专用 AI 文件或特殊结构化标记；`llms.txt` 仅是补充发现入口，不作为排名或 AI 引用承诺。结构化数据应与可见正文一致。
 
 参考：[Google 多语言版本规范](https://developers.google.com/search/docs/specialty/international/localized-versions)、[Google AI 功能与站点规范](https://developers.google.com/search/docs/appearance/ai-features)。
