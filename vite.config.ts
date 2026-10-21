@@ -10,6 +10,7 @@ export default defineConfig({
         main: "index.html",
         brand: "brand.html",
         standards: "standards.html",
+        guides: "guides.html",
       },
     },
   },

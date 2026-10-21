@@ -1,4 +1,6 @@
 /** 双语静态页面与搜索元信息；构建和开发共用，不依赖爬虫执行 JavaScript。 */
+import { guides, guideFor, guideText } from "./guide-content.ts";
+import { guideMarkup, guideStructuredData } from "./guide-markup.ts";
 import catalog from "../data/catalog.json" with { type: "json" };
 import metrics from "../data/metrics.json" with { type: "json" };
 import english from "../data/catalog.en.json" with { type: "json" };
@@ -21,6 +23,7 @@ export const pagePaths = [
   "/",
   "/standards",
   "/brand",
+  ...guides.map((guide) => `/guides/${guide.slug}/`),
   ...catalog.map((item) => `/tools/${item.id}/`),
 ];
 /** 添加语言前缀。 */
@@ -31,6 +34,7 @@ export function localizedPath(path: string, language: Language): string {
 /** 将发布路径映射到静态入口。 */
 export function pageSource(path: string): string | null {
   if (path === "/") return "index.html";
+  if (guideFor(path)) return "guides.html";
   if (path === "/standards" || path === "/standards.html")
     return "standards.html";
   if (path === "/brand.html" || path === "/brand") return "brand.html";
@@ -106,6 +110,9 @@ function structuredData(
     url,
     inLanguage: language === "en" ? "en" : "zh-CN",
   };
+  const guide = guideFor(path);
+  if (guide)
+    return { ...base, ...guideStructuredData(guide, language, origin) };
   if (item)
     return {
       ...base,
@@ -198,6 +205,19 @@ export function localizedPage(
       .replace(
         /<p class="intro">.*?<\/p>/s,
         `<p class="intro">${escape(toolDescription(item, language))}</p>`,
+      );
+  }
+  const guide = guideFor(path);
+  if (guide) {
+    html = html
+      .replace("<!-- guide-content -->", guideMarkup(guide, language))
+      .replace(
+        /<title>.*?<\/title>/s,
+        `<title>${escape(guideText(guide.title, language))} — SuperCLI</title>`,
+      )
+      .replace(
+        /name="description"\s+content="[^"]*"/,
+        `name="description" content="${escape(guideText(guide.summary, language))}"`,
       );
   }
   return metadata(html, path, language);

@@ -1,0 +1,304 @@
+[
+  {
+    "slug": "ai-coding",
+    "category": "ai",
+    "reviewedAt": "2026-10-21",
+    "title": {
+      "zh": "终端 AI 编程工具怎么选？",
+      "en": "Choosing an AI coding CLI"
+    },
+    "summary": {
+      "zh": "从已有账号和工作流出发，比较 Codex、Claude Code 与 Gemini CLI 的适用任务、使用前提和边界。",
+      "en": "Compare Codex, Claude Code, and Gemini CLI by your existing account, workflow, setup needs, and constraints."
+    },
+    "answer": {
+      "zh": "先从你已有可用账号的工具开始，在同一个小任务上检查改动质量。Codex、Claude Code、Gemini CLI 都能参与代码工作；选型更应看登录方式、团队政策和权限设置，而不是只看仓库 Stars。",
+      "en": "Start with a tool you can already access and evaluate its changes on one small task. Codex, Claude Code, and Gemini CLI can all assist with code. Account access, team policy, and permissions are better starting points than repository stars."
+    },
+    "boundary": {
+      "zh": "三者都需要核对所选登录方式与模型服务的使用条件。这是按工作流整理的选型建议，没有独立性能排名；安装工具也不代表获得无限或免费的模型使用量。",
+      "en": "Check the terms of your selected sign-in method and model service. These are workflow-based recommendations, not independent performance rankings. Installing a CLI does not grant unlimited or free model access."
+    },
+    "steps": [
+      {
+        "zh": "选一个范围明确的任务，例如解释一个函数或为现有函数补充测试，并先确认仓库状态。",
+        "en": "Choose a bounded task, such as explaining a function or adding a test, and check repository state first."
+      },
+      {
+        "zh": "按官方指引登录，检查文件访问、命令执行与网络权限，再开始工作。",
+        "en": "Sign in using official guidance and review file, command, and network permissions before starting."
+      },
+      {
+        "zh": "阅读 diff，运行项目已有检查，再决定是否保留改动；不要把生成结果直接当成已验证代码。",
+        "en": "Read the diff and run existing project checks before accepting changes. Generated code still needs verification."
+      }
+    ],
+    "tools": [
+      {
+        "id": "codex",
+        "task": {
+          "zh": "从现有 OpenAI / Codex 工作流进入代码任务",
+          "en": "Work on code from an existing OpenAI / Codex workflow"
+        },
+        "fit": {
+          "zh": "适合希望在项目目录中读代码、修改文件，并衔接脚本或 CI 的人。",
+          "en": "Useful for reading and editing a local repository and extending the workflow into scripts or CI."
+        },
+        "requirements": {
+          "zh": "先确认可用的 ChatGPT 登录或其他官方认证方式；按当前安装文档选择适合系统的分发方式。",
+          "en": "Confirm an available ChatGPT sign-in or another documented authentication method, then choose the installation method for your system."
+        },
+        "caveat": {
+          "zh": "可用能力与额度取决于账号和认证方式；需要纯离线工作时，不应只凭已安装 CLI 就假定模型可用。",
+          "en": "Capabilities and limits depend on your account and authentication method. An installed CLI alone does not guarantee offline model access."
+        },
+        "sources": [
+          "https://learn.chatgpt.com/docs/codex/cli",
+          "https://learn.chatgpt.com/docs/auth"
+        ]
+      },
+      {
+        "id": "claude",
+        "task": {
+          "zh": "在 Claude Code 工作流里处理跨文件改动",
+          "en": "Make cross-file changes within a Claude Code workflow"
+        },
+        "fit": {
+          "zh": "适合已有 Claude Code 访问方式，希望把终端与开发工具协作连起来的人。",
+          "en": "Useful when you already have Claude Code access and want to connect terminal work with development tools."
+        },
+        "requirements": {
+          "zh": "核对订阅、Console 或受支持提供商的访问方式；原生安装与 npm 等安装路径的前提不同。",
+          "en": "Check subscription, Console, or supported-provider access. Native and npm installation paths have different prerequisites."
+        },
+        "caveat": {
+          "zh": "不要把某一种安装路径的运行时依赖套到所有安装方式；命令执行和文件改动仍需核查。",
+          "en": "Do not apply one installation method's runtime requirements to every method. Review executed commands and file changes."
+        },
+        "sources": [
+          "https://code.claude.com/docs/en/overview",
+          "https://code.claude.com/docs/en/setup"
+        ]
+      },
+      {
+        "id": "gemini",
+        "task": {
+          "zh": "在 Google / Gemini 账号环境中开始终端编程",
+          "en": "Start terminal coding with a Google / Gemini account setup"
+        },
+        "fit": {
+          "zh": "适合希望沿用 Google 登录、Gemini API 或 Vertex AI 认证路径的人。",
+          "en": "Useful when Google sign-in, Gemini API credentials, or Vertex AI fits your account setup."
+        },
+        "requirements": {
+          "zh": "当前安装文档列出 Node.js 20+；不同认证方式有各自的账号或项目配置要求。",
+          "en": "Current installation guidance lists Node.js 20+. Each authentication route has its own account or project setup requirements."
+        },
+        "caveat": {
+          "zh": "Google 登录、API Key 与 Vertex AI 的额度和配置并不相同；先确认适用路径再比较成本。",
+          "en": "Google sign-in, API keys, and Vertex AI have different setup and quota models. Choose a route before comparing costs."
+        },
+        "sources": [
+          "https://geminicli.com/docs/get-started/installation/",
+          "https://geminicli.com/docs/get-started/authentication/"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cloud-deployment",
+    "category": "cloud",
+    "reviewedAt": "2026-10-21",
+    "title": {
+      "zh": "项目部署到云端，该用哪个 CLI？",
+      "en": "Which CLI fits your cloud deployment?"
+    },
+    "summary": {
+      "zh": "按部署目标选择 Wrangler、Vercel CLI 或 Supabase CLI，分清网站发布、运行时与后端管理的边界。",
+      "en": "Choose Wrangler, Vercel CLI, or Supabase CLI by deployment target, separating website delivery, runtimes, and backend management."
+    },
+    "answer": {
+      "zh": "先确定项目要落在哪个运行环境。Cloudflare Workers 相关项目看 Wrangler，Vercel 项目看 Vercel CLI，Supabase 的本地后端与数据库迁移看 Supabase CLI。它们服务的目标不同，可以组合使用，也不互相替代所有功能。",
+      "en": "Choose the target environment first: Wrangler for Cloudflare Workers projects, Vercel CLI for Vercel projects, and Supabase CLI for local backend development and database migrations. They serve different targets and can be used together."
+    },
+    "boundary": {
+      "zh": "CLI 负责操作平台资源，不会替你消除平台限制或云端费用。先核对框架运行时、账号权限与项目配置；不要把本地开发成功当成生产发布成功。",
+      "en": "A CLI operates platform resources; it does not remove platform constraints or cloud charges. Check runtime compatibility, account permissions, and project configuration. Local success is not proof of a successful production release."
+    },
+    "steps": [
+      {
+        "zh": "确认部署的是静态站、服务端应用还是后端组件，并核对目标平台的运行时支持。",
+        "en": "Identify whether you are deploying a static site, a server application, or backend components, and check target runtime support."
+      },
+      {
+        "zh": "先在开发或预览环境验证构建产物，核对环境变量、数据连接和目标项目。",
+        "en": "Validate build output in development or preview, then check environment variables, data connections, and the target project."
+      },
+      {
+        "zh": "发布后检查真实网址、关键交互和部署版本；涉及数据库时，另行确认迁移与数据恢复方案。",
+        "en": "After publishing, verify the real URL, key interactions, and deployed revision. Plan migrations and recovery separately for database changes."
+      }
+    ],
+    "tools": [
+      {
+        "id": "wrangler",
+        "task": {
+          "zh": "开发和发布 Cloudflare Workers 项目",
+          "en": "Develop and deploy Cloudflare Workers projects"
+        },
+        "fit": {
+          "zh": "适合 Workers 及关联资源的本地开发、配置和部署工作。",
+          "en": "Useful for local development, configuration, and deployment of Workers and related resources."
+        },
+        "requirements": {
+          "zh": "按官方指引准备项目与开发环境；访问云端资源时确认 Cloudflare 账号和对应权限。",
+          "en": "Prepare a project and development environment using official guidance. Confirm Cloudflare account access and resource permissions for remote operations."
+        },
+        "caveat": {
+          "zh": "它面向 Cloudflare 的运行环境，不是把任意服务器程序原样搬上云的通用部署器。",
+          "en": "It targets the Cloudflare runtime rather than deploying any arbitrary server program unchanged."
+        },
+        "sources": ["https://developers.cloudflare.com/workers/wrangler/"]
+      },
+      {
+        "id": "vercel",
+        "task": {
+          "zh": "管理 Vercel 项目的部署与预览",
+          "en": "Manage deployments and previews for Vercel projects"
+        },
+        "fit": {
+          "zh": "适合使用 Vercel 项目工作流，管理部署、环境变量和项目连接。",
+          "en": "Useful for Vercel project workflows, deployments, environment variables, and project linking."
+        },
+        "requirements": {
+          "zh": "资源操作前需要认证；交互终端可登录，CI 按官方说明配置凭据与项目。",
+          "en": "Authenticate before accessing resources. Sign in interactively or configure credentials and project information for CI."
+        },
+        "caveat": {
+          "zh": "预览与生产是不同目标；运行 CLI 本身不意味着云端部署没有使用量或方案限制。",
+          "en": "Preview and production are separate targets. Using the CLI does not remove hosted usage or plan limits."
+        },
+        "sources": ["https://vercel.com/docs/cli"]
+      },
+      {
+        "id": "supabase",
+        "task": {
+          "zh": "本地启动后端，管理数据库迁移",
+          "en": "Run a local backend and manage database migrations"
+        },
+        "fit": {
+          "zh": "适合 Supabase 本地开发、数据库迁移与项目协作，而非替代所有前端托管工具。",
+          "en": "Useful for Supabase local development, database migrations, and project collaboration rather than general frontend hosting."
+        },
+        "requirements": {
+          "zh": "常见本地完整栈流程使用 Docker 兼容容器环境；官方也有实验性原生运行路径，需核对平台支持。",
+          "en": "The common full local stack uses a Docker-compatible container environment. An experimental native route also exists; check platform support."
+        },
+        "caveat": {
+          "zh": "本地数据库与云端项目是不同环境；连接、迁移和部署前核对目标，不能把本地测试数据当作生产备份。",
+          "en": "Local databases and hosted projects are different environments. Check the target before linking or migrating; local test data is not a production backup."
+        },
+        "sources": [
+          "https://supabase.com/docs/guides/local-development/cli/getting-started"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "terminal-productivity",
+    "category": "terminal",
+    "reviewedAt": "2026-10-21",
+    "title": {
+      "zh": "终端效率工具：搜索、挑选和跳转怎么配？",
+      "en": "Terminal tools for search, selection, and navigation"
+    },
+    "summary": {
+      "zh": "分清 ripgrep、fzf 与 zoxide 的工作边界，按重复最多的动作改善终端工作流。",
+      "en": "Understand ripgrep, fzf, and zoxide, then improve the terminal action you repeat most often."
+    },
+    "answer": {
+      "zh": "找文件里的文本用 ripgrep，从候选列表里交互挑选用 fzf，返回常用目录用 zoxide。三者解决的是不同动作，通常可以互补；先选一个你最常重复的动作，不必一次改完整个 Shell。",
+      "en": "Use ripgrep to search file contents, fzf to interactively select from candidates, and zoxide to revisit directories. They solve different problems and can complement each other. Start with the action you repeat most; you do not need to rebuild your shell."
+    },
+    "boundary": {
+      "zh": "这些工具可以本地处理输入，不需要为基本功能开通模型服务。安装方式、可用快捷键和集成效果仍取决于操作系统与 Shell；不要把交互工具直接当成无人值守脚本的替代品。",
+      "en": "These tools process local input without a model-service account for their basic functions. Installation, shortcuts, and integration depend on your OS and shell. Interactive tools are not drop-in replacements for unattended scripts."
+    },
+    "steps": [
+      {
+        "zh": "先确定你需要的是搜索内容、挑选结果，还是切换目录，不要只按工具热度安装。",
+        "en": "Decide whether you need content search, result selection, or directory navigation rather than installing by popularity."
+      },
+      {
+        "zh": "在小目录或少量候选上试用，再按官方说明接入 Shell；保留原有命令作为回退。",
+        "en": "Try a small directory or candidate list, then follow the documented shell integration. Keep existing commands as a fallback."
+      },
+      {
+        "zh": "自动化脚本要明确输入与输出；遇到漏搜或跳转不准，先检查过滤规则、Shell 初始化和使用历史。",
+        "en": "Make script inputs and outputs explicit. For missing search results or poor navigation matches, check filters, shell initialization, and visit history."
+      }
+    ],
+    "tools": [
+      {
+        "id": "rg",
+        "task": {
+          "zh": "定位代码和文件内容",
+          "en": "Locate text in source code and files"
+        },
+        "fit": {
+          "zh": "适合在目录中按文本或正则表达式搜索，并输出可供后续处理的匹配结果。",
+          "en": "Useful for text or regex searches across directories, with match output for further processing."
+        },
+        "requirements": {
+          "zh": "使用适合系统的预编译包或按上游说明安装；基本搜索不需要云端账号。",
+          "en": "Install an appropriate system package or follow upstream instructions. Basic search does not need a cloud account."
+        },
+        "caveat": {
+          "zh": "默认会过滤被忽略、隐藏和二进制文件；没搜到不一定代表文件中没有目标文本。",
+          "en": "Ignored, hidden, and binary files are filtered by default. No match does not always mean the text is absent."
+        },
+        "sources": ["https://github.com/BurntSushi/ripgrep"]
+      },
+      {
+        "id": "fzf",
+        "task": {
+          "zh": "从文件名、历史或列表中挑选",
+          "en": "Select from filenames, history, or other lists"
+        },
+        "fit": {
+          "zh": "适合给已有候选列表增加模糊匹配和交互选择，也可与 ripgrep 等工具组合。",
+          "en": "Useful for adding fuzzy matching and interactive selection to existing candidates, including workflows with ripgrep."
+        },
+        "requirements": {
+          "zh": "先准备候选输入；历史与文件快捷键等集成需按官方说明配置 Shell。",
+          "en": "Provide candidate input. Configure shell integration for history and file-selection shortcuts as documented."
+        },
+        "caveat": {
+          "zh": "fzf 主要负责筛选候选，不自动替你定义完整搜索范围；交互用法需要用户选择。",
+          "en": "fzf filters candidates; it does not define the full search scope for you. Interactive usage expects a user selection."
+        },
+        "sources": ["https://github.com/junegunn/fzf"]
+      },
+      {
+        "id": "zoxide",
+        "task": {
+          "zh": "更快返回经常访问的目录",
+          "en": "Return to frequently visited directories"
+        },
+        "fit": {
+          "zh": "适合重复进入项目目录；根据访问习惯匹配位置，减少手输长路径。",
+          "en": "Useful for repeatedly visiting project directories, matching locations from visit history instead of typing long paths."
+        },
+        "requirements": {
+          "zh": "安装后需为当前 Shell 添加初始化；交互选择和部分补全功能另需 fzf。",
+          "en": "Add initialization for your shell after installation. Interactive selection and some completion features also need fzf."
+        },
+        "caveat": {
+          "zh": "它依赖访问历史，不是全盘文件搜索器；刚安装时尚未积累常用目录。",
+          "en": "It depends on visit history rather than searching the entire disk. A fresh installation has not yet learned your directories."
+        },
+        "sources": ["https://github.com/ajeetdsouza/zoxide"]
+      }
+    ]
+  }
+]
