@@ -11,6 +11,18 @@
 - X 分享打开可编辑的发布页，由用户确认发送。Open Graph / Twitter 元信息使用 1200×630 PNG，来自仓库已有品牌 SVG。
 - `/sitemap.xml` 自动生成全部双语页面；`/catalog.json` 提供双语用途、原始来源、核验范围和数据快照时间；`/llms.txt` 提供补充检索入口。机器索引不导出本机安装状态。
 - `pnpm build` 校验全部静态路径、语言标记、canonical、分享元信息、JSON-LD、图片与脚本资产。
+- 三个中英文场景指南覆盖 AI 编程、云端部署、终端效率，按任务比较 9 个目录工具，说明使用前提与限制，并附官方资料和核对日期。首页场景入口、指南之间及指南到工具详情均使用真实链接。
+- 指南内容真源为 `data/guides.json`，契约为 `data/guides.schema.json`；构建拒绝缺失翻译、重复路径、未知工具及非官方 HTTPS 来源。指南正文直接输出到静态 HTML，Article 结构化数据引用同一份正文标题、日期和出处。
+
+## 场景内容入口
+
+| 场景 | 中文 | English |
+| --- | --- | --- |
+| AI 编程 | [/guides/ai-coding/](https://supercli.site/guides/ai-coding/) | [/en/guides/ai-coding/](https://supercli.site/en/guides/ai-coding/) |
+| 云端部署 | [/guides/cloud-deployment/](https://supercli.site/guides/cloud-deployment/) | [/en/guides/cloud-deployment/](https://supercli.site/en/guides/cloud-deployment/) |
+| 终端效率 | [/guides/terminal-productivity/](https://supercli.site/guides/terminal-productivity/) | [/en/guides/terminal-productivity/](https://supercli.site/en/guides/terminal-productivity/) |
+
+2026-10-21 核对首版官方资料。指南属于编辑选型建议，未将文档核对写成独立安装实测，也未修改 `data/reviews.json` 的既有记录。新增六个语言页面后，构建站点地图包含 194 个网址，公开目录 JSON 与 llms.txt 同步列出指南。下方 GSC 188 页为首次提交时的读取记录，新版本被 Google 重新读取和收录的情况须另行确认。
 
 ## 后续优先级与验收
 

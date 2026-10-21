@@ -7,7 +7,10 @@ const snapshot = JSON.parse(read("catalog.json"));
 const paths = [...read("sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)].map(
   (match) => new URL(match[1]),
 );
-assert.equal(paths.length, (snapshot.tools.length + 3) * 2);
+assert.equal(
+  paths.length,
+  (snapshot.tools.length + snapshot.guides.length + 3) * 2,
+);
 for (const url of paths) {
   const file =
     url.pathname === "/"

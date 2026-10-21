@@ -369,5 +369,10 @@
   "飞书 Lark": "Lark / Feishu",
   "。": ".",
   "Lark / 飞书 CLI": "Lark / Feishu CLI",
-  "目录数据": "Catalog data"
+  "目录数据": "Catalog data",
+  "场景指南": "Workflow guides",
+  "按场景选工具": "Choose by workflow",
+  "跳到场景指南": "Skip to workflow guide",
+  "按场景选 CLI — SuperCLI": "Choose a CLI by workflow — SuperCLI",
+  "按任务选择 CLI，核对使用前提、限制与官方资料。": "Choose CLI tools by task, with prerequisites, limitations, and official sources."
 }
