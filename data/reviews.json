@@ -1,0 +1,33 @@
+[
+  {
+    "id": "dyt-ashare-cli",
+    "repo": "renjiegod/dyt-ashare-cli",
+    "docs": "https://github.com/renjiegod/dyt-ashare-cli#readme",
+    "install": "git clone https://github.com/renjiegod/dyt-ashare-cli.git && cd dyt-ashare-cli && cargo install --locked --path .",
+    "reviewedAt": "2026-10-21T02:59:13Z",
+    "reviewer": "webkubor",
+    "evidence": "https://github.com/webkubor/supercli/pull/2#pullrequestreview-5594435975",
+    "checks": [
+      {
+        "kind": "source",
+        "method": "documentation",
+        "reference": "https://github.com/renjiegod/dyt-ashare-cli",
+        "note": "核对原作者仓库、README 与目录来源。",
+        "environment": null,
+        "version": null
+      },
+      {
+        "kind": "installation",
+        "method": "documentation",
+        "reference": "https://github.com/renjiegod/dyt-ashare-cli/blob/8e0d330853cf62083e14e664426bf6007ebd1332/README.md#L122-L135",
+        "note": "安装命令与 README 源码安装步骤一致；本站此次未独立执行 CLI 安装。",
+        "environment": null,
+        "version": null
+      }
+    ],
+    "name": "DYT AShare CLI",
+    "vendor": "renjiegod",
+    "maintainerType": "community",
+    "description": "面向 A 股历史分钟数据研究的 Rust CLI，支持覆盖查询、分钟同步和本地质量分析。"
+  }
+]

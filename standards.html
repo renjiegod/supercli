@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>公开收录标准 — SuperCLI</title>
+    <meta
+      name="description"
+      content="SuperCLI 如何核对 CLI 来源、安装方式、用途与维护情况，以及如何公开收录和核验依据。"
+    />
+    <meta name="theme-color" content="#002fa7" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="canonical" href="https://supercli.site/standards" />
+  </head>
+  <body>
+    <a class="skip" href="#standards-main">跳到收录标准</a>
+    <header class="header wrap standards-header">
+      <a class="brand" href="/" aria-label="SuperCLI 首页"
+        ><img
+          class="brand-lockup"
+          src="/brand/supercli-wordmark.svg"
+          alt="SuperCLI"
+          width="210"
+          height="45"
+      /></a>
+      <nav aria-label="主导航">
+        <a href="/#directory">探索 CLI</a
+        ><a href="/standards" aria-current="page">收录标准</a>
+      </nav>
+      <a class="button" href="/#contribute"
+        >推荐 CLI<i data-lucide="arrow-up-right"></i
+      ></a>
+    </header>
+    <main id="standards-main" class="wrap standards-page">
+      <section class="standards-intro">
+        <p class="eyebrow">SuperCLI · 公开收录标准 v1</p>
+        <h1>选一件趁手工具，<br />也看清<span>选择的依据。</span></h1>
+        <p class="intro">
+          我们希望减少从发现到安装的试错。<br />公开原始来源、核验范围与待补信息，让每一次推荐都经得起追问。
+        </p>
+        <a class="button primary" href="/#directory"
+          >带着标准，探索工具<i data-lucide="arrow-up-right"></i
+        ></a>
+      </section>
+      <section class="standards-sources" aria-labelledby="sources-title">
+        <div>
+          <p class="eyebrow">先分清两个概念</p>
+          <h2 id="sources-title">来源说明维护方，核验说明查过什么。</h2>
+          <p>
+            厂商官方与社区项目采用相同收录标准。标签不代表质量排名，也不代表本站获得厂商授权。
+          </p>
+        </div>
+        <div class="source-examples">
+          <article>
+            <span class="source-badge" data-kind="vendor"
+              ><i data-lucide="building-2"></i>厂商官方</span
+            >
+            <p>由产品或平台厂商直接维护的 CLI。</p>
+          </article>
+          <article>
+            <span class="source-badge" data-kind="community"
+              ><i data-lucide="users"></i>社区项目</span
+            >
+            <p>由独立作者、开源组织或社区维护，也包括项目自己的原版 CLI。</p>
+          </article>
+        </div>
+      </section>
+      <section aria-labelledby="criteria-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">所有来源，共用一套标准</p>
+            <h2 id="criteria-title">我们关注这五件事</h2>
+          </div>
+        </div>
+        <div class="criteria-grid">
+          <article>
+            <span class="criterion-number">01</span>
+            <h3>来源能追溯</h3>
+            <p>
+              确认是
+              CLI，查原作者、维护者、官网或原始仓库。区分上游与镜像，避免同名工具混淆。
+            </p>
+            <small>可公开的依据：项目仓库、文档、收录 PR。</small>
+          </article>
+          <article>
+            <span class="criterion-number">02</span>
+            <h3>安装有依据</h3>
+            <p>
+              安装方式与上游说明一致，避免失效地址。资料核对和安装实测分开记录；实测须注明环境与版本。
+            </p>
+            <small>没运行过，不写“安装实测通过”。</small>
+          </article>
+          <article>
+            <span class="criterion-number">03</span>
+            <h3>用途和限制说清楚</h3>
+            <p>
+              说明适合解决什么任务，核对平台、依赖、账号和费用等关键前提。让用户知道装之前需要准备什么。
+            </p>
+            <small>用途具体，限制有来源，避免夸大能力。</small>
+          </article>
+          <article>
+            <span class="criterion-number">04</span>
+            <h3>维护情况可查</h3>
+            <p>
+              关注公开文档、许可证、归档状态和更新时间。仓库推送不等于版本发布，缺失信息明确标注。
+            </p>
+            <small>Stars 是热度参考，不是质量门槛。</small>
+          </article>
+          <article>
+            <span class="criterion-number">05</span>
+            <h3>核验可以被追问</h3>
+            <p>
+              记录维护者、核验时间、实际范围与依据。工具信息变化后应复核；用户可以通过原投稿或修正表单反馈。
+            </p>
+            <small>核验记录对应当时的信息，不作永久保证。</small>
+          </article>
+        </div>
+      </section>
+      <section class="standards-levels" aria-labelledby="levels-title">
+        <p class="eyebrow">如何读懂卡片与详情</p>
+        <h2 id="levels-title">有记录才展示，查到哪一步就写哪一步。</h2>
+        <dl>
+          <div>
+            <dt>资料核对</dt>
+            <dd>核对了文档、原始仓库或安装说明；不等于本站执行过安装。</dd>
+          </div>
+          <div>
+            <dt>安装实测</dt>
+            <dd>只有实际运行并记录环境、工具版本与依据时才使用该标记。</dd>
+          </div>
+          <div>
+            <dt>范围待补充</dt>
+            <dd>
+              已有收录出处，但尚未整理专项核验记录。不会自动标成通过或不合格。
+            </dd>
+          </div>
+        </dl>
+        <p class="standards-note">
+          历史目录的核验详情正在逐步补齐。当前核验入口会如实展示已有范围，不批量补发“已验证”标签。
+        </p>
+      </section>
+      <section class="standards-bottom">
+        <div>
+          <h2>让目录的价值，来自透明与共同维护。</h2>
+          <p>
+            PR 人工审核后合并，main 自动检查与发布。Scorecard
+            提供仓库成熟度参考，不能替代 CLI 安装实测或安全审计。
+          </p>
+        </div>
+        <div>
+          <a
+            class="button primary"
+            href="https://github.com/webkubor/supercli/issues/new?template=cli.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+            >推荐一个 CLI<i data-lucide="arrow-up-right"></i></a
+          ><a
+            class="button"
+            href="https://github.com/webkubor/supercli/issues/new?template=correction.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+            >反馈信息问题</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="wrap footer">
+      <a class="brand" href="/"
+        ><img
+          class="brand-lockup"
+          src="/brand/supercli-wordmark.svg"
+          alt="SuperCLI"
+          width="180"
+          height="38"
+      /></a>
+      <p>公开来源 · 明确核验范围 · 欢迎更正</p>
+      <a href="/brand.html">品牌与设计</a>
+    </footer>
+    <script type="module" src="/src/standards.ts"></script>
+  </body>
+</html>

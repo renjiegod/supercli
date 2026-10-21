@@ -1,0 +1,21 @@
+/** 目录卡片：身份来源、具体用途、本站核验入口与公开指标分层展示。 */
+import { stats, usage, categories, type Entry } from "./catalog";
+import { cardMetrics } from "./tool-metrics";
+import { sourceBadge, reviewCard } from "./review-records";
+import { escapeHtml as escape } from "./escape";
+const number = (n: number) =>
+  Intl.NumberFormat("en", {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(n);
+/** 名次随当前排序变化，未接入指标的工具不编造数字。 */
+export function cardMarkup(item: Entry, index: number, sort: string): string {
+  const metric = stats(item);
+  const destination = item.repo ? `https://github.com/${item.repo}` : item.docs;
+  const rank =
+    ((sort === "stars" || sort === "updated") && !metric) ||
+    (sort === "downloads" && !usage(item))
+      ? "—"
+      : String(index + 1).padStart(2, "0");
+  return `<article class="card"><div class="card-top"><span class="rank">${rank}</span><img class="vendor-icon" src="/icons/${escape(item.icon)}" alt="${escape(item.vendor)} 工具图标" width="44" height="44" loading="lazy"><span class="tag">${escape(categories[item.category as keyof typeof categories])}</span></div><button class="card-title" data-detail="${escape(item.id)}">${escape(item.name)}<i data-lucide="arrow-up-right"></i></button><div class="card-identity"><span class="vendor-name">${escape(item.vendor)}</span>${sourceBadge(item)}</div><p class="description">${escape(item.description)}</p>${reviewCard(item)}${cardMetrics(item)}<div class="card-bottom"><a href="${escape(destination)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(item.name)} 的原始项目来源"><i data-lucide="star"></i>${metric ? number(metric.stars) : "未计分"}<span>${metric ? "Stars" : "项目文档"}</span></a><button class="copy" data-copy="${escape(item.id)}" aria-label="复制 ${escape(item.name)} 安装命令"><i data-lucide="copy"></i>${item.install ? "安装" : "详情"}</button></div></article>`;
+}

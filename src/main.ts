@@ -16,6 +16,10 @@ import {
   Sparkles,
   Terminal,
   Link,
+  Building2,
+  Users,
+  FileText,
+  ChevronDown,
 } from "lucide";
 const icons = {
   GitFork,
@@ -33,22 +37,25 @@ const icons = {
   Sparkles,
   Terminal,
   Link,
+  Building2,
+  Users,
+  FileText,
+  ChevronDown,
 };
 import {
   catalog,
   categories,
   maintainerLabels,
   metrics,
-  queryEntries,
   stats,
-  usage,
+  queryEntries,
   type Entry,
 } from "./catalog";
 import { escapeHtml as escape, detailMarkup } from "./html";
 import { showCopySuccess, setupDialogDismiss } from "./interaction-feedback";
 import { setupCommunity } from "./community";
 import { setupFilterPicker } from "./filter-picker";
-import { cardMetrics } from "./tool-metrics";
+import { cardMarkup } from "./card";
 import "./style.css";
 import { setupDiscovery, setupDetailLinks } from "./discovery";
 const root = document.querySelector<HTMLElement>("#catalog")!;
@@ -60,16 +67,6 @@ let category = "";
 let maintainerType = "";
 let toastTimer: ReturnType<typeof setTimeout>;
 const iconify = () => createIcons({ icons });
-const number = (n: number) =>
-  Intl.NumberFormat("en", {
-    notation: "compact",
-    maximumFractionDigits: 1,
-  }).format(n);
-function card(item: Entry, index: number): string {
-  const metric = stats(item);
-  const destination = item.repo ? `https://github.com/${item.repo}` : item.docs;
-  return `<article class="card"><div class="card-top"><span class="rank">${((sort.value === "stars" || sort.value === "updated") && !metric) || (sort.value === "downloads" && !usage(item)) ? "—" : String(index + 1).padStart(2, "0")}</span><img class="vendor-icon" src="/icons/${escape(item.icon)}" alt="${escape(item.vendor)} 工具图标" width="40" height="40" loading="lazy"><span class="tag">${escape(categories[item.category as keyof typeof categories])}</span></div><button class="card-title" data-detail="${escape(item.id)}">${escape(item.name)}<i data-lucide="arrow-up-right"></i></button><p class="vendor-name">${escape(item.vendor)}<span class="source-badge" data-kind="${item.maintainerType}">${maintainerLabels[item.maintainerType]}</span></p><p class="description">${escape(item.description)}</p>${cardMetrics(item)}<div class="card-bottom"><a href="${escape(destination)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(item.name)} 的官方来源"><i data-lucide="star"></i>${metric ? number(metric.stars) : "未计分"}<span>${metric ? "Stars" : "官方文档"}</span></a><button class="copy" data-copy="${escape(item.id)}" aria-label="复制 ${escape(item.name)} 安装命令"><i data-lucide="copy"></i>${item.install ? "安装" : "详情"}</button></div></article>`;
-}
 function render(): void {
   const items = queryEntries(
     search.value,
@@ -78,7 +75,9 @@ function render(): void {
     sort.value,
     maintainerType,
   );
-  root.innerHTML = items.map(card).join("");
+  root.innerHTML = items
+    .map((item, index) => cardMarkup(item, index, sort.value))
+    .join("");
   document.querySelector("#result-count")!.textContent = `${items.length} 个`;
   const summaries: Record<string, string> = {
     stars: "按 GitHub Stars 排序 · 多工具仓库共享数据",
@@ -242,9 +241,20 @@ function setupEvents(): void {
           .scrollIntoView({ block: "start" });
     }
     const item = catalog.find(
-      (entry) => entry.id === (target.dataset.detail ?? target.dataset.copy),
+      (entry) =>
+        entry.id ===
+        (target.dataset.detail ?? target.dataset.copy ?? target.dataset.review),
     );
-    if (item && target.dataset.detail) showDetail(item);
+    if (item && (target.dataset.detail || target.dataset.review)) {
+      showDetail(item);
+      if (target.dataset.review) {
+        const record =
+          document.querySelector<HTMLDetailsElement>("#review-record")!;
+        record.open = true;
+        record.querySelector<HTMLElement>("summary")!.focus();
+        record.scrollIntoView({ block: "nearest", behavior: "instant" });
+      }
+    }
     if (item && target.dataset.copy) void copyCommand(item);
     if (target.classList.contains("close")) target.closest("dialog")?.close();
   });

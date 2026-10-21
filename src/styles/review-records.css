@@ -1,0 +1,222 @@
+/* 来源与核验分开表达，两个来源标签使用相同触控外观与可读层级。 */
+.card-identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  margin-top: 7px;
+}
+.card-identity .vendor-name {
+  margin: 0;
+  font-size: 11px;
+}
+.source-badge,
+.detail-stats > .source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 500;
+  white-space: nowrap;
+  background: var(--surface);
+  color: var(--muted);
+}
+.source-badge svg {
+  width: 12px;
+  height: 12px;
+  stroke-width: 1.7;
+}
+.source-badge[data-kind="vendor"],
+.detail-stats > .source-badge[data-kind="vendor"] {
+  color: var(--accent);
+  border-color: var(--brand-tint);
+  background: var(--brand-tint);
+}
+.source-badge[data-kind="community"],
+.detail-stats > .source-badge[data-kind="community"] {
+  color: var(--ink);
+  background: var(--bg);
+  border-color: var(--line);
+}
+.review-entry {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 0;
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  text-align: left;
+  min-height: 44px;
+}
+.review-entry > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 11px;
+}
+.review-entry small {
+  margin-left: auto;
+  color: var(--faint);
+  font-size: 10px;
+}
+.review-entry svg {
+  width: 13px;
+  height: 13px;
+  color: var(--accent);
+}
+.review-entry:hover {
+  background: var(--brand-tint);
+}
+.card .review-entry + .tool-metrics {
+  margin-top: 0;
+}
+.review-record {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 20px 0;
+}
+.review-record > summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  cursor: pointer;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  list-style: none;
+}
+.review-record > summary::-webkit-details-marker {
+  display: none;
+}
+.review-record > summary > span {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 400;
+  margin-left: auto;
+}
+.review-record > summary > svg {
+  width: 16px;
+  color: var(--accent);
+}
+.review-record > summary:hover,
+.review-record[open] > summary {
+  background: var(--surface);
+}
+.review-record > summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.review-content {
+  padding: 0 14px 14px;
+  border-top: 1px solid var(--line);
+}
+.review-content a {
+  color: var(--accent);
+  font-size: 12px;
+}
+.review-content > p {
+  margin: 14px 0;
+  font-size: 12px;
+}
+.review-content .review-meta {
+  font-size: 11px;
+}
+.review-checks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.review-checks li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.review-checks li > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+}
+.review-method {
+  color: var(--accent);
+  background: var(--brand-tint);
+  padding: 2px 6px;
+  border-radius: var(--radius);
+  font-size: 10px;
+}
+.review-checks li p {
+  margin: 8px 0;
+  font-size: 12px;
+}
+.review-checks li a,
+.review-standard-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 36px;
+}
+.review-checks li svg,
+.review-standard-link svg {
+  width: 13px;
+}
+.review-standard-link {
+  margin-top: 12px;
+}
+.standards-teaser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--accent);
+  background: var(--brand-tint);
+  margin-bottom: 18px;
+}
+.standards-teaser strong {
+  font-size: 13px;
+}
+.standards-teaser p {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 3px;
+}
+.standards-teaser > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 12px;
+  min-height: 40px;
+}
+.standards-teaser svg {
+  width: 14px;
+}
+@media (max-width: 640px) {
+  .review-entry {
+    min-height: 44px;
+  }
+  .review-record > summary {
+    padding: 12px;
+  }
+  .review-checks li a,
+  .review-standard-link {
+    min-height: 44px;
+  }
+}
+
+.review-chevron {
+  transition: transform var(--fast) var(--ease);
+}
+.review-record[open] .review-chevron {
+  transform: rotate(180deg);
+}

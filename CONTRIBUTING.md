@@ -29,3 +29,9 @@
 3. 新条目需要 `data/community.json` 收录记录；PR 创建前可以准备字段，维护者合并前填最终 PR URL、实际收录时间和经确认的署名。不要猜 PR 编号或推荐者，详情见 [社区维护流程](docs/COMMUNITY.md)。
 4. Node 24+、pnpm 12：`pnpm install --frozen-lockfile`；`node scripts/sync.mjs --gh --icons`、`pnpm sync:usage` 刷新快照，再运行 `pnpm build`。只使用可信的官方安装说明，不执行陌生投稿中的脚本。
 5. 发起 PR，说明来源、用途和推荐理由。维护者在本地审查，手动合并，合并后自动发布；新收录与现有条目修正分别处理。
+
+## 公开收录标准与核验范围
+
+投稿前可阅读 [公开收录标准](https://supercli.site/standards)。厂商与社区工具共用标准，不以 Stars 高低决定是否值得收录。
+
+维护者在 `data/reviews.json` 记录实际核验的范围、时间和依据。安装方式、来源或用途变化时，要复核绑定记录或撤下旧记录；不自动继承旧结论。推荐者的安装经验可以作为补充信息，但不等于本站独立实测。

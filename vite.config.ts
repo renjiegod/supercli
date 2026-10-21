@@ -4,7 +4,13 @@ import { agentEyes } from "vite-plugin-agent-eyes";
 export default defineConfig({
   plugins: [...agentEyes()],
   build: {
-    rollupOptions: { input: { main: "index.html", brand: "brand.html" } },
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        brand: "brand.html",
+        standards: "standards.html",
+      },
+    },
   },
   server: { port: 5179, strictPort: true },
 });

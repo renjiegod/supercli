@@ -1,0 +1,164 @@
+/* 公开标准页面沿用Swiss蓝白网格；编号只表示标准条目，不是工具评级。 */
+.standards-header .button {
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .standards-header nav {
+    display: none;
+  }
+}
+.standards-page {
+  padding-bottom: 56px;
+}
+.standards-intro {
+  padding: 72px 0 56px;
+}
+.standards-intro h1 {
+  font-size: clamp(36px, 4.6vw, 60px);
+  line-height: 1.2;
+}
+.standards-intro .button {
+  margin-top: 28px;
+}
+.standards-sources {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  border-block: 1px solid var(--line);
+  padding: 32px 0;
+  margin-bottom: 56px;
+}
+.standards-sources h2,
+.standards-levels h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+}
+.standards-sources p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+.source-examples {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.source-examples > article {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.criteria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.criteria-grid article {
+  padding: 24px;
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.criterion-number {
+  display: block;
+  font-size: 24px;
+  color: var(--accent);
+  margin-bottom: 20px;
+  font-variant-numeric: tabular-nums;
+}
+.criteria-grid h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+.criteria-grid p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+.criteria-grid small {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.standards-levels {
+  margin-top: 56px;
+  padding: 32px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.standards-levels dl {
+  margin: 24px 0;
+}
+.standards-levels dl > div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.standards-levels dt {
+  font-weight: 600;
+  font-size: 13px;
+}
+.standards-levels dd {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+.standards-note {
+  font-size: 12px;
+  color: var(--muted);
+}
+.standards-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding-top: 48px;
+}
+.standards-bottom h2 {
+  font-size: 22px;
+}
+.standards-bottom p {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.standards-bottom > div:last-child {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1000px) {
+  .standards-sources {
+    grid-template-columns: 1fr;
+  }
+  .criteria-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .standards-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .standards-intro {
+    padding: 44px 0;
+  }
+  .standards-intro h1 {
+    letter-spacing: -1.5px;
+  }
+  .criteria-grid,
+  .source-examples {
+    grid-template-columns: 1fr;
+  }
+  .standards-levels {
+    padding: 20px;
+  }
+  .standards-levels dl > div {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
