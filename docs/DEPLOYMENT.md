@@ -17,7 +17,7 @@ CLOUDFLARE_ACCOUNT_ID=916ebb1b9f240bf4c8826021dd161692 pnpm exec wrangler pages 
 
 Wrangler 使用本机 owner OAuth，不在仓库落密钥。Pages 的 wrangler.toml 不能包含 account_id，应通过环境变量指定。
 
-GitHub Actions 在 main 更新后自动运行：安装锁定依赖 → 类型、数据与测试检查 → 构建 → Cloudflare Pages 部署 → 验证线上 deployment.json 的提交 SHA。PR 不触发部署，审核与合并仍由维护者完成。保留 workflow_dispatch 手动重跑入口。
+GitHub Actions 在 main 更新后自动运行：安装锁定依赖 → 类型、数据与测试检查 → 构建 → Cloudflare Pages 部署 → 验证线上 deployment.json 的提交 SHA。PR 不触发部署。owner 发起的改动通过验证后直接合入 main，无需 PR 审核；社区外部投稿仍由维护者审核并合并。保留 workflow_dispatch 手动重跑入口。
 
 生产任务串行执行；部署前确认当前提交仍是最新 main，过时任务跳过，避免回退线上版本。构建或测试失败时不会部署。production 环境仅允许受保护分支，不再另加发布审批。
 
@@ -25,7 +25,7 @@ CI 仅使用独立 Pages 部署 Token，通过 GitHub Actions Secret 注入部�
 
 ## 分支审核
 
-main 已启用保护：至少一位审核者批准、CODEOWNERS 审核、后续提交撤销旧批准，禁止强推与删除。仓库 owner 保留管理员人工处理能力。没有必需的自动状态检查，所有校验由维护者本地运行。
+main 已启用保护：至少一位审核者批准、CODEOWNERS 审核、后续提交撤销旧批准，禁止强推与删除。仓库 owner 保留管理员处理能力；owner 发起且已通过验证的改动可使用该能力直接合入，不为自己的代码补做 PR 审核。没有必需的自动状态检查，所有校验由维护者本地运行。
 
 ## 凭据
 
