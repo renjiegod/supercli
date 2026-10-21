@@ -26,5 +26,5 @@ export function cardMetrics(item: Entry): string {
 }
 export function detailMetrics(item: Entry): string {
   const data = usage(item);
-  return `${cardMetrics(item)}<p class="usage-explanation">${data ? `来源：npm 包 <a href="https://www.npmjs.com/package/${encodeURIComponent(data.package)}" target="_blank" rel="noopener noreferrer">${escape(data.package)}</a>；统计区间 ${escape(data.start)} 至 ${escape(data.end)}。下载快照 ${escape(new Date(usageSnapshot.fetchedAt).toLocaleDateString("zh-CN", { timeZone: "Asia/Taipei" }))}。` : "尚未接入该工具的公开下载数据，暂无数据不表示零下载。"}<br>调用量：暂无可核实的公开数据。下载次数包含重复安装与 CI，不等于 CLI 执行次数或用户数。仓库更新指作者或维护者的最近推送，不等于版本发布。</p>`;
+  return `${cardMetrics(item)}<details class="metric-source"><summary>数据来源与统计口径 · 下载量不代表调用量</summary><p class="usage-explanation">${data ? `来源：npm 包 <a href="https://www.npmjs.com/package/${encodeURIComponent(data.package)}" target="_blank" rel="noopener noreferrer">${escape(data.package)}</a>；统计区间 ${escape(data.start)} 至 ${escape(data.end)}。下载快照 ${escape(new Date(usageSnapshot.fetchedAt).toLocaleDateString("zh-CN", { timeZone: "Asia/Taipei" }))}。` : "尚未接入该工具的公开下载数据，暂无数据不表示零下载。"}<br>调用量：暂无可核实的公开数据。下载次数包含重复安装与 CI，不等于 CLI 执行次数或用户数。仓库更新指作者或维护者的最近推送，不等于版本发布。</p></details>`;
 }

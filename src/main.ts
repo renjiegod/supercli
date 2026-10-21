@@ -45,6 +45,7 @@ import {
   type Entry,
 } from "./catalog";
 import { escapeHtml as escape, detailMarkup } from "./html";
+import { showCopySuccess, setupDialogDismiss } from "./interaction-feedback";
 import { setupCommunity } from "./community";
 import { setupFilterPicker } from "./filter-picker";
 import { cardMetrics } from "./tool-metrics";
@@ -163,6 +164,7 @@ async function copyCommand(item: Entry): Promise<void> {
   }
   try {
     await navigator.clipboard.writeText(item.install);
+    showCopySuccess(item.id);
     notify(`已复制：${item.install}`);
   } catch {
     showDetail(item);
@@ -276,4 +278,5 @@ render();
 setupDiscovery(showDetail, copyCommand);
 setupCommunity();
 setupDetailLinks(showDetail, notify);
+setupDialogDismiss();
 iconify();

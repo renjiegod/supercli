@@ -1,5 +1,7 @@
 {
-  "files": ["src/styles/base.css"],
+  "files": [
+    "src/styles/base.css"
+  ],
   "pairs": [
     {
       "fg": "ink",
@@ -126,6 +128,18 @@
       "bg": "terminal-line",
       "min": 4.5,
       "label": "安装复制按钮"
+    },
+    {
+      "fg": "faint",
+      "bg": "brand-tint",
+      "min": 4.5,
+      "label": "工具预览辅助文字"
+    },
+    {
+      "fg": "success",
+      "bg": "terminal-line",
+      "min": 4.5,
+      "label": "安装复制成功反馈"
     }
   ]
 }
