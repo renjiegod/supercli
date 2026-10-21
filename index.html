@@ -48,6 +48,10 @@
         rel="noopener noreferrer"
         ><i data-lucide="plus"></i>推荐 CLI</a
       >
+      <div class="language-switch" aria-label="切换语言">
+        <a href="/" data-language="zh" lang="zh-CN" hreflang="zh-CN">中文</a
+        ><a href="/en/" data-language="en" lang="en" hreflang="en">EN</a>
+      </div>
     </header>
     <main class="wrap">
       <section class="hero">
@@ -335,11 +339,29 @@
         >贡献指南<i data-lucide="arrow-up-right"></i
       ></a>
     </footer>
+    <div class="wrap site-share">
+      <a
+        class="button"
+        data-share-x="site"
+        href="https://twitter.com/intent/tweet"
+        target="_blank"
+        rel="noopener noreferrer"
+        >分享到 X</a
+      >
+    </div>
     <dialog id="detail" aria-labelledby="detail-title">
       <button class="close" aria-label="关闭详情">
         <i data-lucide="x"></i>
       </button>
       <div id="detail-content"></div>
+      <a
+        class="button detail-share"
+        data-share-x="tool"
+        href="https://twitter.com/intent/tweet"
+        target="_blank"
+        rel="noopener noreferrer"
+        >分享到 X</a
+      >
       <button class="button detail-share" id="detail-share">
         <i data-lucide="link"></i>复制详情链接
       </button>
@@ -350,6 +372,9 @@
       </button>
       <p class="eyebrow">公开数据，明确口径</p>
       <h2 id="method-title">这份排行怎么算？</h2>
+      <p>
+        <a href="/catalog.json">目录数据</a> · <a href="/llms.txt">llms.txt</a>
+      </p>
       <p>
         “厂商官方”表示由产品或平台厂商直接维护；“社区项目”表示由独立作者、开源组织或社区维护，也包括项目自身的原版
         CLI。两者只区分来源，不代表质量或可信度高低。

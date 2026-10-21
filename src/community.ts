@@ -1,4 +1,5 @@
 /** 社区发现与署名：仅展示有收录依据的记录，历史维护和用户推荐分别统计。 */
+import { msg, t, locale, countLabel } from "./i18n";
 import rawRecords from "../data/community.json";
 import { catalog, type Entry } from "./catalog";
 import { escapeHtml as escape } from "./escape";
@@ -12,7 +13,7 @@ export interface CommunityRecord {
 }
 const records: readonly CommunityRecord[] = rawRecords;
 const date = (value: string) =>
-  new Date(value).toLocaleDateString("zh-CN", { timeZone: "Asia/Taipei" });
+  new Date(value).toLocaleDateString(locale, { timeZone: "Asia/Taipei" });
 const profile = (name: string) =>
   `<a href="https://github.com/${encodeURIComponent(name)}" target="_blank" rel="noopener noreferrer">@${escape(name)}</a>`;
 /** 收录时间不等于上游更新时间；推荐署名仅来自明确同意展示的投稿者。 */
@@ -22,7 +23,7 @@ export function attributionMarkup(
 ): string {
   const row = entries.find((record) => record.id === item.id);
   if (!row) return "";
-  return `<div class="attribution"><span>收录于 <time datetime="${escape(row.addedAt)}">${date(row.addedAt)}</time></span><span>收录维护 ${profile(row.curatedBy)}</span>${row.recommendedBy ? `<span>推荐者 ${profile(row.recommendedBy)}</span>` : ""}<a href="${escape(row.evidence)}" target="_blank" rel="noopener noreferrer">查看收录记录</a></div>`;
+  return msg`<div class="attribution"><span>收录于 <time datetime="${escape(row.addedAt)}">${date(row.addedAt)}</time></span><span>收录维护 ${profile(row.curatedBy)}</span>${row.recommendedBy ? msg`<span>推荐者 ${profile(row.recommendedBy)}</span>` : ""}<a href="${escape(row.evidence)}" target="_blank" rel="noopener noreferrer">查看收录记录</a></div>`;
 }
 /** 最近收录按真实入库时间排列，同批条目按名称稳定展示。 */
 export function recentEntries(
@@ -58,7 +59,7 @@ export function setupCommunity(): void {
   document.querySelector("#recent-tools")!.innerHTML = recentEntries()
     .map((row) => {
       const item = catalog.find((entry) => entry.id === row.id)!;
-      return `<button class="recent-tool" data-detail="${escape(item.id)}"><img src="/icons/${escape(item.icon)}" alt="" width="32" height="32"><span><strong>${escape(item.name)}</strong><small>${row.recommendedBy ? `由 @${escape(row.recommendedBy)} 推荐` : "维护者收录"} · ${date(row.addedAt)}</small></span><i data-lucide="arrow-up-right"></i></button>`;
+      return `<button class="recent-tool" data-detail="${escape(item.id)}"><img src="/icons/${escape(item.icon)}" alt="" width="32" height="32"><span><strong>${escape(t(item.name))}</strong><small>${row.recommendedBy ? msg`由 @${escape(row.recommendedBy)} 推荐` : t("维护者收录")} · ${date(row.addedAt)}</small></span><i data-lucide="arrow-up-right"></i></button>`;
     })
     .join("");
   const creditList = (
@@ -68,7 +69,7 @@ export function setupCommunity(): void {
     contributorCounts(field, entries)
       .map(
         (row) =>
-          `<li>${profile(row.name)}<span>${row.count} 个工具</span></li>`,
+          msg`<li>${profile(row.name)}<span>${countLabel(row.count, "tools")}</span></li>`,
       )
       .join("");
   document.querySelector("#maintainer-credits")!.innerHTML =

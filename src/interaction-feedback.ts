@@ -1,4 +1,5 @@
 /** 操作反馈：复制状态、原生弹窗遮罩关闭及滚动锁定，保留 Escape 与焦点恢复。 */
+import { t } from "./i18n";
 const resets = new WeakMap<
   HTMLButtonElement,
   { timer: ReturnType<typeof setTimeout>; html: string; label: string | null }
@@ -26,9 +27,9 @@ export function showCopySuccess(id: string): void {
     if (previous) clearTimeout(previous.timer);
     const html = previous?.html ?? button.innerHTML;
     const label = previous ? previous.label : button.getAttribute("aria-label");
-    button.textContent = "已复制";
+    button.textContent = t("已复制");
     button.classList.add("copy-success");
-    button.setAttribute("aria-label", "安装命令已复制");
+    button.setAttribute("aria-label", t("安装命令已复制"));
     const timer = setTimeout(() => resetCopyFeedback(button), 1800);
     resets.set(button, { timer, html, label });
   }
