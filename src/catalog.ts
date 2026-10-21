@@ -1,8 +1,13 @@
 /** CLI 目录查询；路由：/；来源：人工收录清单与本地刷新快照。 */
+import { t } from "./i18n";
+import englishDescriptions from "../data/catalog.en.json";
 import rawCatalog from "../data/catalog.json";
 import rawUsage from "../data/usage.json";
 import rawMetrics from "../data/metrics.json";
-import categories from "../data/categories.json";
+import rawCategories from "../data/categories.json";
+const categories = Object.fromEntries(
+  Object.entries(rawCategories).map(([key, label]) => [key, t(label)]),
+);
 /** 公开目录条目；非 GitHub CLI 使用官方文档，不虚构仓库。 */
 export interface Entry {
   readonly id: string;
@@ -73,7 +78,10 @@ export function queryEntries(
         [
           item.name,
           item.vendor,
+          t(item.vendor),
           item.description,
+          englishDescriptions[item.id as keyof typeof englishDescriptions],
+          rawCategories[item.category as keyof typeof rawCategories],
           item.repo,
           item.install,
           categories[item.category as keyof typeof categories],
@@ -104,7 +112,7 @@ export function queryEntries(
     });
 }
 export const maintainerLabels = {
-  vendor: "厂商官方",
-  community: "社区项目",
+  vendor: t("厂商官方"),
+  community: t("社区项目"),
 } as const;
 export { catalog, categories, metrics };

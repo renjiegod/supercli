@@ -1,0 +1,53 @@
+.language-switch {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 8px;
+  font-size: 12px;
+}
+.language-switch a {
+  padding: 6px;
+  border-radius: var(--radius);
+  color: var(--muted);
+}
+.language-switch a[aria-current] {
+  color: var(--accent);
+  background: var(--brand-tint);
+}
+.language-switch a:hover {
+  background: var(--surface-hover);
+}
+.language-switch a:active {
+  transform: translateY(1px);
+}
+.site-share {
+  padding-bottom: 24px;
+}
+html[lang="en"] h1 {
+  font-size: clamp(36px, 4.4vw, 60px);
+  letter-spacing: -2px;
+}
+html[lang="en"] .header {
+  gap: 16px;
+}
+html[lang="en"] .card-title {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 640px) {
+  html[lang="en"] .header {
+    gap: 6px;
+  }
+  html[lang="en"] .submit-link {
+    font-size: 10px;
+    padding-inline: 6px;
+  }
+  .language-switch {
+    gap: 0;
+  }
+  .language-switch a {
+    padding-inline: 4px;
+  }
+  html[lang="en"] .hero h1 {
+    font-size: 40px;
+  }
+}

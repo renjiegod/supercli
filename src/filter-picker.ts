@@ -1,10 +1,11 @@
 /** 目录筛选弹层：复用 select 数据，提供搜索、键盘导航、关闭与焦点恢复。 */
+import { t, msg } from "./i18n";
 import { escapeHtml } from "./escape";
 const descriptions: Record<string, string> = {
-  stars: "按关联仓库的收藏数排列",
-  updated: "作者或维护者最近推送优先",
-  downloads: "npm 近 30 天下载次数，不代表调用量",
-  name: "按工具名称的字母顺序浏览",
+  stars: t("按关联仓库的收藏数排列"),
+  updated: t("作者或维护者最近推送优先"),
+  downloads: t("npm 近 30 天下载次数，不代表调用量"),
+  name: t("按工具名称的字母顺序浏览"),
 };
 /** 将原生数据控件增强为可检索的按钮面板；筛选仍通过 change 事件进入页面状态。 */
 export function setupFilterPicker(
@@ -12,7 +13,7 @@ export function setupFilterPicker(
   searchable: boolean,
 ): void {
   const host = select.closest<HTMLElement>(".select-label")!;
-  const label = searchable ? "筛选厂商" : "排序方式";
+  const label = searchable ? t("筛选厂商") : t("排序方式");
   const panelId = `${select.id}-panel`;
   const button = document.createElement("button");
   button.type = "button";
@@ -25,14 +26,14 @@ export function setupFilterPicker(
   panel.hidden = true;
   panel.setAttribute("role", "group");
   panel.setAttribute("aria-label", label);
-  panel.innerHTML = `${searchable ? '<input class="picker-search" type="search" placeholder="搜索厂商…" aria-label="搜索厂商">' : '<p class="picker-heading">排序方式</p>'}<div class="picker-options"></div><p class="picker-empty" hidden>没有匹配的厂商，试试其他名称。</p>`;
+  panel.innerHTML = msg`${searchable ? t('<input class="picker-search" type="search" placeholder="搜索厂商…" aria-label="搜索厂商">') : t('<p class="picker-heading">排序方式</p>')}<div class="picker-options"></div><p class="picker-empty" hidden>没有匹配的厂商，试试其他名称。</p>`;
   host.append(button, panel);
   select.hidden = true;
   const input = panel.querySelector<HTMLInputElement>("input");
   const list = panel.querySelector<HTMLElement>(".picker-options")!;
   function sync(): void {
     const selected = select.selectedOptions[0];
-    button.innerHTML = `<span><small>${searchable ? "厂商" : "排序"}</small><strong>${escapeHtml(selected.textContent ?? "")}</strong></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>`;
+    button.innerHTML = `<span><small>${searchable ? t("厂商") : t("排序")}</small><strong>${escapeHtml(selected.textContent ?? "")}</strong></span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>`;
     button.setAttribute("aria-label", `${label}：${selected.textContent}`);
     const query = input?.value.trim().toLocaleLowerCase() ?? "";
     const options = [...select.options].filter((option) =>

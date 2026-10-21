@@ -1,4 +1,7 @@
 /** 目录页面交互：搜索、筛选、排序、详情、安装命令复制；路由：/。 */
+import { setupSharing, updateSharing } from "./sharing";
+import { setupLanguage, countLabel } from "./i18n";
+import { msg, t, locale } from "./i18n";
 import {
   createIcons,
   GitFork,
@@ -78,12 +81,15 @@ function render(): void {
   root.innerHTML = items
     .map((item, index) => cardMarkup(item, index, sort.value))
     .join("");
-  document.querySelector("#result-count")!.textContent = `${items.length} 个`;
+  document.querySelector("#result-count")!.textContent = countLabel(
+    items.length,
+    "results",
+  );
   const summaries: Record<string, string> = {
-    stars: "按 GitHub Stars 排序 · 多工具仓库共享数据",
-    downloads: "按 npm 近 30 天下载量排序 · 未接入数据的工具在后",
-    updated: "按仓库最近推送排序 · 不代表版本发布时间",
-    name: "按名称 A–Z 排序 · 序号不代表热度",
+    stars: t("按 GitHub Stars 排序 · 多工具仓库共享数据"),
+    downloads: t("按 npm 近 30 天下载量排序 · 未接入数据的工具在后"),
+    updated: t("按仓库最近推送排序 · 不代表版本发布时间"),
+    name: t("按名称 A–Z 排序 · 序号不代表热度"),
   };
   document.querySelector("#ranking-summary")!.textContent =
     summaries[sort.value];
@@ -118,13 +124,14 @@ function render(): void {
     "",
     `${location.pathname}${params.size ? `?${params}` : ""}${location.hash}`,
   );
+  updateSharing();
   iconify();
 }
 function renderActiveFilters(): void {
   const filters = [
-    ["search", search.value && `搜索：${search.value}`],
+    ["search", search.value && msg`搜索：${search.value}`],
     ["category", categories[category as keyof typeof categories]],
-    ["vendor", vendor.value],
+    ["vendor", t(vendor.value)],
     [
       "source",
       maintainerLabels[maintainerType as keyof typeof maintainerLabels],
@@ -136,10 +143,10 @@ function renderActiveFilters(): void {
     filters
       .map(
         ([key, value]) =>
-          `<button class="filter-chip" data-clear="${key}" aria-label="移除${escape(String(value))}">${escape(String(value))}<i data-lucide="x"></i></button>`,
+          msg`<button class="filter-chip" data-clear="${key}" aria-label="移除${escape(String(value))}">${escape(String(value))}<i data-lucide="x"></i></button>`,
       )
       .join("") +
-    '<button class="clear-all" data-clear="all">清除全部</button>';
+    t('<button class="clear-all" data-clear="all">清除全部</button>');
 }
 function clearFilter(key: string): void {
   if (key === "search" || key === "all") search.value = "";
@@ -164,10 +171,10 @@ async function copyCommand(item: Entry): Promise<void> {
   try {
     await navigator.clipboard.writeText(item.install);
     showCopySuccess(item.id);
-    notify(`已复制：${item.install}`);
+    notify(msg`已复制：${item.install}`);
   } catch {
     showDetail(item);
-    notify("无法访问剪贴板，请在详情中手动复制安装命令。");
+    notify(t("无法访问剪贴板，请在详情中手动复制安装命令。"));
   }
 }
 function showDetail(item: Entry): void {
@@ -180,6 +187,7 @@ function showDetail(item: Entry): void {
   url.searchParams.set("tool", item.id);
   history.replaceState(null, "", url);
   if (!detail.open) detail.showModal();
+  updateSharing();
   iconify();
 }
 function initFilters(): void {
@@ -191,13 +199,15 @@ function initFilters(): void {
   ).padStart(2, "0");
   const time = new Date(metrics.fetchedAt);
   document.querySelector("#updated")!.textContent =
-    `数据快照 ${time.toLocaleString("zh-CN", { timeZone: "Asia/Taipei", hour12: false })} UTC+8`;
+    msg`数据快照 ${time.toLocaleString(locale, { timeZone: "Asia/Taipei", hour12: false })} UTC+8`;
   vendor.innerHTML += [...new Set(catalog.map((item) => item.vendor))]
     .toSorted()
-    .map((name) => `<option>${escape(name)}</option>`)
+    .map(
+      (name) => `<option value="${escape(name)}">${escape(t(name))}</option>`,
+    )
     .join("");
   document.querySelector("#categories")!.innerHTML = [
-    ["", "全部工具"],
+    ["", t("全部工具")],
     ...Object.entries(categories),
   ]
     .map(
@@ -225,8 +235,15 @@ function setupEvents(): void {
     element.addEventListener(element === search ? "input" : "change", render),
   );
   document.addEventListener("click", (event) => {
-    const target = (event.target as HTMLElement).closest<HTMLElement>("button");
+    const target = (event.target as HTMLElement).closest<HTMLElement>(
+      "button, a[data-detail]",
+    );
     if (!target) return;
+    if (target.matches("a[data-detail]")) {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
+      event.preventDefault();
+    }
     if (target.dataset.clear) clearFilter(target.dataset.clear);
     if (target.dataset.source !== undefined) {
       maintainerType = target.dataset.source;
@@ -290,3 +307,7 @@ setupCommunity();
 setupDetailLinks(showDetail, notify);
 setupDialogDismiss();
 iconify();
+
+setupLanguage();
+
+setupSharing();

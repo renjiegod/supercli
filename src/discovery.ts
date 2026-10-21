@@ -1,4 +1,6 @@
 /** 首页发现入口：使用目录真源，不展示虚构活动或安装结果。 */
+import { sharePageUrl } from "./sharing";
+import { t, msg } from "./i18n";
 import { resetCopyFeedback } from "./interaction-feedback";
 import { catalog, stats } from "./catalog";
 import { escapeHtml as escape } from "./html";
@@ -15,7 +17,7 @@ export function setupDiscovery(
   root.innerHTML = picks
     .map(
       (item, index) =>
-        `<button class="stage-tool" aria-describedby="stage-caption stage-command" data-stage="${escape(item.id)}"><img src="/icons/${escape(item.icon)}" alt="" width="36" height="36"><span><strong>${escape(item.name)}</strong><small>${escape(item.vendor)}</small></span><span class="stage-stars">${stats(item)?.stars.toLocaleString("en") ?? "未计分"}<small>${stats(item) ? "GitHub Stars" : "官方来源"}</small></span><span class="stage-number">0${index + 1}</span></button>`,
+        `<button class="stage-tool" aria-describedby="stage-caption stage-command" data-stage="${escape(item.id)}"><img src="/icons/${escape(item.icon)}" alt="" width="36" height="36"><span><strong>${escape(t(item.name))}</strong><small>${escape(t(item.vendor))}</small></span><span class="stage-stars">${stats(item)?.stars.toLocaleString("en") ?? t("未计分")}<small>${stats(item) ? "GitHub Stars" : t("官方来源")}</small></span><span class="stage-number">0${index + 1}</span></button>`,
     )
     .join("");
   let selected = picks[0];
@@ -24,11 +26,11 @@ export function setupDiscovery(
     resetCopyFeedback(copyButton);
     selected = item;
     document.querySelector("#stage-command")!.textContent =
-      item.install ?? "请查看官方文档";
+      item.install ?? t("请查看官方文档");
     document.querySelector("#stage-command-label")!.textContent =
-      `${item.name} 安装命令`;
+      msg`${item.name} 安装命令`;
     copyButton.dataset.preview = item.id;
-    copyButton.setAttribute("aria-label", `复制 ${item.name} 安装命令`);
+    copyButton.setAttribute("aria-label", msg`复制 ${item.name} 安装命令`);
     root
       .querySelectorAll<HTMLButtonElement>("[data-stage]")
       .forEach((button) => {
@@ -66,14 +68,16 @@ export function setupDetailLinks(
   notify: (message: string) => void,
 ): void {
   const detail = document.querySelector<HTMLDialogElement>("#detail")!;
-  const initial = new URLSearchParams(location.search).get("tool");
+  const initial =
+    new URLSearchParams(location.search).get("tool") ??
+    location.pathname.match(/\/tools\/([^/]+)\//)?.[1];
   const item = catalog.find((entry) => entry.id === initial);
   if (item) open(item);
   else if (initial) {
     const url = new URL(location.href);
     url.searchParams.delete("tool");
     history.replaceState(null, "", url);
-    notify("这个工具尚未收录，可在目录中搜索或提交。");
+    notify(t("这个工具尚未收录，可在目录中搜索或提交。"));
   }
   detail.addEventListener("close", () => {
     const url = new URL(location.href);
@@ -84,10 +88,14 @@ export function setupDetailLinks(
     .querySelector("#detail-share")!
     .addEventListener("click", async () => {
       try {
-        await navigator.clipboard.writeText(location.href);
-        notify("已复制工具详情链接");
+        const current = new URL(location.href);
+        const id =
+          current.searchParams.get("tool") ??
+          current.pathname.match(/\/tools\/([^/]+)\//)?.[1];
+        await navigator.clipboard.writeText(sharePageUrl(current, id).href);
+        notify(t("已复制工具详情链接"));
       } catch {
-        notify("无法访问剪贴板，请复制浏览器地址栏中的链接。");
+        notify(t("无法访问剪贴板，请复制浏览器地址栏中的链接。"));
       }
     });
 }

@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "check": "pnpm typecheck && node scripts/validate.mjs && pnpm test",
-    "build": "pnpm check && vite build",
+    "build": "pnpm check && vite build && node scripts/check-static.mjs",
     "sync": "node scripts/sync.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "test": "tsx --test scripts/*.test.mjs",
@@ -20,6 +20,7 @@
     "node": ">=24"
   },
   "devDependencies": {
+    "@types/node": "^24.19.2",
     "prettier": "^3.9.10",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
